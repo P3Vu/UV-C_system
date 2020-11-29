@@ -13,6 +13,7 @@
 #include "esp_spi_flash.h"
 #include "esp_log.h"
 #include "driver/gpio.h"
+#include "driver/adc.h"
 
 
 
@@ -26,11 +27,12 @@
 #define GPIO_INPUT_PIN_SEL (1ULL<<MOTION_SENSOR)
 #define ESP_INTR_FLAG_DEFAULT 0
 
-static xQueueHandle gpio_evt_queue = NULL;
-
 #define ON      0
 #define OFF     1
 
+#define ADC_AVR_SAMPLES 64          /* Number of samples avereged for UV sensor */
+
+static xQueueHandle gpio_evt_queue = NULL;
 static const char* TAG = "Module";
 
 static void IRAM_ATTR gpio_isr_handler(void* arg)
@@ -111,15 +113,61 @@ static void TurnOffLamp(int gpioNum){
     return;
 }
 
+/** Configures the ADC peripheral for UV sensor */
+static void configADC(void){
+    esp_err_t err;
+
+    err = adc1_config_width(ADC_WIDTH_BIT_12);
+    if(err != ESP_OK){
+        ESP_LOGW(TAG, "Fail to config ADC Width");
+        return;
+    }
+
+    err = adc1_config_channel_atten(ADC1_CHANNEL_0, ADC_ATTEN_DB_11);
+    if(err != ESP_OK){
+        ESP_LOGW(TAG, "Fail to config ADC channel attenuation");
+    }
+
+    ESP_LOGI(TAG, "ADC Config finished.");
+    return;
+}
+
+/** Function measures UV intensity form ML8511 sensor by ADC
+    @return
+        - UV Sensor reading in [mW/cm^2]
+*/
+static float UVmeas(void){
+
+        float vol = 0;
+        float intensity = 0;
+        int avr = 0;
+        int sum = 0;
+        uint8_t counter;
+
+        /* Average samples */
+        for(counter = 0; counter < ADC_AVR_SAMPLES; counter++){
+            sum += adc1_get_raw(ADC1_CHANNEL_0);
+        }
+
+        avr = sum / 64;
+        /* Prints raw adc value */
+        //printf("avr value = %d", avr);
+
+        vol = 3.3 * ((float)avr/4095);
+        //printf("Voltage = %d\n", voltage);
+
+        /* The pattern below is brought from ML8511 sensor characteristic figured
+            in datasheet on Output Voltage - UV Intensity Characteristic */
+        intensity = 8*(vol-1);  /* in [mW/cm^2] */
+        if(intensity < 0) intensity = 0;
+
+        return intensity;
+}
+
 void app_main()
 {
     configGPIO();
-
-    int cnt = 0;
-    while(1) {
-        printf("cnt: %d\n", cnt++);
-        vTaskDelay(1000 / portTICK_RATE_MS);
-    }
+    configADC();
 
 }
 
