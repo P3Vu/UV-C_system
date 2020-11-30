@@ -2,10 +2,13 @@
   ******************************************************************************
   * @file       main.c
   * @author     Pawel Wojciechowski
+  * @version    V.1.0.0
+  * @date       29-November-2020
   ******************************************************************************
   */
 
 #include <stdio.h>
+#include <stdbool.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "freertos/queue.h"
@@ -14,18 +17,29 @@
 #include "esp_log.h"
 #include "driver/gpio.h"
 #include "driver/adc.h"
+#include "driver/i2c.h"
+#include "math.h"
 
+#define LAMP1                       GPIO_NUM_2                    /* RELAY IN1 on board */
+#define LAMP2                       GPIO_NUM_0                    /* RELAY IN2 on board */
+#define LAMP3                       GPIO_NUM_18                   /* RELAY IN3 on board */
+#define LAMP4                       GPIO_NUM_19                   /* RELAY IN4 on board */
+#define I2C_MASTER_SCL_IO                GPIO_NUM_22                   /* Master */
+#define I2C_MASTER_SDA_IO                 GPIO_NUM_21
 
-
-#define LAMP1           GPIO_NUM_2                    /* RELAY IN1 on board */
-#define LAMP2           GPIO_NUM_0                    /* RELAY IN2 on board */
-#define LAMP3           GPIO_NUM_18                   /* RELAY IN3 on board */
-#define LAMP4           GPIO_NUM_19                   /* RELAY IN4 on board */
 #define GPIO_OUTPUT_PIN_SEL ((1ULL<<GPIO_NUM_2) | (1ULL<<GPIO_NUM_0) | (1ULL<<GPIO_NUM_18) | (1ULL<<GPIO_NUM_19))
 
-#define MOTION_SENSOR   GPIO_NUM_13               /* Microwave Motion Sensor */
-#define GPIO_INPUT_PIN_SEL (1ULL<<MOTION_SENSOR)
-#define ESP_INTR_FLAG_DEFAULT 0
+#define MOTION_SENSOR               GPIO_NUM_13               /* Microwave Motion Sensor */
+#define GPIO_INPUT_PIN_SEL         (1ULL<<MOTION_SENSOR)
+#define ESP_INTR_FLAG_DEFAULT           0
+
+#define LIGHT_SENSOR_ADDR   0x4A
+#define LHB_addr            0x03                    /* Lux High Byte address */
+#define LLB_addr            0x04                    /* Lux Low Byte address */
+
+#define I2C_WRITE_ADDR   0x00
+#define I2C_READ_ADDR    0x01
+
 
 #define ON      0
 #define OFF     1
@@ -164,11 +178,96 @@ static float UVmeas(void){
         return intensity;
 }
 
+/** Initializes a I2C config */
+void i2c_init (void) {
+  int i2c_master_port = 0;
+  i2c_config_t conf;
+  conf.mode = I2C_MODE_MASTER;
+  conf.sda_io_num = I2C_MASTER_SDA_IO;
+  conf.scl_io_num = I2C_MASTER_SCL_IO;
+  conf.sda_pullup_en = GPIO_PULLUP_ENABLE;
+  conf.scl_pullup_en = GPIO_PULLUP_ENABLE;
+  conf.master.clk_speed = 100000;
+  i2c_param_config(i2c_master_port, &conf);
+  i2c_driver_install(i2c_master_port, conf.mode, 0, 0, 0);
+}
+
+/** Reads a singular byte from particular address */
+uint8_t i2c_read_byte (uint8_t slave_addr, uint8_t addr) {
+  i2c_cmd_handle_t cmd = i2c_cmd_link_create();
+  i2c_master_start(cmd);
+  i2c_master_write_byte(cmd, slave_addr|I2C_WRITE_ADDR, 1);
+  i2c_master_write_byte(cmd, addr, 1);
+  i2c_master_start(cmd);
+  i2c_master_write_byte(cmd, slave_addr|I2C_READ_ADDR, 1);
+
+  uint8_t data;
+  i2c_master_read_byte(cmd, &data, 1);
+  i2c_master_stop(cmd);
+  i2c_master_cmd_begin(0, cmd, 1000/portTICK_PERIOD_MS);
+  i2c_cmd_link_delete(cmd);
+  return data;
+}
+
+/** Read 2 bytes in 1 transmission */
+bool i2c_read_2bytes (uint8_t slave_addr, uint8_t addr, uint8_t* buf) {
+  i2c_cmd_handle_t cmd = i2c_cmd_link_create();
+  i2c_master_start(cmd);
+  i2c_master_write_byte(cmd, slave_addr|I2C_WRITE_ADDR, 0);
+  i2c_master_write_byte(cmd, 0x03, 0);
+  i2c_master_start(cmd);
+  i2c_master_write_byte(cmd, slave_addr|I2C_READ_ADDR, 0);
+  i2c_master_read_byte(cmd, buf, 0);
+
+  i2c_master_start(cmd);
+  i2c_master_write_byte(cmd, slave_addr|I2C_WRITE_ADDR, 0);
+  i2c_master_write_byte(cmd, 0x04, 0);
+  i2c_master_start(cmd);
+  i2c_master_write_byte(cmd, slave_addr|I2C_READ_ADDR, 0);
+  i2c_master_read_byte(cmd, buf+1, 1);
+  i2c_master_stop(cmd);
+
+  i2c_master_cmd_begin(0, cmd, 1000/portTICK_PERIOD_MS);
+  i2c_cmd_link_delete(cmd);
+
+  return true;
+}
+
+/** Measures ambient light in luxes */
+static int LUXMeas(void){
+
+    uint8_t slave_addr = LIGHT_SENSOR_ADDR;
+    uint8_t read_addr  = LHB_addr;
+    slave_addr = slave_addr << 1;
+
+    uint8_t buf[2] = {};
+
+    i2c_read_2bytes(slave_addr, read_addr, buf);
+    vTaskDelay(10 / portTICK_PERIOD_MS);
+
+    /* Calculate the readings */
+    uint8_t exponent = (buf[0] & 0xF0) >> 4;
+    uint8_t mantissa = ((buf[0] & 0x0F) << 4)| (buf[1] & 0x0F);
+    float calc = pow(2, exponent) * mantissa * 0.72;
+    int lux = (int)calc;
+
+    //printf("Exp = %d | Mantissa  = %d | Lux = %f \n", exponent, mantissa , lux);
+    return lux;
+}
+
 void app_main()
 {
     configGPIO();
     configADC();
+    i2c_init();
 
+    int light = 0;
+
+    while(1){
+        light = LUXMeas();
+        printf("Lux = %d\n", light);
+        vTaskDelay(1000 / portTICK_RATE_MS);
+    }
 }
 
 
