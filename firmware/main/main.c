@@ -9,45 +9,73 @@
 
 #include <stdio.h>
 #include <stdbool.h>
+#include "math.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "freertos/queue.h"
+#include "freertos/event_groups.h"
 #include "esp_system.h"
 #include "esp_spi_flash.h"
 #include "esp_log.h"
+#include "esp_wifi.h"
+#include "esp_event.h"
 #include "driver/gpio.h"
 #include "driver/adc.h"
 #include "driver/i2c.h"
-#include "math.h"
+#include "nvs_flash.h"
+
+#include "lwip/err.h"
+#include "lwip/sys.h"
 
 #define LAMP1                       GPIO_NUM_2                    /* RELAY IN1 on board */
 #define LAMP2                       GPIO_NUM_0                    /* RELAY IN2 on board */
 #define LAMP3                       GPIO_NUM_18                   /* RELAY IN3 on board */
 #define LAMP4                       GPIO_NUM_19                   /* RELAY IN4 on board */
-#define I2C_MASTER_SCL_IO                GPIO_NUM_22                   /* Master */
-#define I2C_MASTER_SDA_IO                 GPIO_NUM_21
+#define I2C_MASTER_SCL_IO           GPIO_NUM_22                   /* I2C Master SCL */
+#define I2C_MASTER_SDA_IO           GPIO_NUM_21                   /* I2C Master SDA */
+#define MOTION_SENSOR               GPIO_NUM_13                   /* Microwave Motion Sensor */
 
-#define GPIO_OUTPUT_PIN_SEL ((1ULL<<GPIO_NUM_2) | (1ULL<<GPIO_NUM_0) | (1ULL<<GPIO_NUM_18) | (1ULL<<GPIO_NUM_19))
+#define GPIO_OUTPUT_PIN_SEL ((1ULL<<GPIO_NUM_2) | \
+                             (1ULL<<GPIO_NUM_0) | \
+                             (1ULL<<GPIO_NUM_18)| \
+                             (1ULL<<GPIO_NUM_19)) \
 
-#define MOTION_SENSOR               GPIO_NUM_13               /* Microwave Motion Sensor */
-#define GPIO_INPUT_PIN_SEL         (1ULL<<MOTION_SENSOR)
-#define ESP_INTR_FLAG_DEFAULT           0
+#define GPIO_INPUT_PIN_SEL          1ULL<<MOTION_SENSOR
+#define ESP_INTR_FLAG_DEFAULT       0
 
-#define LIGHT_SENSOR_ADDR   0x4A
-#define LHB_addr            0x03                    /* Lux High Byte address */
-#define LLB_addr            0x04                    /* Lux Low Byte address */
+#define LIGHT_SENSOR_ADDR           0x4A
+#define LHB_addr                    0x03                        /* Lux High Byte address */
+#define LLB_addr                    0x04                        /* Lux Low Byte address */
 
 #define I2C_WRITE_ADDR   0x00
 #define I2C_READ_ADDR    0x01
-
 
 #define ON      0
 #define OFF     1
 
 #define ADC_AVR_SAMPLES 64          /* Number of samples avereged for UV sensor */
 
+/** *** WiFi *** */
+
+/* WiFi Config */
+#define EXAMPLE_ESP_WIFI_SSID               "UPC8716827"
+#define EXAMPLE_ESP_WIFI_PASS               "bvyhjy3jbdbC"
+#define EXAMPLE_ESP_MAXIMUM_RETRY           1
+
+/* The event group allows multiple bits for each event, but we only care about two events:
+ * - we are connected to the AP with an IP
+ * - we failed to connect after the maximum amount of retries */
+#define WIFI_CONNECTED_BIT BIT0
+#define WIFI_FAIL_BIT      BIT1
+
 static xQueueHandle gpio_evt_queue = NULL;
-static const char* TAG = "Module";
+static const char* TAG_MODULE = "Module";
+static const char *TAG_WIFI = "wifi station";
+
+static int s_retry_num = 0;
+
+/* FreeRTOS event group to signal when we are connected*/
+static EventGroupHandle_t s_wifi_event_group;
 
 static void IRAM_ATTR gpio_isr_handler(void* arg)
 {
@@ -107,13 +135,13 @@ static void configGPIO(void){
     // hook isr handler for specific gpio pin again
     gpio_isr_handler_add(MOTION_SENSOR, gpio_isr_handler, (void*) MOTION_SENSOR);
 
-    ESP_LOGI(TAG, "GPIO Config finished.");
+    ESP_LOGI(TAG_MODULE, "GPIO Config finished.");
 }
 /** Turn On the Lamp */
 static void TurnOnLamp(int gpioNum){
     int err = 0;
     err = gpio_set_level(gpioNum, ON);
-    if(err != ESP_OK) ESP_LOGW(TAG, "Fail to set Lamp On at GPIO: %d", gpioNum);
+    if(err != ESP_OK) ESP_LOGW(TAG_MODULE, "Fail to set Lamp On at GPIO: %d", gpioNum);
 
     return;
 }
@@ -122,7 +150,7 @@ static void TurnOnLamp(int gpioNum){
 static void TurnOffLamp(int gpioNum){
     int err = 0;
     err = gpio_set_level(gpioNum, OFF);
-    if(err != ESP_OK) ESP_LOGW(TAG, "Fail to set Lamp Off at GPIO: %d", gpioNum);
+    if(err != ESP_OK) ESP_LOGW(TAG_MODULE, "Fail to set Lamp Off at GPIO: %d", gpioNum);
 
     return;
 }
@@ -133,16 +161,16 @@ static void configADC(void){
 
     err = adc1_config_width(ADC_WIDTH_BIT_12);
     if(err != ESP_OK){
-        ESP_LOGW(TAG, "Fail to config ADC Width");
+        ESP_LOGW(TAG_MODULE, "Fail to config ADC Width");
         return;
     }
 
     err = adc1_config_channel_atten(ADC1_CHANNEL_0, ADC_ATTEN_DB_11);
     if(err != ESP_OK){
-        ESP_LOGW(TAG, "Fail to config ADC channel attenuation");
+        ESP_LOGW(TAG_MODULE, "Fail to config ADC channel attenuation");
     }
 
-    ESP_LOGI(TAG, "ADC Config finished.");
+    ESP_LOGI(TAG_MODULE, "ADC Config finished.");
     return;
 }
 
@@ -255,19 +283,107 @@ static int LUXMeas(void){
     return lux;
 }
 
+/** **************************** WIFI **************************** */
+static void event_handler(void* arg, esp_event_base_t event_base,
+                                int32_t event_id, void* event_data)
+{
+    if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_START) {
+        esp_wifi_connect();
+    } else if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_DISCONNECTED) {
+        if (s_retry_num < EXAMPLE_ESP_MAXIMUM_RETRY) {
+            esp_wifi_connect();
+            s_retry_num++;
+            ESP_LOGI(TAG_WIFI, "retry to connect to the AP");
+        } else {
+            xEventGroupSetBits(s_wifi_event_group, WIFI_FAIL_BIT);
+        }
+        ESP_LOGI(TAG_WIFI,"connect to the AP fail");
+    } else if (event_base == IP_EVENT && event_id == IP_EVENT_STA_GOT_IP) {
+        ip_event_got_ip_t* event = (ip_event_got_ip_t*) event_data;
+        ESP_LOGI(TAG_WIFI, "got ip:%s",
+                 ip4addr_ntoa(&event->ip_info.ip));
+        s_retry_num = 0;
+        xEventGroupSetBits(s_wifi_event_group, WIFI_CONNECTED_BIT);
+    }
+}
+
+void wifi_init_sta()
+{
+    s_wifi_event_group = xEventGroupCreate();
+
+    tcpip_adapter_init();
+
+    ESP_ERROR_CHECK(esp_event_loop_create_default());
+
+    wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
+    ESP_ERROR_CHECK(esp_wifi_init(&cfg));
+
+    ESP_ERROR_CHECK(esp_event_handler_register(WIFI_EVENT, ESP_EVENT_ANY_ID, &event_handler, NULL));
+    ESP_ERROR_CHECK(esp_event_handler_register(IP_EVENT, IP_EVENT_STA_GOT_IP, &event_handler, NULL));
+
+    wifi_config_t wifi_config = {
+        .sta = {
+            .ssid = EXAMPLE_ESP_WIFI_SSID,
+            .password = EXAMPLE_ESP_WIFI_PASS,
+            /* Setting a password implies module will connect to all security modes including WEP/WPA.
+             * However these modes are deprecated and not advisable to be used. Incase your Access point
+             * doesn't support WPA2, these mode can be enabled by commenting below line */
+	     .threshold.authmode = WIFI_AUTH_WPA2_PSK,
+
+            .pmf_cfg = {
+                .capable = true,
+                .required = false
+            },
+        },
+    };
+    ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_STA) );
+    ESP_ERROR_CHECK(esp_wifi_set_config(ESP_IF_WIFI_STA, &wifi_config) );
+    ESP_ERROR_CHECK(esp_wifi_start() );
+
+    ESP_LOGI(TAG_WIFI, "wifi_init_sta finished.");
+
+    /* Waiting until either the connection is established (WIFI_CONNECTED_BIT) or connection failed for the maximum
+     * number of re-tries (WIFI_FAIL_BIT). The bits are set by event_handler() (see above) */
+    EventBits_t bits = xEventGroupWaitBits(s_wifi_event_group,
+            WIFI_CONNECTED_BIT | WIFI_FAIL_BIT,
+            pdFALSE,
+            pdFALSE,
+            portMAX_DELAY);
+
+    /* xEventGroupWaitBits() returns the bits before the call returned, hence we can test which event actually
+     * happened. */
+    if (bits & WIFI_CONNECTED_BIT) {
+        ESP_LOGI(TAG_WIFI, "connected to ap SSID:%s password:%s",
+                 EXAMPLE_ESP_WIFI_SSID, EXAMPLE_ESP_WIFI_PASS);
+    } else if (bits & WIFI_FAIL_BIT) {
+        ESP_LOGI(TAG_WIFI, "Failed to connect to SSID:%s, password:%s",
+                 EXAMPLE_ESP_WIFI_SSID, EXAMPLE_ESP_WIFI_PASS);
+    } else {
+        ESP_LOGE(TAG_WIFI, "UNEXPECTED EVENT");
+    }
+
+    ESP_ERROR_CHECK(esp_event_handler_unregister(IP_EVENT, IP_EVENT_STA_GOT_IP, &event_handler));
+    ESP_ERROR_CHECK(esp_event_handler_unregister(WIFI_EVENT, ESP_EVENT_ANY_ID, &event_handler));
+    vEventGroupDelete(s_wifi_event_group);
+}
+
+/** *************************************************************** */
+
 void app_main()
 {
     configGPIO();
     configADC();
     i2c_init();
 
-    int light = 0;
-
-    while(1){
-        light = LUXMeas();
-        printf("Lux = %d\n", light);
-        vTaskDelay(1000 / portTICK_RATE_MS);
+    esp_err_t err = nvs_flash_init();
+    if(err == ESP_ERR_NVS_NO_FREE_PAGES || err == ESP_ERR_NVS_NEW_VERSION_FOUND){
+        ESP_ERROR_CHECK(nvs_flash_erase());
+        err = nvs_flash_init();
     }
+    ESP_ERROR_CHECK(err);
+
+    ESP_LOGI(TAG_WIFI, "ESP_WIFI_MODE_STA");
+    wifi_init_sta();
 }
 
 
