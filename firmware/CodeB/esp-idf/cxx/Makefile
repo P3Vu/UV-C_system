@@ -50,7 +50,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CMake
+CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -125,14 +125,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\cxx\CMakeFiles\progress.marks
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/cxx/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles 0
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\cxx\CMakeFiles\progress.marks
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/cxx/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/cxx/clean
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/cxx/clean
 .PHONY : clean
 
 # The main clean target
@@ -142,22 +142,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/cxx/preinstall
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/cxx/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/cxx/preinstall
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/cxx/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 esp-idf/cxx/CMakeFiles/__idf_cxx.dir/rule:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/cxx/CMakeFiles/__idf_cxx.dir/rule
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/cxx/CMakeFiles/__idf_cxx.dir/rule
 .PHONY : esp-idf/cxx/CMakeFiles/__idf_cxx.dir/rule
 
 # Convenience name for target.
@@ -167,7 +167,7 @@ __idf_cxx: esp-idf/cxx/CMakeFiles/__idf_cxx.dir/rule
 
 # fast build rule for target.
 __idf_cxx/fast:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\cxx\CMakeFiles\__idf_cxx.dir\build.make esp-idf/cxx/CMakeFiles/__idf_cxx.dir/build
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\cxx\CMakeFiles\__idf_cxx.dir\build.make esp-idf/cxx/CMakeFiles/__idf_cxx.dir/build
 .PHONY : __idf_cxx/fast
 
 cxx_exception_stubs.obj: cxx_exception_stubs.cpp.obj
@@ -176,7 +176,7 @@ cxx_exception_stubs.obj: cxx_exception_stubs.cpp.obj
 
 # target to build an object file
 cxx_exception_stubs.cpp.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\cxx\CMakeFiles\__idf_cxx.dir\build.make esp-idf/cxx/CMakeFiles/__idf_cxx.dir/cxx_exception_stubs.cpp.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\cxx\CMakeFiles\__idf_cxx.dir\build.make esp-idf/cxx/CMakeFiles/__idf_cxx.dir/cxx_exception_stubs.cpp.obj
 .PHONY : cxx_exception_stubs.cpp.obj
 
 cxx_exception_stubs.i: cxx_exception_stubs.cpp.i
@@ -185,7 +185,7 @@ cxx_exception_stubs.i: cxx_exception_stubs.cpp.i
 
 # target to preprocess a source file
 cxx_exception_stubs.cpp.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\cxx\CMakeFiles\__idf_cxx.dir\build.make esp-idf/cxx/CMakeFiles/__idf_cxx.dir/cxx_exception_stubs.cpp.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\cxx\CMakeFiles\__idf_cxx.dir\build.make esp-idf/cxx/CMakeFiles/__idf_cxx.dir/cxx_exception_stubs.cpp.i
 .PHONY : cxx_exception_stubs.cpp.i
 
 cxx_exception_stubs.s: cxx_exception_stubs.cpp.s
@@ -194,7 +194,7 @@ cxx_exception_stubs.s: cxx_exception_stubs.cpp.s
 
 # target to generate assembly for a file
 cxx_exception_stubs.cpp.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\cxx\CMakeFiles\__idf_cxx.dir\build.make esp-idf/cxx/CMakeFiles/__idf_cxx.dir/cxx_exception_stubs.cpp.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\cxx\CMakeFiles\__idf_cxx.dir\build.make esp-idf/cxx/CMakeFiles/__idf_cxx.dir/cxx_exception_stubs.cpp.s
 .PHONY : cxx_exception_stubs.cpp.s
 
 cxx_guards.obj: cxx_guards.cpp.obj
@@ -203,7 +203,7 @@ cxx_guards.obj: cxx_guards.cpp.obj
 
 # target to build an object file
 cxx_guards.cpp.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\cxx\CMakeFiles\__idf_cxx.dir\build.make esp-idf/cxx/CMakeFiles/__idf_cxx.dir/cxx_guards.cpp.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\cxx\CMakeFiles\__idf_cxx.dir\build.make esp-idf/cxx/CMakeFiles/__idf_cxx.dir/cxx_guards.cpp.obj
 .PHONY : cxx_guards.cpp.obj
 
 cxx_guards.i: cxx_guards.cpp.i
@@ -212,7 +212,7 @@ cxx_guards.i: cxx_guards.cpp.i
 
 # target to preprocess a source file
 cxx_guards.cpp.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\cxx\CMakeFiles\__idf_cxx.dir\build.make esp-idf/cxx/CMakeFiles/__idf_cxx.dir/cxx_guards.cpp.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\cxx\CMakeFiles\__idf_cxx.dir\build.make esp-idf/cxx/CMakeFiles/__idf_cxx.dir/cxx_guards.cpp.i
 .PHONY : cxx_guards.cpp.i
 
 cxx_guards.s: cxx_guards.cpp.s
@@ -221,7 +221,7 @@ cxx_guards.s: cxx_guards.cpp.s
 
 # target to generate assembly for a file
 cxx_guards.cpp.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\cxx\CMakeFiles\__idf_cxx.dir\build.make esp-idf/cxx/CMakeFiles/__idf_cxx.dir/cxx_guards.cpp.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\cxx\CMakeFiles\__idf_cxx.dir\build.make esp-idf/cxx/CMakeFiles/__idf_cxx.dir/cxx_guards.cpp.s
 .PHONY : cxx_guards.cpp.s
 
 # Help Target
@@ -254,6 +254,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

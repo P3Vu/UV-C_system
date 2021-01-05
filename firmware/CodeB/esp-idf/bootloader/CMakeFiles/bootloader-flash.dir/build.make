@@ -45,7 +45,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CMake
+CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB
 
 # Utility rule file for bootloader-flash.
 
@@ -53,7 +53,7 @@ CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CMake
 include esp-idf/bootloader/CMakeFiles/bootloader-flash.dir/progress.make
 
 esp-idf/bootloader/CMakeFiles/bootloader-flash:
-	cd /d C:\Users\pawel\Desktop\esp-idf\components\bootloader && C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -D IDF_PATH="C:/Users/pawel/Desktop/esp-idf" -D ESPTOOLPY="python C:/Users/pawel/Desktop/esp-idf/components/esptool_py/esptool/esptool.py --chip esp32" -D ESPTOOL_ARGS="write_flash @flash_bootloader_args" -D WORKING_DIRECTORY="C:/Users/pawel/Desktop/Grant/Project/firmware/CMake" -P C:/Users/pawel/Desktop/esp-idf/components/esptool_py/run_esptool.cmake
+	cd /d C:\Users\pawel\Desktop\esp-idf\components\bootloader && C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -D IDF_PATH="C:/Users/pawel/Desktop/esp-idf" -D ESPTOOLPY="python C:/Users/pawel/Desktop/esp-idf/components/esptool_py/esptool/esptool.py --chip esp32" -D ESPTOOL_ARGS="write_flash @flash_bootloader_args" -D WORKING_DIRECTORY="C:/Users/pawel/Desktop/Grant/Project/firmware/CodeB" -P C:/Users/pawel/Desktop/esp-idf/components/esptool_py/run_esptool.cmake
 
 bootloader-flash: esp-idf/bootloader/CMakeFiles/bootloader-flash
 bootloader-flash: esp-idf/bootloader/CMakeFiles/bootloader-flash.dir/build.make
@@ -66,10 +66,10 @@ esp-idf/bootloader/CMakeFiles/bootloader-flash.dir/build: bootloader-flash
 .PHONY : esp-idf/bootloader/CMakeFiles/bootloader-flash.dir/build
 
 esp-idf/bootloader/CMakeFiles/bootloader-flash.dir/clean:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\bootloader && $(CMAKE_COMMAND) -P CMakeFiles\bootloader-flash.dir\cmake_clean.cmake
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\bootloader && $(CMAKE_COMMAND) -P CMakeFiles\bootloader-flash.dir\cmake_clean.cmake
 .PHONY : esp-idf/bootloader/CMakeFiles/bootloader-flash.dir/clean
 
 esp-idf/bootloader/CMakeFiles/bootloader-flash.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\esp-idf\components\bootloader C:\Users\pawel\Desktop\Grant\Project\firmware\CMake C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\bootloader C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\bootloader\CMakeFiles\bootloader-flash.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\esp-idf\components\bootloader C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\bootloader C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\bootloader\CMakeFiles\bootloader-flash.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : esp-idf/bootloader/CMakeFiles/bootloader-flash.dir/depend
 

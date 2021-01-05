@@ -45,7 +45,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CMake
+CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB
 
 # Utility rule file for _project_elf_src.
 
@@ -56,8 +56,8 @@ CMakeFiles/_project_elf_src: project_elf_src.c
 
 
 project_elf_src.c:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating project_elf_src.c"
-	C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -E touch C:/Users/pawel/Desktop/Grant/Project/firmware/CMake/project_elf_src.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating project_elf_src.c"
+	C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -E touch C:/Users/pawel/Desktop/Grant/Project/firmware/CodeB/project_elf_src.c
 
 _project_elf_src: CMakeFiles/_project_elf_src
 _project_elf_src: project_elf_src.c
@@ -75,6 +75,6 @@ CMakeFiles/_project_elf_src.dir/clean:
 .PHONY : CMakeFiles/_project_elf_src.dir/clean
 
 CMakeFiles/_project_elf_src.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\Grant\Project\firmware\CMake C:\Users\pawel\Desktop\Grant\Project\firmware\CMake C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles\_project_elf_src.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles\_project_elf_src.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/_project_elf_src.dir/depend
 

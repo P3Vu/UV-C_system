@@ -45,7 +45,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CMake
+CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB
 
 # Include any dependencies generated for this target.
 include esp-idf/esp-tls/CMakeFiles/__idf_esp-tls.dir/depend.make
@@ -58,16 +58,16 @@ include esp-idf/esp-tls/CMakeFiles/__idf_esp-tls.dir/flags.make
 
 esp-idf/esp-tls/CMakeFiles/__idf_esp-tls.dir/esp_tls.c.obj: esp-idf/esp-tls/CMakeFiles/__idf_esp-tls.dir/flags.make
 esp-idf/esp-tls/CMakeFiles/__idf_esp-tls.dir/esp_tls.c.obj: C:/Users/pawel/Desktop/esp-idf/components/esp-tls/esp_tls.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/esp-tls/CMakeFiles/__idf_esp-tls.dir/esp_tls.c.obj"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\esp-tls && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\__idf_esp-tls.dir\esp_tls.c.obj   -c C:\Users\pawel\Desktop\esp-idf\components\esp-tls\esp_tls.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/esp-tls/CMakeFiles/__idf_esp-tls.dir/esp_tls.c.obj"
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\esp-tls && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\__idf_esp-tls.dir\esp_tls.c.obj   -c C:\Users\pawel\Desktop\esp-idf\components\esp-tls\esp_tls.c
 
 esp-idf/esp-tls/CMakeFiles/__idf_esp-tls.dir/esp_tls.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_esp-tls.dir/esp_tls.c.i"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\esp-tls && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\pawel\Desktop\esp-idf\components\esp-tls\esp_tls.c > CMakeFiles\__idf_esp-tls.dir\esp_tls.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\esp-tls && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\pawel\Desktop\esp-idf\components\esp-tls\esp_tls.c > CMakeFiles\__idf_esp-tls.dir\esp_tls.c.i
 
 esp-idf/esp-tls/CMakeFiles/__idf_esp-tls.dir/esp_tls.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_esp-tls.dir/esp_tls.c.s"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\esp-tls && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\pawel\Desktop\esp-idf\components\esp-tls\esp_tls.c -o CMakeFiles\__idf_esp-tls.dir\esp_tls.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\esp-tls && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\pawel\Desktop\esp-idf\components\esp-tls\esp_tls.c -o CMakeFiles\__idf_esp-tls.dir\esp_tls.c.s
 
 # Object files for target __idf_esp-tls
 __idf_esp__tls_OBJECTS = \
@@ -79,9 +79,9 @@ __idf_esp__tls_EXTERNAL_OBJECTS =
 esp-idf/esp-tls/libesp-tls.a: esp-idf/esp-tls/CMakeFiles/__idf_esp-tls.dir/esp_tls.c.obj
 esp-idf/esp-tls/libesp-tls.a: esp-idf/esp-tls/CMakeFiles/__idf_esp-tls.dir/build.make
 esp-idf/esp-tls/libesp-tls.a: esp-idf/esp-tls/CMakeFiles/__idf_esp-tls.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libesp-tls.a"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\esp-tls && $(CMAKE_COMMAND) -P CMakeFiles\__idf_esp-tls.dir\cmake_clean_target.cmake
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\esp-tls && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\__idf_esp-tls.dir\link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libesp-tls.a"
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\esp-tls && $(CMAKE_COMMAND) -P CMakeFiles\__idf_esp-tls.dir\cmake_clean_target.cmake
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\esp-tls && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\__idf_esp-tls.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 esp-idf/esp-tls/CMakeFiles/__idf_esp-tls.dir/build: esp-idf/esp-tls/libesp-tls.a
@@ -89,10 +89,10 @@ esp-idf/esp-tls/CMakeFiles/__idf_esp-tls.dir/build: esp-idf/esp-tls/libesp-tls.a
 .PHONY : esp-idf/esp-tls/CMakeFiles/__idf_esp-tls.dir/build
 
 esp-idf/esp-tls/CMakeFiles/__idf_esp-tls.dir/clean:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\esp-tls && $(CMAKE_COMMAND) -P CMakeFiles\__idf_esp-tls.dir\cmake_clean.cmake
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\esp-tls && $(CMAKE_COMMAND) -P CMakeFiles\__idf_esp-tls.dir\cmake_clean.cmake
 .PHONY : esp-idf/esp-tls/CMakeFiles/__idf_esp-tls.dir/clean
 
 esp-idf/esp-tls/CMakeFiles/__idf_esp-tls.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\esp-idf\components\esp-tls C:\Users\pawel\Desktop\Grant\Project\firmware\CMake C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\esp-tls C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\esp-tls\CMakeFiles\__idf_esp-tls.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\esp-idf\components\esp-tls C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\esp-tls C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\esp-tls\CMakeFiles\__idf_esp-tls.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : esp-idf/esp-tls/CMakeFiles/__idf_esp-tls.dir/depend
 

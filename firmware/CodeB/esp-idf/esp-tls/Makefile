@@ -50,7 +50,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CMake
+CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -125,14 +125,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\esp-tls\CMakeFiles\progress.marks
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/esp-tls/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles 0
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\esp-tls\CMakeFiles\progress.marks
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/esp-tls/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/esp-tls/clean
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/esp-tls/clean
 .PHONY : clean
 
 # The main clean target
@@ -142,22 +142,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/esp-tls/preinstall
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/esp-tls/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/esp-tls/preinstall
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/esp-tls/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 esp-idf/esp-tls/CMakeFiles/__idf_esp-tls.dir/rule:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/esp-tls/CMakeFiles/__idf_esp-tls.dir/rule
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/esp-tls/CMakeFiles/__idf_esp-tls.dir/rule
 .PHONY : esp-idf/esp-tls/CMakeFiles/__idf_esp-tls.dir/rule
 
 # Convenience name for target.
@@ -167,7 +167,7 @@ __idf_esp-tls: esp-idf/esp-tls/CMakeFiles/__idf_esp-tls.dir/rule
 
 # fast build rule for target.
 __idf_esp-tls/fast:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp-tls\CMakeFiles\__idf_esp-tls.dir\build.make esp-idf/esp-tls/CMakeFiles/__idf_esp-tls.dir/build
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp-tls\CMakeFiles\__idf_esp-tls.dir\build.make esp-idf/esp-tls/CMakeFiles/__idf_esp-tls.dir/build
 .PHONY : __idf_esp-tls/fast
 
 esp_tls.obj: esp_tls.c.obj
@@ -176,7 +176,7 @@ esp_tls.obj: esp_tls.c.obj
 
 # target to build an object file
 esp_tls.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp-tls\CMakeFiles\__idf_esp-tls.dir\build.make esp-idf/esp-tls/CMakeFiles/__idf_esp-tls.dir/esp_tls.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp-tls\CMakeFiles\__idf_esp-tls.dir\build.make esp-idf/esp-tls/CMakeFiles/__idf_esp-tls.dir/esp_tls.c.obj
 .PHONY : esp_tls.c.obj
 
 esp_tls.i: esp_tls.c.i
@@ -185,7 +185,7 @@ esp_tls.i: esp_tls.c.i
 
 # target to preprocess a source file
 esp_tls.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp-tls\CMakeFiles\__idf_esp-tls.dir\build.make esp-idf/esp-tls/CMakeFiles/__idf_esp-tls.dir/esp_tls.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp-tls\CMakeFiles\__idf_esp-tls.dir\build.make esp-idf/esp-tls/CMakeFiles/__idf_esp-tls.dir/esp_tls.c.i
 .PHONY : esp_tls.c.i
 
 esp_tls.s: esp_tls.c.s
@@ -194,7 +194,7 @@ esp_tls.s: esp_tls.c.s
 
 # target to generate assembly for a file
 esp_tls.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp-tls\CMakeFiles\__idf_esp-tls.dir\build.make esp-idf/esp-tls/CMakeFiles/__idf_esp-tls.dir/esp_tls.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp-tls\CMakeFiles\__idf_esp-tls.dir\build.make esp-idf/esp-tls/CMakeFiles/__idf_esp-tls.dir/esp_tls.c.s
 .PHONY : esp_tls.c.s
 
 # Help Target
@@ -224,6 +224,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -50,7 +50,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CMake
+CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -125,14 +125,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\protocomm\CMakeFiles\progress.marks
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/protocomm/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles 0
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\protocomm\CMakeFiles\progress.marks
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/protocomm/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/protocomm/clean
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/protocomm/clean
 .PHONY : clean
 
 # The main clean target
@@ -142,22 +142,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/protocomm/preinstall
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/protocomm/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/protocomm/preinstall
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/protocomm/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/rule:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/rule
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/rule
 .PHONY : esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/rule
 
 # Convenience name for target.
@@ -167,7 +167,7 @@ __idf_protocomm: esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/rule
 
 # fast build rule for target.
 __idf_protocomm/fast:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/build
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/build
 .PHONY : __idf_protocomm/fast
 
 proto-c/constants.pb-c.obj: proto-c/constants.pb-c.c.obj
@@ -176,7 +176,7 @@ proto-c/constants.pb-c.obj: proto-c/constants.pb-c.c.obj
 
 # target to build an object file
 proto-c/constants.pb-c.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/constants.pb-c.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/constants.pb-c.c.obj
 .PHONY : proto-c/constants.pb-c.c.obj
 
 proto-c/constants.pb-c.i: proto-c/constants.pb-c.c.i
@@ -185,7 +185,7 @@ proto-c/constants.pb-c.i: proto-c/constants.pb-c.c.i
 
 # target to preprocess a source file
 proto-c/constants.pb-c.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/constants.pb-c.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/constants.pb-c.c.i
 .PHONY : proto-c/constants.pb-c.c.i
 
 proto-c/constants.pb-c.s: proto-c/constants.pb-c.c.s
@@ -194,7 +194,7 @@ proto-c/constants.pb-c.s: proto-c/constants.pb-c.c.s
 
 # target to generate assembly for a file
 proto-c/constants.pb-c.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/constants.pb-c.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/constants.pb-c.c.s
 .PHONY : proto-c/constants.pb-c.c.s
 
 proto-c/sec0.pb-c.obj: proto-c/sec0.pb-c.c.obj
@@ -203,7 +203,7 @@ proto-c/sec0.pb-c.obj: proto-c/sec0.pb-c.c.obj
 
 # target to build an object file
 proto-c/sec0.pb-c.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec0.pb-c.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec0.pb-c.c.obj
 .PHONY : proto-c/sec0.pb-c.c.obj
 
 proto-c/sec0.pb-c.i: proto-c/sec0.pb-c.c.i
@@ -212,7 +212,7 @@ proto-c/sec0.pb-c.i: proto-c/sec0.pb-c.c.i
 
 # target to preprocess a source file
 proto-c/sec0.pb-c.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec0.pb-c.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec0.pb-c.c.i
 .PHONY : proto-c/sec0.pb-c.c.i
 
 proto-c/sec0.pb-c.s: proto-c/sec0.pb-c.c.s
@@ -221,7 +221,7 @@ proto-c/sec0.pb-c.s: proto-c/sec0.pb-c.c.s
 
 # target to generate assembly for a file
 proto-c/sec0.pb-c.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec0.pb-c.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec0.pb-c.c.s
 .PHONY : proto-c/sec0.pb-c.c.s
 
 proto-c/sec1.pb-c.obj: proto-c/sec1.pb-c.c.obj
@@ -230,7 +230,7 @@ proto-c/sec1.pb-c.obj: proto-c/sec1.pb-c.c.obj
 
 # target to build an object file
 proto-c/sec1.pb-c.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec1.pb-c.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec1.pb-c.c.obj
 .PHONY : proto-c/sec1.pb-c.c.obj
 
 proto-c/sec1.pb-c.i: proto-c/sec1.pb-c.c.i
@@ -239,7 +239,7 @@ proto-c/sec1.pb-c.i: proto-c/sec1.pb-c.c.i
 
 # target to preprocess a source file
 proto-c/sec1.pb-c.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec1.pb-c.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec1.pb-c.c.i
 .PHONY : proto-c/sec1.pb-c.c.i
 
 proto-c/sec1.pb-c.s: proto-c/sec1.pb-c.c.s
@@ -248,7 +248,7 @@ proto-c/sec1.pb-c.s: proto-c/sec1.pb-c.c.s
 
 # target to generate assembly for a file
 proto-c/sec1.pb-c.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec1.pb-c.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec1.pb-c.c.s
 .PHONY : proto-c/sec1.pb-c.c.s
 
 proto-c/session.pb-c.obj: proto-c/session.pb-c.c.obj
@@ -257,7 +257,7 @@ proto-c/session.pb-c.obj: proto-c/session.pb-c.c.obj
 
 # target to build an object file
 proto-c/session.pb-c.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/session.pb-c.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/session.pb-c.c.obj
 .PHONY : proto-c/session.pb-c.c.obj
 
 proto-c/session.pb-c.i: proto-c/session.pb-c.c.i
@@ -266,7 +266,7 @@ proto-c/session.pb-c.i: proto-c/session.pb-c.c.i
 
 # target to preprocess a source file
 proto-c/session.pb-c.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/session.pb-c.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/session.pb-c.c.i
 .PHONY : proto-c/session.pb-c.c.i
 
 proto-c/session.pb-c.s: proto-c/session.pb-c.c.s
@@ -275,7 +275,7 @@ proto-c/session.pb-c.s: proto-c/session.pb-c.c.s
 
 # target to generate assembly for a file
 proto-c/session.pb-c.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/session.pb-c.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/session.pb-c.c.s
 .PHONY : proto-c/session.pb-c.c.s
 
 src/common/protocomm.obj: src/common/protocomm.c.obj
@@ -284,7 +284,7 @@ src/common/protocomm.obj: src/common/protocomm.c.obj
 
 # target to build an object file
 src/common/protocomm.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/common/protocomm.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/common/protocomm.c.obj
 .PHONY : src/common/protocomm.c.obj
 
 src/common/protocomm.i: src/common/protocomm.c.i
@@ -293,7 +293,7 @@ src/common/protocomm.i: src/common/protocomm.c.i
 
 # target to preprocess a source file
 src/common/protocomm.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/common/protocomm.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/common/protocomm.c.i
 .PHONY : src/common/protocomm.c.i
 
 src/common/protocomm.s: src/common/protocomm.c.s
@@ -302,7 +302,7 @@ src/common/protocomm.s: src/common/protocomm.c.s
 
 # target to generate assembly for a file
 src/common/protocomm.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/common/protocomm.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/common/protocomm.c.s
 .PHONY : src/common/protocomm.c.s
 
 src/security/security0.obj: src/security/security0.c.obj
@@ -311,7 +311,7 @@ src/security/security0.obj: src/security/security0.c.obj
 
 # target to build an object file
 src/security/security0.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/security/security0.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/security/security0.c.obj
 .PHONY : src/security/security0.c.obj
 
 src/security/security0.i: src/security/security0.c.i
@@ -320,7 +320,7 @@ src/security/security0.i: src/security/security0.c.i
 
 # target to preprocess a source file
 src/security/security0.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/security/security0.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/security/security0.c.i
 .PHONY : src/security/security0.c.i
 
 src/security/security0.s: src/security/security0.c.s
@@ -329,7 +329,7 @@ src/security/security0.s: src/security/security0.c.s
 
 # target to generate assembly for a file
 src/security/security0.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/security/security0.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/security/security0.c.s
 .PHONY : src/security/security0.c.s
 
 src/security/security1.obj: src/security/security1.c.obj
@@ -338,7 +338,7 @@ src/security/security1.obj: src/security/security1.c.obj
 
 # target to build an object file
 src/security/security1.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/security/security1.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/security/security1.c.obj
 .PHONY : src/security/security1.c.obj
 
 src/security/security1.i: src/security/security1.c.i
@@ -347,7 +347,7 @@ src/security/security1.i: src/security/security1.c.i
 
 # target to preprocess a source file
 src/security/security1.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/security/security1.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/security/security1.c.i
 .PHONY : src/security/security1.c.i
 
 src/security/security1.s: src/security/security1.c.s
@@ -356,7 +356,7 @@ src/security/security1.s: src/security/security1.c.s
 
 # target to generate assembly for a file
 src/security/security1.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/security/security1.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/security/security1.c.s
 .PHONY : src/security/security1.c.s
 
 src/transports/protocomm_console.obj: src/transports/protocomm_console.c.obj
@@ -365,7 +365,7 @@ src/transports/protocomm_console.obj: src/transports/protocomm_console.c.obj
 
 # target to build an object file
 src/transports/protocomm_console.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_console.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_console.c.obj
 .PHONY : src/transports/protocomm_console.c.obj
 
 src/transports/protocomm_console.i: src/transports/protocomm_console.c.i
@@ -374,7 +374,7 @@ src/transports/protocomm_console.i: src/transports/protocomm_console.c.i
 
 # target to preprocess a source file
 src/transports/protocomm_console.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_console.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_console.c.i
 .PHONY : src/transports/protocomm_console.c.i
 
 src/transports/protocomm_console.s: src/transports/protocomm_console.c.s
@@ -383,7 +383,7 @@ src/transports/protocomm_console.s: src/transports/protocomm_console.c.s
 
 # target to generate assembly for a file
 src/transports/protocomm_console.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_console.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_console.c.s
 .PHONY : src/transports/protocomm_console.c.s
 
 src/transports/protocomm_httpd.obj: src/transports/protocomm_httpd.c.obj
@@ -392,7 +392,7 @@ src/transports/protocomm_httpd.obj: src/transports/protocomm_httpd.c.obj
 
 # target to build an object file
 src/transports/protocomm_httpd.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_httpd.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_httpd.c.obj
 .PHONY : src/transports/protocomm_httpd.c.obj
 
 src/transports/protocomm_httpd.i: src/transports/protocomm_httpd.c.i
@@ -401,7 +401,7 @@ src/transports/protocomm_httpd.i: src/transports/protocomm_httpd.c.i
 
 # target to preprocess a source file
 src/transports/protocomm_httpd.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_httpd.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_httpd.c.i
 .PHONY : src/transports/protocomm_httpd.c.i
 
 src/transports/protocomm_httpd.s: src/transports/protocomm_httpd.c.s
@@ -410,7 +410,7 @@ src/transports/protocomm_httpd.s: src/transports/protocomm_httpd.c.s
 
 # target to generate assembly for a file
 src/transports/protocomm_httpd.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_httpd.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\protocomm\CMakeFiles\__idf_protocomm.dir\build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_httpd.c.s
 .PHONY : src/transports/protocomm_httpd.c.s
 
 # Help Target
@@ -464,6 +464,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

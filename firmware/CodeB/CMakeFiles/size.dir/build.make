@@ -45,7 +45,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CMake
+CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB
 
 # Utility rule file for size.
 
@@ -53,7 +53,7 @@ CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CMake
 include CMakeFiles/size.dir/progress.make
 
 CMakeFiles/size: UV.elf
-	python C:/Users/pawel/Desktop/esp-idf/tools/idf_size.py C:/Users/pawel/Desktop/Grant/Project/firmware/CMake/UV.map
+	python C:/Users/pawel/Desktop/esp-idf/tools/idf_size.py C:/Users/pawel/Desktop/Grant/Project/firmware/CodeB/UV.map
 
 size: CMakeFiles/size
 size: CMakeFiles/size.dir/build.make
@@ -70,6 +70,6 @@ CMakeFiles/size.dir/clean:
 .PHONY : CMakeFiles/size.dir/clean
 
 CMakeFiles/size.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\Grant\Project\firmware\CMake C:\Users\pawel\Desktop\Grant\Project\firmware\CMake C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles\size.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles\size.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/size.dir/depend
 

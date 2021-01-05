@@ -50,7 +50,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CMake
+CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -125,14 +125,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\esp_http_server\CMakeFiles\progress.marks
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/esp_http_server/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles 0
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\esp_http_server\CMakeFiles\progress.marks
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/esp_http_server/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/esp_http_server/clean
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/esp_http_server/clean
 .PHONY : clean
 
 # The main clean target
@@ -142,22 +142,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/esp_http_server/preinstall
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/esp_http_server/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/esp_http_server/preinstall
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/esp_http_server/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/rule:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/rule
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/rule
 .PHONY : esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/rule
 
 # Convenience name for target.
@@ -167,7 +167,7 @@ __idf_esp_http_server: esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.
 
 # fast build rule for target.
 __idf_esp_http_server/fast:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_http_server\CMakeFiles\__idf_esp_http_server.dir\build.make esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/build
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_http_server\CMakeFiles\__idf_esp_http_server.dir\build.make esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/build
 .PHONY : __idf_esp_http_server/fast
 
 src/httpd_main.obj: src/httpd_main.c.obj
@@ -176,7 +176,7 @@ src/httpd_main.obj: src/httpd_main.c.obj
 
 # target to build an object file
 src/httpd_main.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_http_server\CMakeFiles\__idf_esp_http_server.dir\build.make esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_main.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_http_server\CMakeFiles\__idf_esp_http_server.dir\build.make esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_main.c.obj
 .PHONY : src/httpd_main.c.obj
 
 src/httpd_main.i: src/httpd_main.c.i
@@ -185,7 +185,7 @@ src/httpd_main.i: src/httpd_main.c.i
 
 # target to preprocess a source file
 src/httpd_main.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_http_server\CMakeFiles\__idf_esp_http_server.dir\build.make esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_main.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_http_server\CMakeFiles\__idf_esp_http_server.dir\build.make esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_main.c.i
 .PHONY : src/httpd_main.c.i
 
 src/httpd_main.s: src/httpd_main.c.s
@@ -194,7 +194,7 @@ src/httpd_main.s: src/httpd_main.c.s
 
 # target to generate assembly for a file
 src/httpd_main.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_http_server\CMakeFiles\__idf_esp_http_server.dir\build.make esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_main.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_http_server\CMakeFiles\__idf_esp_http_server.dir\build.make esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_main.c.s
 .PHONY : src/httpd_main.c.s
 
 src/httpd_parse.obj: src/httpd_parse.c.obj
@@ -203,7 +203,7 @@ src/httpd_parse.obj: src/httpd_parse.c.obj
 
 # target to build an object file
 src/httpd_parse.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_http_server\CMakeFiles\__idf_esp_http_server.dir\build.make esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_parse.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_http_server\CMakeFiles\__idf_esp_http_server.dir\build.make esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_parse.c.obj
 .PHONY : src/httpd_parse.c.obj
 
 src/httpd_parse.i: src/httpd_parse.c.i
@@ -212,7 +212,7 @@ src/httpd_parse.i: src/httpd_parse.c.i
 
 # target to preprocess a source file
 src/httpd_parse.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_http_server\CMakeFiles\__idf_esp_http_server.dir\build.make esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_parse.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_http_server\CMakeFiles\__idf_esp_http_server.dir\build.make esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_parse.c.i
 .PHONY : src/httpd_parse.c.i
 
 src/httpd_parse.s: src/httpd_parse.c.s
@@ -221,7 +221,7 @@ src/httpd_parse.s: src/httpd_parse.c.s
 
 # target to generate assembly for a file
 src/httpd_parse.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_http_server\CMakeFiles\__idf_esp_http_server.dir\build.make esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_parse.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_http_server\CMakeFiles\__idf_esp_http_server.dir\build.make esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_parse.c.s
 .PHONY : src/httpd_parse.c.s
 
 src/httpd_sess.obj: src/httpd_sess.c.obj
@@ -230,7 +230,7 @@ src/httpd_sess.obj: src/httpd_sess.c.obj
 
 # target to build an object file
 src/httpd_sess.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_http_server\CMakeFiles\__idf_esp_http_server.dir\build.make esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_sess.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_http_server\CMakeFiles\__idf_esp_http_server.dir\build.make esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_sess.c.obj
 .PHONY : src/httpd_sess.c.obj
 
 src/httpd_sess.i: src/httpd_sess.c.i
@@ -239,7 +239,7 @@ src/httpd_sess.i: src/httpd_sess.c.i
 
 # target to preprocess a source file
 src/httpd_sess.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_http_server\CMakeFiles\__idf_esp_http_server.dir\build.make esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_sess.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_http_server\CMakeFiles\__idf_esp_http_server.dir\build.make esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_sess.c.i
 .PHONY : src/httpd_sess.c.i
 
 src/httpd_sess.s: src/httpd_sess.c.s
@@ -248,7 +248,7 @@ src/httpd_sess.s: src/httpd_sess.c.s
 
 # target to generate assembly for a file
 src/httpd_sess.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_http_server\CMakeFiles\__idf_esp_http_server.dir\build.make esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_sess.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_http_server\CMakeFiles\__idf_esp_http_server.dir\build.make esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_sess.c.s
 .PHONY : src/httpd_sess.c.s
 
 src/httpd_txrx.obj: src/httpd_txrx.c.obj
@@ -257,7 +257,7 @@ src/httpd_txrx.obj: src/httpd_txrx.c.obj
 
 # target to build an object file
 src/httpd_txrx.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_http_server\CMakeFiles\__idf_esp_http_server.dir\build.make esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_txrx.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_http_server\CMakeFiles\__idf_esp_http_server.dir\build.make esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_txrx.c.obj
 .PHONY : src/httpd_txrx.c.obj
 
 src/httpd_txrx.i: src/httpd_txrx.c.i
@@ -266,7 +266,7 @@ src/httpd_txrx.i: src/httpd_txrx.c.i
 
 # target to preprocess a source file
 src/httpd_txrx.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_http_server\CMakeFiles\__idf_esp_http_server.dir\build.make esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_txrx.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_http_server\CMakeFiles\__idf_esp_http_server.dir\build.make esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_txrx.c.i
 .PHONY : src/httpd_txrx.c.i
 
 src/httpd_txrx.s: src/httpd_txrx.c.s
@@ -275,7 +275,7 @@ src/httpd_txrx.s: src/httpd_txrx.c.s
 
 # target to generate assembly for a file
 src/httpd_txrx.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_http_server\CMakeFiles\__idf_esp_http_server.dir\build.make esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_txrx.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_http_server\CMakeFiles\__idf_esp_http_server.dir\build.make esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_txrx.c.s
 .PHONY : src/httpd_txrx.c.s
 
 src/httpd_uri.obj: src/httpd_uri.c.obj
@@ -284,7 +284,7 @@ src/httpd_uri.obj: src/httpd_uri.c.obj
 
 # target to build an object file
 src/httpd_uri.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_http_server\CMakeFiles\__idf_esp_http_server.dir\build.make esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_uri.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_http_server\CMakeFiles\__idf_esp_http_server.dir\build.make esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_uri.c.obj
 .PHONY : src/httpd_uri.c.obj
 
 src/httpd_uri.i: src/httpd_uri.c.i
@@ -293,7 +293,7 @@ src/httpd_uri.i: src/httpd_uri.c.i
 
 # target to preprocess a source file
 src/httpd_uri.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_http_server\CMakeFiles\__idf_esp_http_server.dir\build.make esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_uri.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_http_server\CMakeFiles\__idf_esp_http_server.dir\build.make esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_uri.c.i
 .PHONY : src/httpd_uri.c.i
 
 src/httpd_uri.s: src/httpd_uri.c.s
@@ -302,7 +302,7 @@ src/httpd_uri.s: src/httpd_uri.c.s
 
 # target to generate assembly for a file
 src/httpd_uri.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_http_server\CMakeFiles\__idf_esp_http_server.dir\build.make esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_uri.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_http_server\CMakeFiles\__idf_esp_http_server.dir\build.make esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_uri.c.s
 .PHONY : src/httpd_uri.c.s
 
 src/util/ctrl_sock.obj: src/util/ctrl_sock.c.obj
@@ -311,7 +311,7 @@ src/util/ctrl_sock.obj: src/util/ctrl_sock.c.obj
 
 # target to build an object file
 src/util/ctrl_sock.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_http_server\CMakeFiles\__idf_esp_http_server.dir\build.make esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/util/ctrl_sock.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_http_server\CMakeFiles\__idf_esp_http_server.dir\build.make esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/util/ctrl_sock.c.obj
 .PHONY : src/util/ctrl_sock.c.obj
 
 src/util/ctrl_sock.i: src/util/ctrl_sock.c.i
@@ -320,7 +320,7 @@ src/util/ctrl_sock.i: src/util/ctrl_sock.c.i
 
 # target to preprocess a source file
 src/util/ctrl_sock.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_http_server\CMakeFiles\__idf_esp_http_server.dir\build.make esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/util/ctrl_sock.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_http_server\CMakeFiles\__idf_esp_http_server.dir\build.make esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/util/ctrl_sock.c.i
 .PHONY : src/util/ctrl_sock.c.i
 
 src/util/ctrl_sock.s: src/util/ctrl_sock.c.s
@@ -329,7 +329,7 @@ src/util/ctrl_sock.s: src/util/ctrl_sock.c.s
 
 # target to generate assembly for a file
 src/util/ctrl_sock.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_http_server\CMakeFiles\__idf_esp_http_server.dir\build.make esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/util/ctrl_sock.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_http_server\CMakeFiles\__idf_esp_http_server.dir\build.make esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/util/ctrl_sock.c.s
 .PHONY : src/util/ctrl_sock.c.s
 
 # Help Target
@@ -374,6 +374,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

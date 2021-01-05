@@ -45,7 +45,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CMake
+CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB
 
 # Utility rule file for bootloader.
 
@@ -63,51 +63,51 @@ CMakeFiles/bootloader-complete: bootloader-prefix/src/bootloader-stamp/bootloade
 CMakeFiles/bootloader-complete: bootloader-prefix/src/bootloader-stamp/bootloader-configure
 CMakeFiles/bootloader-complete: bootloader-prefix/src/bootloader-stamp/bootloader-build
 CMakeFiles/bootloader-complete: bootloader-prefix/src/bootloader-stamp/bootloader-install
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Completed 'bootloader'"
-	C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -E make_directory C:/Users/pawel/Desktop/Grant/Project/firmware/CMake/CMakeFiles
-	C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -E touch C:/Users/pawel/Desktop/Grant/Project/firmware/CMake/CMakeFiles/bootloader-complete
-	C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -E touch C:/Users/pawel/Desktop/Grant/Project/firmware/CMake/bootloader-prefix/src/bootloader-stamp/bootloader-done
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Completed 'bootloader'"
+	C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -E make_directory C:/Users/pawel/Desktop/Grant/Project/firmware/CodeB/CMakeFiles
+	C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -E touch C:/Users/pawel/Desktop/Grant/Project/firmware/CodeB/CMakeFiles/bootloader-complete
+	C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -E touch C:/Users/pawel/Desktop/Grant/Project/firmware/CodeB/bootloader-prefix/src/bootloader-stamp/bootloader-done
 
 bootloader-prefix/src/bootloader-stamp/bootloader-install: bootloader-prefix/src/bootloader-stamp/bootloader-build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "No install step for 'bootloader'"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\bootloader && C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -E echo_append
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\bootloader && C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -E touch C:/Users/pawel/Desktop/Grant/Project/firmware/CMake/bootloader-prefix/src/bootloader-stamp/bootloader-install
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "No install step for 'bootloader'"
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\bootloader && C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -E echo_append
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\bootloader && C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -E touch C:/Users/pawel/Desktop/Grant/Project/firmware/CodeB/bootloader-prefix/src/bootloader-stamp/bootloader-install
 
 bootloader-prefix/src/bootloader-stamp/bootloader-mkdir:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Creating directories for 'bootloader'"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Creating directories for 'bootloader'"
 	C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -E make_directory C:/Users/pawel/Desktop/esp-idf/components/bootloader/subproject
-	C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -E make_directory C:/Users/pawel/Desktop/Grant/Project/firmware/CMake/bootloader
-	C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -E make_directory C:/Users/pawel/Desktop/Grant/Project/firmware/CMake/bootloader-prefix
-	C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -E make_directory C:/Users/pawel/Desktop/Grant/Project/firmware/CMake/bootloader-prefix/tmp
-	C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -E make_directory C:/Users/pawel/Desktop/Grant/Project/firmware/CMake/bootloader-prefix/src/bootloader-stamp
-	C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -E make_directory C:/Users/pawel/Desktop/Grant/Project/firmware/CMake/bootloader-prefix/src
-	C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -E touch C:/Users/pawel/Desktop/Grant/Project/firmware/CMake/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir
+	C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -E make_directory C:/Users/pawel/Desktop/Grant/Project/firmware/CodeB/bootloader
+	C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -E make_directory C:/Users/pawel/Desktop/Grant/Project/firmware/CodeB/bootloader-prefix
+	C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -E make_directory C:/Users/pawel/Desktop/Grant/Project/firmware/CodeB/bootloader-prefix/tmp
+	C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -E make_directory C:/Users/pawel/Desktop/Grant/Project/firmware/CodeB/bootloader-prefix/src/bootloader-stamp
+	C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -E make_directory C:/Users/pawel/Desktop/Grant/Project/firmware/CodeB/bootloader-prefix/src
+	C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -E touch C:/Users/pawel/Desktop/Grant/Project/firmware/CodeB/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir
 
 bootloader-prefix/src/bootloader-stamp/bootloader-download: bootloader-prefix/src/bootloader-stamp/bootloader-mkdir
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "No download step for 'bootloader'"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "No download step for 'bootloader'"
 	C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -E echo_append
-	C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -E touch C:/Users/pawel/Desktop/Grant/Project/firmware/CMake/bootloader-prefix/src/bootloader-stamp/bootloader-download
+	C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -E touch C:/Users/pawel/Desktop/Grant/Project/firmware/CodeB/bootloader-prefix/src/bootloader-stamp/bootloader-download
 
 bootloader-prefix/src/bootloader-stamp/bootloader-update: bootloader-prefix/src/bootloader-stamp/bootloader-download
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "No update step for 'bootloader'"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "No update step for 'bootloader'"
 	C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -E echo_append
-	C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -E touch C:/Users/pawel/Desktop/Grant/Project/firmware/CMake/bootloader-prefix/src/bootloader-stamp/bootloader-update
+	C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -E touch C:/Users/pawel/Desktop/Grant/Project/firmware/CodeB/bootloader-prefix/src/bootloader-stamp/bootloader-update
 
 bootloader-prefix/src/bootloader-stamp/bootloader-patch: bootloader-prefix/src/bootloader-stamp/bootloader-download
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "No patch step for 'bootloader'"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "No patch step for 'bootloader'"
 	C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -E echo_append
-	C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -E touch C:/Users/pawel/Desktop/Grant/Project/firmware/CMake/bootloader-prefix/src/bootloader-stamp/bootloader-patch
+	C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -E touch C:/Users/pawel/Desktop/Grant/Project/firmware/CodeB/bootloader-prefix/src/bootloader-stamp/bootloader-patch
 
 bootloader-prefix/src/bootloader-stamp/bootloader-configure: bootloader-prefix/tmp/bootloader-cfgcmd.txt
 bootloader-prefix/src/bootloader-stamp/bootloader-configure: bootloader-prefix/src/bootloader-stamp/bootloader-update
 bootloader-prefix/src/bootloader-stamp/bootloader-configure: bootloader-prefix/src/bootloader-stamp/bootloader-patch
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Performing configure step for 'bootloader'"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\bootloader && C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -DSDKCONFIG=C:/Users/pawel/Desktop/Grant/Project/firmware/sdkconfig -DIDF_PATH=C:/Users/pawel/Desktop/esp-idf -DIDF_TARGET=esp32 -DPYTHON=python -DPYTHON_DEPS_CHECKED=1 -DEXTRA_COMPONENT_DIRS=C:/Users/pawel/Desktop/esp-idf/components/bootloader -DLEGACY_INCLUDE_COMMON_HEADERS= "-GCodeBlocks - MinGW Makefiles" C:/Users/pawel/Desktop/esp-idf/components/bootloader/subproject
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\bootloader && C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -E touch C:/Users/pawel/Desktop/Grant/Project/firmware/CMake/bootloader-prefix/src/bootloader-stamp/bootloader-configure
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Performing configure step for 'bootloader'"
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\bootloader && C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -DSDKCONFIG=C:/Users/pawel/Desktop/Grant/Project/firmware/sdkconfig -DIDF_PATH=C:/Users/pawel/Desktop/esp-idf -DIDF_TARGET=esp32 -DPYTHON=python -DPYTHON_DEPS_CHECKED=1 -DEXTRA_COMPONENT_DIRS=C:/Users/pawel/Desktop/esp-idf/components/bootloader -DLEGACY_INCLUDE_COMMON_HEADERS= "-GCodeBlocks - MinGW Makefiles" C:/Users/pawel/Desktop/esp-idf/components/bootloader/subproject
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\bootloader && C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -E touch C:/Users/pawel/Desktop/Grant/Project/firmware/CodeB/bootloader-prefix/src/bootloader-stamp/bootloader-configure
 
 bootloader-prefix/src/bootloader-stamp/bootloader-build: bootloader-prefix/src/bootloader-stamp/bootloader-configure
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Performing build step for 'bootloader'"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\bootloader && $(MAKE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Performing build step for 'bootloader'"
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\bootloader && $(MAKE)
 
 bootloader: CMakeFiles/bootloader
 bootloader: CMakeFiles/bootloader-complete
@@ -132,6 +132,6 @@ CMakeFiles/bootloader.dir/clean:
 .PHONY : CMakeFiles/bootloader.dir/clean
 
 CMakeFiles/bootloader.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\Grant\Project\firmware\CMake C:\Users\pawel\Desktop\Grant\Project\firmware\CMake C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles\bootloader.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles\bootloader.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/bootloader.dir/depend
 

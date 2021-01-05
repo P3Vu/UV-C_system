@@ -45,7 +45,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CMake
+CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB
 
 # Include any dependencies generated for this target.
 include esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/depend.make
@@ -58,94 +58,94 @@ include esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/flags.make
 
 esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/coexist.c.obj: esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/flags.make
 esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/coexist.c.obj: C:/Users/pawel/Desktop/esp-idf/components/esp_wifi/src/coexist.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/coexist.c.obj"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\esp_wifi && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\__idf_esp_wifi.dir\src\coexist.c.obj   -c C:\Users\pawel\Desktop\esp-idf\components\esp_wifi\src\coexist.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/coexist.c.obj"
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\esp_wifi && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\__idf_esp_wifi.dir\src\coexist.c.obj   -c C:\Users\pawel\Desktop\esp-idf\components\esp_wifi\src\coexist.c
 
 esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/coexist.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_esp_wifi.dir/src/coexist.c.i"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\esp_wifi && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\pawel\Desktop\esp-idf\components\esp_wifi\src\coexist.c > CMakeFiles\__idf_esp_wifi.dir\src\coexist.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\esp_wifi && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\pawel\Desktop\esp-idf\components\esp_wifi\src\coexist.c > CMakeFiles\__idf_esp_wifi.dir\src\coexist.c.i
 
 esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/coexist.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_esp_wifi.dir/src/coexist.c.s"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\esp_wifi && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\pawel\Desktop\esp-idf\components\esp_wifi\src\coexist.c -o CMakeFiles\__idf_esp_wifi.dir\src\coexist.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\esp_wifi && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\pawel\Desktop\esp-idf\components\esp_wifi\src\coexist.c -o CMakeFiles\__idf_esp_wifi.dir\src\coexist.c.s
 
 esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/lib_printf.c.obj: esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/flags.make
 esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/lib_printf.c.obj: C:/Users/pawel/Desktop/esp-idf/components/esp_wifi/src/lib_printf.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/lib_printf.c.obj"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\esp_wifi && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\__idf_esp_wifi.dir\src\lib_printf.c.obj   -c C:\Users\pawel\Desktop\esp-idf\components\esp_wifi\src\lib_printf.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/lib_printf.c.obj"
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\esp_wifi && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\__idf_esp_wifi.dir\src\lib_printf.c.obj   -c C:\Users\pawel\Desktop\esp-idf\components\esp_wifi\src\lib_printf.c
 
 esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/lib_printf.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_esp_wifi.dir/src/lib_printf.c.i"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\esp_wifi && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\pawel\Desktop\esp-idf\components\esp_wifi\src\lib_printf.c > CMakeFiles\__idf_esp_wifi.dir\src\lib_printf.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\esp_wifi && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\pawel\Desktop\esp-idf\components\esp_wifi\src\lib_printf.c > CMakeFiles\__idf_esp_wifi.dir\src\lib_printf.c.i
 
 esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/lib_printf.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_esp_wifi.dir/src/lib_printf.c.s"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\esp_wifi && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\pawel\Desktop\esp-idf\components\esp_wifi\src\lib_printf.c -o CMakeFiles\__idf_esp_wifi.dir\src\lib_printf.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\esp_wifi && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\pawel\Desktop\esp-idf\components\esp_wifi\src\lib_printf.c -o CMakeFiles\__idf_esp_wifi.dir\src\lib_printf.c.s
 
 esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/mesh_event.c.obj: esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/flags.make
 esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/mesh_event.c.obj: C:/Users/pawel/Desktop/esp-idf/components/esp_wifi/src/mesh_event.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/mesh_event.c.obj"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\esp_wifi && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\__idf_esp_wifi.dir\src\mesh_event.c.obj   -c C:\Users\pawel\Desktop\esp-idf\components\esp_wifi\src\mesh_event.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/mesh_event.c.obj"
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\esp_wifi && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\__idf_esp_wifi.dir\src\mesh_event.c.obj   -c C:\Users\pawel\Desktop\esp-idf\components\esp_wifi\src\mesh_event.c
 
 esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/mesh_event.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_esp_wifi.dir/src/mesh_event.c.i"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\esp_wifi && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\pawel\Desktop\esp-idf\components\esp_wifi\src\mesh_event.c > CMakeFiles\__idf_esp_wifi.dir\src\mesh_event.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\esp_wifi && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\pawel\Desktop\esp-idf\components\esp_wifi\src\mesh_event.c > CMakeFiles\__idf_esp_wifi.dir\src\mesh_event.c.i
 
 esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/mesh_event.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_esp_wifi.dir/src/mesh_event.c.s"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\esp_wifi && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\pawel\Desktop\esp-idf\components\esp_wifi\src\mesh_event.c -o CMakeFiles\__idf_esp_wifi.dir\src\mesh_event.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\esp_wifi && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\pawel\Desktop\esp-idf\components\esp_wifi\src\mesh_event.c -o CMakeFiles\__idf_esp_wifi.dir\src\mesh_event.c.s
 
 esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/phy_init.c.obj: esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/flags.make
 esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/phy_init.c.obj: C:/Users/pawel/Desktop/esp-idf/components/esp_wifi/src/phy_init.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/phy_init.c.obj"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\esp_wifi && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\__idf_esp_wifi.dir\src\phy_init.c.obj   -c C:\Users\pawel\Desktop\esp-idf\components\esp_wifi\src\phy_init.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/phy_init.c.obj"
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\esp_wifi && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\__idf_esp_wifi.dir\src\phy_init.c.obj   -c C:\Users\pawel\Desktop\esp-idf\components\esp_wifi\src\phy_init.c
 
 esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/phy_init.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_esp_wifi.dir/src/phy_init.c.i"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\esp_wifi && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\pawel\Desktop\esp-idf\components\esp_wifi\src\phy_init.c > CMakeFiles\__idf_esp_wifi.dir\src\phy_init.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\esp_wifi && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\pawel\Desktop\esp-idf\components\esp_wifi\src\phy_init.c > CMakeFiles\__idf_esp_wifi.dir\src\phy_init.c.i
 
 esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/phy_init.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_esp_wifi.dir/src/phy_init.c.s"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\esp_wifi && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\pawel\Desktop\esp-idf\components\esp_wifi\src\phy_init.c -o CMakeFiles\__idf_esp_wifi.dir\src\phy_init.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\esp_wifi && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\pawel\Desktop\esp-idf\components\esp_wifi\src\phy_init.c -o CMakeFiles\__idf_esp_wifi.dir\src\phy_init.c.s
 
 esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/smartconfig.c.obj: esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/flags.make
 esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/smartconfig.c.obj: C:/Users/pawel/Desktop/esp-idf/components/esp_wifi/src/smartconfig.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/smartconfig.c.obj"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\esp_wifi && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\__idf_esp_wifi.dir\src\smartconfig.c.obj   -c C:\Users\pawel\Desktop\esp-idf\components\esp_wifi\src\smartconfig.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/smartconfig.c.obj"
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\esp_wifi && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\__idf_esp_wifi.dir\src\smartconfig.c.obj   -c C:\Users\pawel\Desktop\esp-idf\components\esp_wifi\src\smartconfig.c
 
 esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/smartconfig.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_esp_wifi.dir/src/smartconfig.c.i"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\esp_wifi && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\pawel\Desktop\esp-idf\components\esp_wifi\src\smartconfig.c > CMakeFiles\__idf_esp_wifi.dir\src\smartconfig.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\esp_wifi && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\pawel\Desktop\esp-idf\components\esp_wifi\src\smartconfig.c > CMakeFiles\__idf_esp_wifi.dir\src\smartconfig.c.i
 
 esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/smartconfig.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_esp_wifi.dir/src/smartconfig.c.s"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\esp_wifi && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\pawel\Desktop\esp-idf\components\esp_wifi\src\smartconfig.c -o CMakeFiles\__idf_esp_wifi.dir\src\smartconfig.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\esp_wifi && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\pawel\Desktop\esp-idf\components\esp_wifi\src\smartconfig.c -o CMakeFiles\__idf_esp_wifi.dir\src\smartconfig.c.s
 
 esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/smartconfig_ack.c.obj: esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/flags.make
 esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/smartconfig_ack.c.obj: C:/Users/pawel/Desktop/esp-idf/components/esp_wifi/src/smartconfig_ack.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/smartconfig_ack.c.obj"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\esp_wifi && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\__idf_esp_wifi.dir\src\smartconfig_ack.c.obj   -c C:\Users\pawel\Desktop\esp-idf\components\esp_wifi\src\smartconfig_ack.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/smartconfig_ack.c.obj"
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\esp_wifi && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\__idf_esp_wifi.dir\src\smartconfig_ack.c.obj   -c C:\Users\pawel\Desktop\esp-idf\components\esp_wifi\src\smartconfig_ack.c
 
 esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/smartconfig_ack.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_esp_wifi.dir/src/smartconfig_ack.c.i"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\esp_wifi && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\pawel\Desktop\esp-idf\components\esp_wifi\src\smartconfig_ack.c > CMakeFiles\__idf_esp_wifi.dir\src\smartconfig_ack.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\esp_wifi && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\pawel\Desktop\esp-idf\components\esp_wifi\src\smartconfig_ack.c > CMakeFiles\__idf_esp_wifi.dir\src\smartconfig_ack.c.i
 
 esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/smartconfig_ack.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_esp_wifi.dir/src/smartconfig_ack.c.s"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\esp_wifi && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\pawel\Desktop\esp-idf\components\esp_wifi\src\smartconfig_ack.c -o CMakeFiles\__idf_esp_wifi.dir\src\smartconfig_ack.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\esp_wifi && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\pawel\Desktop\esp-idf\components\esp_wifi\src\smartconfig_ack.c -o CMakeFiles\__idf_esp_wifi.dir\src\smartconfig_ack.c.s
 
 esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/wifi_init.c.obj: esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/flags.make
 esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/wifi_init.c.obj: C:/Users/pawel/Desktop/esp-idf/components/esp_wifi/src/wifi_init.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/wifi_init.c.obj"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\esp_wifi && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\__idf_esp_wifi.dir\src\wifi_init.c.obj   -c C:\Users\pawel\Desktop\esp-idf\components\esp_wifi\src\wifi_init.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/wifi_init.c.obj"
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\esp_wifi && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\__idf_esp_wifi.dir\src\wifi_init.c.obj   -c C:\Users\pawel\Desktop\esp-idf\components\esp_wifi\src\wifi_init.c
 
 esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/wifi_init.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_esp_wifi.dir/src/wifi_init.c.i"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\esp_wifi && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\pawel\Desktop\esp-idf\components\esp_wifi\src\wifi_init.c > CMakeFiles\__idf_esp_wifi.dir\src\wifi_init.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\esp_wifi && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\pawel\Desktop\esp-idf\components\esp_wifi\src\wifi_init.c > CMakeFiles\__idf_esp_wifi.dir\src\wifi_init.c.i
 
 esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/wifi_init.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_esp_wifi.dir/src/wifi_init.c.s"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\esp_wifi && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\pawel\Desktop\esp-idf\components\esp_wifi\src\wifi_init.c -o CMakeFiles\__idf_esp_wifi.dir\src\wifi_init.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\esp_wifi && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\pawel\Desktop\esp-idf\components\esp_wifi\src\wifi_init.c -o CMakeFiles\__idf_esp_wifi.dir\src\wifi_init.c.s
 
 # Object files for target __idf_esp_wifi
 __idf_esp_wifi_OBJECTS = \
@@ -169,9 +169,9 @@ esp-idf/esp_wifi/libesp_wifi.a: esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/s
 esp-idf/esp_wifi/libesp_wifi.a: esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/wifi_init.c.obj
 esp-idf/esp_wifi/libesp_wifi.a: esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/build.make
 esp-idf/esp_wifi/libesp_wifi.a: esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library libesp_wifi.a"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\esp_wifi && $(CMAKE_COMMAND) -P CMakeFiles\__idf_esp_wifi.dir\cmake_clean_target.cmake
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\esp_wifi && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\__idf_esp_wifi.dir\link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library libesp_wifi.a"
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\esp_wifi && $(CMAKE_COMMAND) -P CMakeFiles\__idf_esp_wifi.dir\cmake_clean_target.cmake
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\esp_wifi && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\__idf_esp_wifi.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/build: esp-idf/esp_wifi/libesp_wifi.a
@@ -179,10 +179,10 @@ esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/build: esp-idf/esp_wifi/libesp_wi
 .PHONY : esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/build
 
 esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/clean:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\esp_wifi && $(CMAKE_COMMAND) -P CMakeFiles\__idf_esp_wifi.dir\cmake_clean.cmake
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\esp_wifi && $(CMAKE_COMMAND) -P CMakeFiles\__idf_esp_wifi.dir\cmake_clean.cmake
 .PHONY : esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/clean
 
 esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\esp-idf\components\esp_wifi C:\Users\pawel\Desktop\Grant\Project\firmware\CMake C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\esp_wifi C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\esp_wifi\CMakeFiles\__idf_esp_wifi.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\esp-idf\components\esp_wifi C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\esp_wifi C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\esp_wifi\CMakeFiles\__idf_esp_wifi.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/depend
 

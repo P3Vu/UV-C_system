@@ -45,7 +45,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CMake
+CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB
 
 # Utility rule file for gen_project_binary.
 
@@ -56,10 +56,10 @@ CMakeFiles/gen_project_binary: .bin_timestamp
 
 
 .bin_timestamp: UV.elf
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating binary image from built executable"
-	python C:/Users/pawel/Desktop/esp-idf/components/esptool_py/esptool/esptool.py --chip esp32 elf2image --flash_mode dio --flash_freq 40m --flash_size 2MB --elf-sha256-offset 0xb0 -o C:/Users/pawel/Desktop/Grant/Project/firmware/CMake/UV.bin UV.elf
-	C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -E echo "Generated C:/Users/pawel/Desktop/Grant/Project/firmware/CMake/UV.bin"
-	C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -E md5sum C:/Users/pawel/Desktop/Grant/Project/firmware/CMake/UV.bin > C:/Users/pawel/Desktop/Grant/Project/firmware/CMake/.bin_timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating binary image from built executable"
+	python C:/Users/pawel/Desktop/esp-idf/components/esptool_py/esptool/esptool.py --chip esp32 elf2image --flash_mode dio --flash_freq 40m --flash_size 2MB --elf-sha256-offset 0xb0 -o C:/Users/pawel/Desktop/Grant/Project/firmware/CodeB/UV.bin UV.elf
+	C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -E echo "Generated C:/Users/pawel/Desktop/Grant/Project/firmware/CodeB/UV.bin"
+	C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -E md5sum C:/Users/pawel/Desktop/Grant/Project/firmware/CodeB/UV.bin > C:/Users/pawel/Desktop/Grant/Project/firmware/CodeB/.bin_timestamp
 
 gen_project_binary: CMakeFiles/gen_project_binary
 gen_project_binary: .bin_timestamp
@@ -77,6 +77,6 @@ CMakeFiles/gen_project_binary.dir/clean:
 .PHONY : CMakeFiles/gen_project_binary.dir/clean
 
 CMakeFiles/gen_project_binary.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\Grant\Project\firmware\CMake C:\Users\pawel\Desktop\Grant\Project\firmware\CMake C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles\gen_project_binary.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles\gen_project_binary.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/gen_project_binary.dir/depend
 

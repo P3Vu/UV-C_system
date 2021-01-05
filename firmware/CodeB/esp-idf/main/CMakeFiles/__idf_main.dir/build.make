@@ -45,7 +45,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CMake
+CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB
 
 # Include any dependencies generated for this target.
 include esp-idf/main/CMakeFiles/__idf_main.dir/depend.make
@@ -58,30 +58,135 @@ include esp-idf/main/CMakeFiles/__idf_main.dir/flags.make
 
 esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj: esp-idf/main/CMakeFiles/__idf_main.dir/flags.make
 esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj: ../main/main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\main && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\__idf_main.dir\main.c.obj   -c C:\Users\pawel\Desktop\Grant\Project\firmware\main\main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj"
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\main && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\__idf_main.dir\main.c.obj   -c C:\Users\pawel\Desktop\Grant\Project\firmware\main\main.c
 
 esp-idf/main/CMakeFiles/__idf_main.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_main.dir/main.c.i"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\main && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\pawel\Desktop\Grant\Project\firmware\main\main.c > CMakeFiles\__idf_main.dir\main.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\main && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\pawel\Desktop\Grant\Project\firmware\main\main.c > CMakeFiles\__idf_main.dir\main.c.i
 
 esp-idf/main/CMakeFiles/__idf_main.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_main.dir/main.c.s"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\main && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\pawel\Desktop\Grant\Project\firmware\main\main.c -o CMakeFiles\__idf_main.dir\main.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\main && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\pawel\Desktop\Grant\Project\firmware\main\main.c -o CMakeFiles\__idf_main.dir\main.c.s
+
+esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/myI2C/my_i2c.c.obj: esp-idf/main/CMakeFiles/__idf_main.dir/flags.make
+esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/myI2C/my_i2c.c.obj: ../libs/myI2C/my_i2c.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/myI2C/my_i2c.c.obj"
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\main && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\__idf_main.dir\__\libs\myI2C\my_i2c.c.obj   -c C:\Users\pawel\Desktop\Grant\Project\firmware\libs\myI2C\my_i2c.c
+
+esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/myI2C/my_i2c.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_main.dir/__/libs/myI2C/my_i2c.c.i"
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\main && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\pawel\Desktop\Grant\Project\firmware\libs\myI2C\my_i2c.c > CMakeFiles\__idf_main.dir\__\libs\myI2C\my_i2c.c.i
+
+esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/myI2C/my_i2c.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_main.dir/__/libs/myI2C/my_i2c.c.s"
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\main && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\pawel\Desktop\Grant\Project\firmware\libs\myI2C\my_i2c.c -o CMakeFiles\__idf_main.dir\__\libs\myI2C\my_i2c.c.s
+
+esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/myHTTP/my_http.c.obj: esp-idf/main/CMakeFiles/__idf_main.dir/flags.make
+esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/myHTTP/my_http.c.obj: ../libs/myHTTP/my_http.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/myHTTP/my_http.c.obj"
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\main && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\__idf_main.dir\__\libs\myHTTP\my_http.c.obj   -c C:\Users\pawel\Desktop\Grant\Project\firmware\libs\myHTTP\my_http.c
+
+esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/myHTTP/my_http.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_main.dir/__/libs/myHTTP/my_http.c.i"
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\main && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\pawel\Desktop\Grant\Project\firmware\libs\myHTTP\my_http.c > CMakeFiles\__idf_main.dir\__\libs\myHTTP\my_http.c.i
+
+esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/myHTTP/my_http.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_main.dir/__/libs/myHTTP/my_http.c.s"
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\main && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\pawel\Desktop\Grant\Project\firmware\libs\myHTTP\my_http.c -o CMakeFiles\__idf_main.dir\__\libs\myHTTP\my_http.c.s
+
+esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/cJSON/cJSON.c.obj: esp-idf/main/CMakeFiles/__idf_main.dir/flags.make
+esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/cJSON/cJSON.c.obj: ../libs/cJSON/cJSON.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/cJSON/cJSON.c.obj"
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\main && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\__idf_main.dir\__\libs\cJSON\cJSON.c.obj   -c C:\Users\pawel\Desktop\Grant\Project\firmware\libs\cJSON\cJSON.c
+
+esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/cJSON/cJSON.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_main.dir/__/libs/cJSON/cJSON.c.i"
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\main && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\pawel\Desktop\Grant\Project\firmware\libs\cJSON\cJSON.c > CMakeFiles\__idf_main.dir\__\libs\cJSON\cJSON.c.i
+
+esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/cJSON/cJSON.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_main.dir/__/libs/cJSON/cJSON.c.s"
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\main && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\pawel\Desktop\Grant\Project\firmware\libs\cJSON\cJSON.c -o CMakeFiles\__idf_main.dir\__\libs\cJSON\cJSON.c.s
+
+esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/myJSON/my_JSON.c.obj: esp-idf/main/CMakeFiles/__idf_main.dir/flags.make
+esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/myJSON/my_JSON.c.obj: ../libs/myJSON/my_JSON.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/myJSON/my_JSON.c.obj"
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\main && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\__idf_main.dir\__\libs\myJSON\my_JSON.c.obj   -c C:\Users\pawel\Desktop\Grant\Project\firmware\libs\myJSON\my_JSON.c
+
+esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/myJSON/my_JSON.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_main.dir/__/libs/myJSON/my_JSON.c.i"
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\main && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\pawel\Desktop\Grant\Project\firmware\libs\myJSON\my_JSON.c > CMakeFiles\__idf_main.dir\__\libs\myJSON\my_JSON.c.i
+
+esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/myJSON/my_JSON.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_main.dir/__/libs/myJSON/my_JSON.c.s"
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\main && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\pawel\Desktop\Grant\Project\firmware\libs\myJSON\my_JSON.c -o CMakeFiles\__idf_main.dir\__\libs\myJSON\my_JSON.c.s
+
+esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/MAX44009/MAX44009.c.obj: esp-idf/main/CMakeFiles/__idf_main.dir/flags.make
+esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/MAX44009/MAX44009.c.obj: ../libs/MAX44009/MAX44009.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/MAX44009/MAX44009.c.obj"
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\main && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\__idf_main.dir\__\libs\MAX44009\MAX44009.c.obj   -c C:\Users\pawel\Desktop\Grant\Project\firmware\libs\MAX44009\MAX44009.c
+
+esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/MAX44009/MAX44009.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_main.dir/__/libs/MAX44009/MAX44009.c.i"
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\main && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\pawel\Desktop\Grant\Project\firmware\libs\MAX44009\MAX44009.c > CMakeFiles\__idf_main.dir\__\libs\MAX44009\MAX44009.c.i
+
+esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/MAX44009/MAX44009.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_main.dir/__/libs/MAX44009/MAX44009.c.s"
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\main && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\pawel\Desktop\Grant\Project\firmware\libs\MAX44009\MAX44009.c -o CMakeFiles\__idf_main.dir\__\libs\MAX44009\MAX44009.c.s
+
+esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/ML8511/ML8511.c.obj: esp-idf/main/CMakeFiles/__idf_main.dir/flags.make
+esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/ML8511/ML8511.c.obj: ../libs/ML8511/ML8511.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/ML8511/ML8511.c.obj"
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\main && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\__idf_main.dir\__\libs\ML8511\ML8511.c.obj   -c C:\Users\pawel\Desktop\Grant\Project\firmware\libs\ML8511\ML8511.c
+
+esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/ML8511/ML8511.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_main.dir/__/libs/ML8511/ML8511.c.i"
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\main && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\pawel\Desktop\Grant\Project\firmware\libs\ML8511\ML8511.c > CMakeFiles\__idf_main.dir\__\libs\ML8511\ML8511.c.i
+
+esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/ML8511/ML8511.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_main.dir/__/libs/ML8511/ML8511.c.s"
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\main && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\pawel\Desktop\Grant\Project\firmware\libs\ML8511\ML8511.c -o CMakeFiles\__idf_main.dir\__\libs\ML8511\ML8511.c.s
+
+esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/mySNTP/my_SNTP.c.obj: esp-idf/main/CMakeFiles/__idf_main.dir/flags.make
+esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/mySNTP/my_SNTP.c.obj: ../libs/mySNTP/my_SNTP.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/mySNTP/my_SNTP.c.obj"
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\main && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\__idf_main.dir\__\libs\mySNTP\my_SNTP.c.obj   -c C:\Users\pawel\Desktop\Grant\Project\firmware\libs\mySNTP\my_SNTP.c
+
+esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/mySNTP/my_SNTP.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_main.dir/__/libs/mySNTP/my_SNTP.c.i"
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\main && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\pawel\Desktop\Grant\Project\firmware\libs\mySNTP\my_SNTP.c > CMakeFiles\__idf_main.dir\__\libs\mySNTP\my_SNTP.c.i
+
+esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/mySNTP/my_SNTP.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_main.dir/__/libs/mySNTP/my_SNTP.c.s"
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\main && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\pawel\Desktop\Grant\Project\firmware\libs\mySNTP\my_SNTP.c -o CMakeFiles\__idf_main.dir\__\libs\mySNTP\my_SNTP.c.s
 
 # Object files for target __idf_main
 __idf_main_OBJECTS = \
-"CMakeFiles/__idf_main.dir/main.c.obj"
+"CMakeFiles/__idf_main.dir/main.c.obj" \
+"CMakeFiles/__idf_main.dir/__/libs/myI2C/my_i2c.c.obj" \
+"CMakeFiles/__idf_main.dir/__/libs/myHTTP/my_http.c.obj" \
+"CMakeFiles/__idf_main.dir/__/libs/cJSON/cJSON.c.obj" \
+"CMakeFiles/__idf_main.dir/__/libs/myJSON/my_JSON.c.obj" \
+"CMakeFiles/__idf_main.dir/__/libs/MAX44009/MAX44009.c.obj" \
+"CMakeFiles/__idf_main.dir/__/libs/ML8511/ML8511.c.obj" \
+"CMakeFiles/__idf_main.dir/__/libs/mySNTP/my_SNTP.c.obj"
 
 # External object files for target __idf_main
 __idf_main_EXTERNAL_OBJECTS =
 
 esp-idf/main/libmain.a: esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+esp-idf/main/libmain.a: esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/myI2C/my_i2c.c.obj
+esp-idf/main/libmain.a: esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/myHTTP/my_http.c.obj
+esp-idf/main/libmain.a: esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/cJSON/cJSON.c.obj
+esp-idf/main/libmain.a: esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/myJSON/my_JSON.c.obj
+esp-idf/main/libmain.a: esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/MAX44009/MAX44009.c.obj
+esp-idf/main/libmain.a: esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/ML8511/ML8511.c.obj
+esp-idf/main/libmain.a: esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/mySNTP/my_SNTP.c.obj
 esp-idf/main/libmain.a: esp-idf/main/CMakeFiles/__idf_main.dir/build.make
 esp-idf/main/libmain.a: esp-idf/main/CMakeFiles/__idf_main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libmain.a"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\main && $(CMAKE_COMMAND) -P CMakeFiles\__idf_main.dir\cmake_clean_target.cmake
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\main && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\__idf_main.dir\link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX static library libmain.a"
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\main && $(CMAKE_COMMAND) -P CMakeFiles\__idf_main.dir\cmake_clean_target.cmake
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\main && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\__idf_main.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 esp-idf/main/CMakeFiles/__idf_main.dir/build: esp-idf/main/libmain.a
@@ -89,10 +194,10 @@ esp-idf/main/CMakeFiles/__idf_main.dir/build: esp-idf/main/libmain.a
 .PHONY : esp-idf/main/CMakeFiles/__idf_main.dir/build
 
 esp-idf/main/CMakeFiles/__idf_main.dir/clean:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\main && $(CMAKE_COMMAND) -P CMakeFiles\__idf_main.dir\cmake_clean.cmake
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\main && $(CMAKE_COMMAND) -P CMakeFiles\__idf_main.dir\cmake_clean.cmake
 .PHONY : esp-idf/main/CMakeFiles/__idf_main.dir/clean
 
 esp-idf/main/CMakeFiles/__idf_main.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\Grant\Project\firmware\main C:\Users\pawel\Desktop\Grant\Project\firmware\CMake C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\main C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\main\CMakeFiles\__idf_main.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\Grant\Project\firmware\main C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\main C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\main\CMakeFiles\__idf_main.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : esp-idf/main/CMakeFiles/__idf_main.dir/depend
 

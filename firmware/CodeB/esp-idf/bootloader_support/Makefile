@@ -50,7 +50,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CMake
+CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -125,14 +125,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\bootloader_support\CMakeFiles\progress.marks
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/bootloader_support/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles 0
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\bootloader_support\CMakeFiles\progress.marks
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/bootloader_support/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/bootloader_support/clean
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/bootloader_support/clean
 .PHONY : clean
 
 # The main clean target
@@ -142,22 +142,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/bootloader_support/preinstall
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/bootloader_support/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/bootloader_support/preinstall
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/bootloader_support/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/rule:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/rule
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/rule
 .PHONY : esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/rule
 
 # Convenience name for target.
@@ -167,7 +167,7 @@ __idf_bootloader_support: esp-idf/bootloader_support/CMakeFiles/__idf_bootloader
 
 # fast build rule for target.
 __idf_bootloader_support/fast:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build
 .PHONY : __idf_bootloader_support/fast
 
 src/bootloader_clock.obj: src/bootloader_clock.c.obj
@@ -176,7 +176,7 @@ src/bootloader_clock.obj: src/bootloader_clock.c.obj
 
 # target to build an object file
 src/bootloader_clock.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_clock.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_clock.c.obj
 .PHONY : src/bootloader_clock.c.obj
 
 src/bootloader_clock.i: src/bootloader_clock.c.i
@@ -185,7 +185,7 @@ src/bootloader_clock.i: src/bootloader_clock.c.i
 
 # target to preprocess a source file
 src/bootloader_clock.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_clock.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_clock.c.i
 .PHONY : src/bootloader_clock.c.i
 
 src/bootloader_clock.s: src/bootloader_clock.c.s
@@ -194,7 +194,7 @@ src/bootloader_clock.s: src/bootloader_clock.c.s
 
 # target to generate assembly for a file
 src/bootloader_clock.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_clock.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_clock.c.s
 .PHONY : src/bootloader_clock.c.s
 
 src/bootloader_common.obj: src/bootloader_common.c.obj
@@ -203,7 +203,7 @@ src/bootloader_common.obj: src/bootloader_common.c.obj
 
 # target to build an object file
 src/bootloader_common.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_common.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_common.c.obj
 .PHONY : src/bootloader_common.c.obj
 
 src/bootloader_common.i: src/bootloader_common.c.i
@@ -212,7 +212,7 @@ src/bootloader_common.i: src/bootloader_common.c.i
 
 # target to preprocess a source file
 src/bootloader_common.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_common.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_common.c.i
 .PHONY : src/bootloader_common.c.i
 
 src/bootloader_common.s: src/bootloader_common.c.s
@@ -221,7 +221,7 @@ src/bootloader_common.s: src/bootloader_common.c.s
 
 # target to generate assembly for a file
 src/bootloader_common.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_common.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_common.c.s
 .PHONY : src/bootloader_common.c.s
 
 src/bootloader_flash.obj: src/bootloader_flash.c.obj
@@ -230,7 +230,7 @@ src/bootloader_flash.obj: src/bootloader_flash.c.obj
 
 # target to build an object file
 src/bootloader_flash.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_flash.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_flash.c.obj
 .PHONY : src/bootloader_flash.c.obj
 
 src/bootloader_flash.i: src/bootloader_flash.c.i
@@ -239,7 +239,7 @@ src/bootloader_flash.i: src/bootloader_flash.c.i
 
 # target to preprocess a source file
 src/bootloader_flash.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_flash.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_flash.c.i
 .PHONY : src/bootloader_flash.c.i
 
 src/bootloader_flash.s: src/bootloader_flash.c.s
@@ -248,7 +248,7 @@ src/bootloader_flash.s: src/bootloader_flash.c.s
 
 # target to generate assembly for a file
 src/bootloader_flash.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_flash.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_flash.c.s
 .PHONY : src/bootloader_flash.c.s
 
 src/bootloader_flash_config.obj: src/bootloader_flash_config.c.obj
@@ -257,7 +257,7 @@ src/bootloader_flash_config.obj: src/bootloader_flash_config.c.obj
 
 # target to build an object file
 src/bootloader_flash_config.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_flash_config.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_flash_config.c.obj
 .PHONY : src/bootloader_flash_config.c.obj
 
 src/bootloader_flash_config.i: src/bootloader_flash_config.c.i
@@ -266,7 +266,7 @@ src/bootloader_flash_config.i: src/bootloader_flash_config.c.i
 
 # target to preprocess a source file
 src/bootloader_flash_config.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_flash_config.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_flash_config.c.i
 .PHONY : src/bootloader_flash_config.c.i
 
 src/bootloader_flash_config.s: src/bootloader_flash_config.c.s
@@ -275,7 +275,7 @@ src/bootloader_flash_config.s: src/bootloader_flash_config.c.s
 
 # target to generate assembly for a file
 src/bootloader_flash_config.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_flash_config.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_flash_config.c.s
 .PHONY : src/bootloader_flash_config.c.s
 
 src/bootloader_random.obj: src/bootloader_random.c.obj
@@ -284,7 +284,7 @@ src/bootloader_random.obj: src/bootloader_random.c.obj
 
 # target to build an object file
 src/bootloader_random.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_random.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_random.c.obj
 .PHONY : src/bootloader_random.c.obj
 
 src/bootloader_random.i: src/bootloader_random.c.i
@@ -293,7 +293,7 @@ src/bootloader_random.i: src/bootloader_random.c.i
 
 # target to preprocess a source file
 src/bootloader_random.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_random.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_random.c.i
 .PHONY : src/bootloader_random.c.i
 
 src/bootloader_random.s: src/bootloader_random.c.s
@@ -302,7 +302,7 @@ src/bootloader_random.s: src/bootloader_random.c.s
 
 # target to generate assembly for a file
 src/bootloader_random.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_random.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_random.c.s
 .PHONY : src/bootloader_random.c.s
 
 src/bootloader_utility.obj: src/bootloader_utility.c.obj
@@ -311,7 +311,7 @@ src/bootloader_utility.obj: src/bootloader_utility.c.obj
 
 # target to build an object file
 src/bootloader_utility.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_utility.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_utility.c.obj
 .PHONY : src/bootloader_utility.c.obj
 
 src/bootloader_utility.i: src/bootloader_utility.c.i
@@ -320,7 +320,7 @@ src/bootloader_utility.i: src/bootloader_utility.c.i
 
 # target to preprocess a source file
 src/bootloader_utility.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_utility.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_utility.c.i
 .PHONY : src/bootloader_utility.c.i
 
 src/bootloader_utility.s: src/bootloader_utility.c.s
@@ -329,7 +329,7 @@ src/bootloader_utility.s: src/bootloader_utility.c.s
 
 # target to generate assembly for a file
 src/bootloader_utility.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_utility.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_utility.c.s
 .PHONY : src/bootloader_utility.c.s
 
 src/esp_image_format.obj: src/esp_image_format.c.obj
@@ -338,7 +338,7 @@ src/esp_image_format.obj: src/esp_image_format.c.obj
 
 # target to build an object file
 src/esp_image_format.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp_image_format.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp_image_format.c.obj
 .PHONY : src/esp_image_format.c.obj
 
 src/esp_image_format.i: src/esp_image_format.c.i
@@ -347,7 +347,7 @@ src/esp_image_format.i: src/esp_image_format.c.i
 
 # target to preprocess a source file
 src/esp_image_format.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp_image_format.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp_image_format.c.i
 .PHONY : src/esp_image_format.c.i
 
 src/esp_image_format.s: src/esp_image_format.c.s
@@ -356,7 +356,7 @@ src/esp_image_format.s: src/esp_image_format.c.s
 
 # target to generate assembly for a file
 src/esp_image_format.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp_image_format.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp_image_format.c.s
 .PHONY : src/esp_image_format.c.s
 
 src/flash_encrypt.obj: src/flash_encrypt.c.obj
@@ -365,7 +365,7 @@ src/flash_encrypt.obj: src/flash_encrypt.c.obj
 
 # target to build an object file
 src/flash_encrypt.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_encrypt.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_encrypt.c.obj
 .PHONY : src/flash_encrypt.c.obj
 
 src/flash_encrypt.i: src/flash_encrypt.c.i
@@ -374,7 +374,7 @@ src/flash_encrypt.i: src/flash_encrypt.c.i
 
 # target to preprocess a source file
 src/flash_encrypt.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_encrypt.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_encrypt.c.i
 .PHONY : src/flash_encrypt.c.i
 
 src/flash_encrypt.s: src/flash_encrypt.c.s
@@ -383,7 +383,7 @@ src/flash_encrypt.s: src/flash_encrypt.c.s
 
 # target to generate assembly for a file
 src/flash_encrypt.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_encrypt.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_encrypt.c.s
 .PHONY : src/flash_encrypt.c.s
 
 src/flash_partitions.obj: src/flash_partitions.c.obj
@@ -392,7 +392,7 @@ src/flash_partitions.obj: src/flash_partitions.c.obj
 
 # target to build an object file
 src/flash_partitions.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_partitions.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_partitions.c.obj
 .PHONY : src/flash_partitions.c.obj
 
 src/flash_partitions.i: src/flash_partitions.c.i
@@ -401,7 +401,7 @@ src/flash_partitions.i: src/flash_partitions.c.i
 
 # target to preprocess a source file
 src/flash_partitions.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_partitions.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_partitions.c.i
 .PHONY : src/flash_partitions.c.i
 
 src/flash_partitions.s: src/flash_partitions.c.s
@@ -410,7 +410,7 @@ src/flash_partitions.s: src/flash_partitions.c.s
 
 # target to generate assembly for a file
 src/flash_partitions.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_partitions.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_partitions.c.s
 .PHONY : src/flash_partitions.c.s
 
 src/flash_qio_mode.obj: src/flash_qio_mode.c.obj
@@ -419,7 +419,7 @@ src/flash_qio_mode.obj: src/flash_qio_mode.c.obj
 
 # target to build an object file
 src/flash_qio_mode.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_qio_mode.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_qio_mode.c.obj
 .PHONY : src/flash_qio_mode.c.obj
 
 src/flash_qio_mode.i: src/flash_qio_mode.c.i
@@ -428,7 +428,7 @@ src/flash_qio_mode.i: src/flash_qio_mode.c.i
 
 # target to preprocess a source file
 src/flash_qio_mode.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_qio_mode.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_qio_mode.c.i
 .PHONY : src/flash_qio_mode.c.i
 
 src/flash_qio_mode.s: src/flash_qio_mode.c.s
@@ -437,7 +437,7 @@ src/flash_qio_mode.s: src/flash_qio_mode.c.s
 
 # target to generate assembly for a file
 src/flash_qio_mode.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_qio_mode.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_qio_mode.c.s
 .PHONY : src/flash_qio_mode.c.s
 
 src/idf/bootloader_sha.obj: src/idf/bootloader_sha.c.obj
@@ -446,7 +446,7 @@ src/idf/bootloader_sha.obj: src/idf/bootloader_sha.c.obj
 
 # target to build an object file
 src/idf/bootloader_sha.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/idf/bootloader_sha.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/idf/bootloader_sha.c.obj
 .PHONY : src/idf/bootloader_sha.c.obj
 
 src/idf/bootloader_sha.i: src/idf/bootloader_sha.c.i
@@ -455,7 +455,7 @@ src/idf/bootloader_sha.i: src/idf/bootloader_sha.c.i
 
 # target to preprocess a source file
 src/idf/bootloader_sha.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/idf/bootloader_sha.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/idf/bootloader_sha.c.i
 .PHONY : src/idf/bootloader_sha.c.i
 
 src/idf/bootloader_sha.s: src/idf/bootloader_sha.c.s
@@ -464,7 +464,7 @@ src/idf/bootloader_sha.s: src/idf/bootloader_sha.c.s
 
 # target to generate assembly for a file
 src/idf/bootloader_sha.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/idf/bootloader_sha.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/idf/bootloader_sha.c.s
 .PHONY : src/idf/bootloader_sha.c.s
 
 src/idf/secure_boot_signatures.obj: src/idf/secure_boot_signatures.c.obj
@@ -473,7 +473,7 @@ src/idf/secure_boot_signatures.obj: src/idf/secure_boot_signatures.c.obj
 
 # target to build an object file
 src/idf/secure_boot_signatures.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/idf/secure_boot_signatures.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/idf/secure_boot_signatures.c.obj
 .PHONY : src/idf/secure_boot_signatures.c.obj
 
 src/idf/secure_boot_signatures.i: src/idf/secure_boot_signatures.c.i
@@ -482,7 +482,7 @@ src/idf/secure_boot_signatures.i: src/idf/secure_boot_signatures.c.i
 
 # target to preprocess a source file
 src/idf/secure_boot_signatures.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/idf/secure_boot_signatures.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/idf/secure_boot_signatures.c.i
 .PHONY : src/idf/secure_boot_signatures.c.i
 
 src/idf/secure_boot_signatures.s: src/idf/secure_boot_signatures.c.s
@@ -491,7 +491,7 @@ src/idf/secure_boot_signatures.s: src/idf/secure_boot_signatures.c.s
 
 # target to generate assembly for a file
 src/idf/secure_boot_signatures.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/idf/secure_boot_signatures.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\bootloader_support\CMakeFiles\__idf_bootloader_support.dir\build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/idf/secure_boot_signatures.c.s
 .PHONY : src/idf/secure_boot_signatures.c.s
 
 # Help Target
@@ -554,6 +554,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

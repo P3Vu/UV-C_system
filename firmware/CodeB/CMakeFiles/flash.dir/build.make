@@ -45,7 +45,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CMake
+CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB
 
 # Utility rule file for flash.
 
@@ -53,7 +53,7 @@ CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CMake
 include CMakeFiles/flash.dir/progress.make
 
 CMakeFiles/flash:
-	cd /d C:\Users\pawel\Desktop\esp-idf\components\esptool_py && C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -D IDF_PATH="C:/Users/pawel/Desktop/esp-idf" -D ESPTOOLPY="python C:/Users/pawel/Desktop/esp-idf/components/esptool_py/esptool/esptool.py --chip esp32" -D ESPTOOL_ARGS="write_flash @flash_project_args" -D WORKING_DIRECTORY="C:/Users/pawel/Desktop/Grant/Project/firmware/CMake" -P C:/Users/pawel/Desktop/esp-idf/components/esptool_py/run_esptool.cmake
+	cd /d C:\Users\pawel\Desktop\esp-idf\components\esptool_py && C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -D IDF_PATH="C:/Users/pawel/Desktop/esp-idf" -D ESPTOOLPY="python C:/Users/pawel/Desktop/esp-idf/components/esptool_py/esptool/esptool.py --chip esp32" -D ESPTOOL_ARGS="write_flash @flash_project_args" -D WORKING_DIRECTORY="C:/Users/pawel/Desktop/Grant/Project/firmware/CodeB" -P C:/Users/pawel/Desktop/esp-idf/components/esptool_py/run_esptool.cmake
 
 flash: CMakeFiles/flash
 flash: CMakeFiles/flash.dir/build.make
@@ -70,6 +70,6 @@ CMakeFiles/flash.dir/clean:
 .PHONY : CMakeFiles/flash.dir/clean
 
 CMakeFiles/flash.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\Grant\Project\firmware\CMake C:\Users\pawel\Desktop\Grant\Project\firmware\CMake C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles\flash.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles\flash.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/flash.dir/depend
 

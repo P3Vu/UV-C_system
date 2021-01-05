@@ -50,7 +50,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CMake
+CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -125,14 +125,14 @@ list_install_components/fast: list_install_components
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\esp_wifi\CMakeFiles\progress.marks
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/esp_wifi/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles 0
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\esp_wifi\CMakeFiles\progress.marks
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/esp_wifi/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/esp_wifi/clean
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/esp_wifi/clean
 .PHONY : clean
 
 # The main clean target
@@ -142,22 +142,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/esp_wifi/preinstall
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/esp_wifi/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/esp_wifi/preinstall
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/esp_wifi/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/rule:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/rule
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/rule
 .PHONY : esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/rule
 
 # Convenience name for target.
@@ -167,7 +167,7 @@ __idf_esp_wifi: esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/rule
 
 # fast build rule for target.
 __idf_esp_wifi/fast:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_wifi\CMakeFiles\__idf_esp_wifi.dir\build.make esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/build
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_wifi\CMakeFiles\__idf_esp_wifi.dir\build.make esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/build
 .PHONY : __idf_esp_wifi/fast
 
 src/coexist.obj: src/coexist.c.obj
@@ -176,7 +176,7 @@ src/coexist.obj: src/coexist.c.obj
 
 # target to build an object file
 src/coexist.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_wifi\CMakeFiles\__idf_esp_wifi.dir\build.make esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/coexist.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_wifi\CMakeFiles\__idf_esp_wifi.dir\build.make esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/coexist.c.obj
 .PHONY : src/coexist.c.obj
 
 src/coexist.i: src/coexist.c.i
@@ -185,7 +185,7 @@ src/coexist.i: src/coexist.c.i
 
 # target to preprocess a source file
 src/coexist.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_wifi\CMakeFiles\__idf_esp_wifi.dir\build.make esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/coexist.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_wifi\CMakeFiles\__idf_esp_wifi.dir\build.make esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/coexist.c.i
 .PHONY : src/coexist.c.i
 
 src/coexist.s: src/coexist.c.s
@@ -194,7 +194,7 @@ src/coexist.s: src/coexist.c.s
 
 # target to generate assembly for a file
 src/coexist.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_wifi\CMakeFiles\__idf_esp_wifi.dir\build.make esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/coexist.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_wifi\CMakeFiles\__idf_esp_wifi.dir\build.make esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/coexist.c.s
 .PHONY : src/coexist.c.s
 
 src/lib_printf.obj: src/lib_printf.c.obj
@@ -203,7 +203,7 @@ src/lib_printf.obj: src/lib_printf.c.obj
 
 # target to build an object file
 src/lib_printf.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_wifi\CMakeFiles\__idf_esp_wifi.dir\build.make esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/lib_printf.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_wifi\CMakeFiles\__idf_esp_wifi.dir\build.make esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/lib_printf.c.obj
 .PHONY : src/lib_printf.c.obj
 
 src/lib_printf.i: src/lib_printf.c.i
@@ -212,7 +212,7 @@ src/lib_printf.i: src/lib_printf.c.i
 
 # target to preprocess a source file
 src/lib_printf.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_wifi\CMakeFiles\__idf_esp_wifi.dir\build.make esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/lib_printf.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_wifi\CMakeFiles\__idf_esp_wifi.dir\build.make esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/lib_printf.c.i
 .PHONY : src/lib_printf.c.i
 
 src/lib_printf.s: src/lib_printf.c.s
@@ -221,7 +221,7 @@ src/lib_printf.s: src/lib_printf.c.s
 
 # target to generate assembly for a file
 src/lib_printf.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_wifi\CMakeFiles\__idf_esp_wifi.dir\build.make esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/lib_printf.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_wifi\CMakeFiles\__idf_esp_wifi.dir\build.make esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/lib_printf.c.s
 .PHONY : src/lib_printf.c.s
 
 src/mesh_event.obj: src/mesh_event.c.obj
@@ -230,7 +230,7 @@ src/mesh_event.obj: src/mesh_event.c.obj
 
 # target to build an object file
 src/mesh_event.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_wifi\CMakeFiles\__idf_esp_wifi.dir\build.make esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/mesh_event.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_wifi\CMakeFiles\__idf_esp_wifi.dir\build.make esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/mesh_event.c.obj
 .PHONY : src/mesh_event.c.obj
 
 src/mesh_event.i: src/mesh_event.c.i
@@ -239,7 +239,7 @@ src/mesh_event.i: src/mesh_event.c.i
 
 # target to preprocess a source file
 src/mesh_event.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_wifi\CMakeFiles\__idf_esp_wifi.dir\build.make esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/mesh_event.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_wifi\CMakeFiles\__idf_esp_wifi.dir\build.make esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/mesh_event.c.i
 .PHONY : src/mesh_event.c.i
 
 src/mesh_event.s: src/mesh_event.c.s
@@ -248,7 +248,7 @@ src/mesh_event.s: src/mesh_event.c.s
 
 # target to generate assembly for a file
 src/mesh_event.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_wifi\CMakeFiles\__idf_esp_wifi.dir\build.make esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/mesh_event.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_wifi\CMakeFiles\__idf_esp_wifi.dir\build.make esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/mesh_event.c.s
 .PHONY : src/mesh_event.c.s
 
 src/phy_init.obj: src/phy_init.c.obj
@@ -257,7 +257,7 @@ src/phy_init.obj: src/phy_init.c.obj
 
 # target to build an object file
 src/phy_init.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_wifi\CMakeFiles\__idf_esp_wifi.dir\build.make esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/phy_init.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_wifi\CMakeFiles\__idf_esp_wifi.dir\build.make esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/phy_init.c.obj
 .PHONY : src/phy_init.c.obj
 
 src/phy_init.i: src/phy_init.c.i
@@ -266,7 +266,7 @@ src/phy_init.i: src/phy_init.c.i
 
 # target to preprocess a source file
 src/phy_init.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_wifi\CMakeFiles\__idf_esp_wifi.dir\build.make esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/phy_init.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_wifi\CMakeFiles\__idf_esp_wifi.dir\build.make esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/phy_init.c.i
 .PHONY : src/phy_init.c.i
 
 src/phy_init.s: src/phy_init.c.s
@@ -275,7 +275,7 @@ src/phy_init.s: src/phy_init.c.s
 
 # target to generate assembly for a file
 src/phy_init.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_wifi\CMakeFiles\__idf_esp_wifi.dir\build.make esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/phy_init.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_wifi\CMakeFiles\__idf_esp_wifi.dir\build.make esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/phy_init.c.s
 .PHONY : src/phy_init.c.s
 
 src/smartconfig.obj: src/smartconfig.c.obj
@@ -284,7 +284,7 @@ src/smartconfig.obj: src/smartconfig.c.obj
 
 # target to build an object file
 src/smartconfig.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_wifi\CMakeFiles\__idf_esp_wifi.dir\build.make esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/smartconfig.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_wifi\CMakeFiles\__idf_esp_wifi.dir\build.make esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/smartconfig.c.obj
 .PHONY : src/smartconfig.c.obj
 
 src/smartconfig.i: src/smartconfig.c.i
@@ -293,7 +293,7 @@ src/smartconfig.i: src/smartconfig.c.i
 
 # target to preprocess a source file
 src/smartconfig.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_wifi\CMakeFiles\__idf_esp_wifi.dir\build.make esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/smartconfig.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_wifi\CMakeFiles\__idf_esp_wifi.dir\build.make esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/smartconfig.c.i
 .PHONY : src/smartconfig.c.i
 
 src/smartconfig.s: src/smartconfig.c.s
@@ -302,7 +302,7 @@ src/smartconfig.s: src/smartconfig.c.s
 
 # target to generate assembly for a file
 src/smartconfig.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_wifi\CMakeFiles\__idf_esp_wifi.dir\build.make esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/smartconfig.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_wifi\CMakeFiles\__idf_esp_wifi.dir\build.make esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/smartconfig.c.s
 .PHONY : src/smartconfig.c.s
 
 src/smartconfig_ack.obj: src/smartconfig_ack.c.obj
@@ -311,7 +311,7 @@ src/smartconfig_ack.obj: src/smartconfig_ack.c.obj
 
 # target to build an object file
 src/smartconfig_ack.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_wifi\CMakeFiles\__idf_esp_wifi.dir\build.make esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/smartconfig_ack.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_wifi\CMakeFiles\__idf_esp_wifi.dir\build.make esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/smartconfig_ack.c.obj
 .PHONY : src/smartconfig_ack.c.obj
 
 src/smartconfig_ack.i: src/smartconfig_ack.c.i
@@ -320,7 +320,7 @@ src/smartconfig_ack.i: src/smartconfig_ack.c.i
 
 # target to preprocess a source file
 src/smartconfig_ack.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_wifi\CMakeFiles\__idf_esp_wifi.dir\build.make esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/smartconfig_ack.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_wifi\CMakeFiles\__idf_esp_wifi.dir\build.make esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/smartconfig_ack.c.i
 .PHONY : src/smartconfig_ack.c.i
 
 src/smartconfig_ack.s: src/smartconfig_ack.c.s
@@ -329,7 +329,7 @@ src/smartconfig_ack.s: src/smartconfig_ack.c.s
 
 # target to generate assembly for a file
 src/smartconfig_ack.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_wifi\CMakeFiles\__idf_esp_wifi.dir\build.make esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/smartconfig_ack.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_wifi\CMakeFiles\__idf_esp_wifi.dir\build.make esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/smartconfig_ack.c.s
 .PHONY : src/smartconfig_ack.c.s
 
 src/wifi_init.obj: src/wifi_init.c.obj
@@ -338,7 +338,7 @@ src/wifi_init.obj: src/wifi_init.c.obj
 
 # target to build an object file
 src/wifi_init.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_wifi\CMakeFiles\__idf_esp_wifi.dir\build.make esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/wifi_init.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_wifi\CMakeFiles\__idf_esp_wifi.dir\build.make esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/wifi_init.c.obj
 .PHONY : src/wifi_init.c.obj
 
 src/wifi_init.i: src/wifi_init.c.i
@@ -347,7 +347,7 @@ src/wifi_init.i: src/wifi_init.c.i
 
 # target to preprocess a source file
 src/wifi_init.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_wifi\CMakeFiles\__idf_esp_wifi.dir\build.make esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/wifi_init.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_wifi\CMakeFiles\__idf_esp_wifi.dir\build.make esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/wifi_init.c.i
 .PHONY : src/wifi_init.c.i
 
 src/wifi_init.s: src/wifi_init.c.s
@@ -356,7 +356,7 @@ src/wifi_init.s: src/wifi_init.c.s
 
 # target to generate assembly for a file
 src/wifi_init.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_wifi\CMakeFiles\__idf_esp_wifi.dir\build.make esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/wifi_init.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_wifi\CMakeFiles\__idf_esp_wifi.dir\build.make esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/wifi_init.c.s
 .PHONY : src/wifi_init.c.s
 
 # Help Target
@@ -404,6 +404,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

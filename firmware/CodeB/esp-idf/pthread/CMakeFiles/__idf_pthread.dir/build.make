@@ -45,7 +45,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CMake
+CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB
 
 # Include any dependencies generated for this target.
 include esp-idf/pthread/CMakeFiles/__idf_pthread.dir/depend.make
@@ -58,42 +58,42 @@ include esp-idf/pthread/CMakeFiles/__idf_pthread.dir/flags.make
 
 esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread.c.obj: esp-idf/pthread/CMakeFiles/__idf_pthread.dir/flags.make
 esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread.c.obj: C:/Users/pawel/Desktop/esp-idf/components/pthread/pthread.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread.c.obj"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\pthread && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\__idf_pthread.dir\pthread.c.obj   -c C:\Users\pawel\Desktop\esp-idf\components\pthread\pthread.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread.c.obj"
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\pthread && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\__idf_pthread.dir\pthread.c.obj   -c C:\Users\pawel\Desktop\esp-idf\components\pthread\pthread.c
 
 esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_pthread.dir/pthread.c.i"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\pthread && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\pawel\Desktop\esp-idf\components\pthread\pthread.c > CMakeFiles\__idf_pthread.dir\pthread.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\pthread && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\pawel\Desktop\esp-idf\components\pthread\pthread.c > CMakeFiles\__idf_pthread.dir\pthread.c.i
 
 esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_pthread.dir/pthread.c.s"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\pthread && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\pawel\Desktop\esp-idf\components\pthread\pthread.c -o CMakeFiles\__idf_pthread.dir\pthread.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\pthread && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\pawel\Desktop\esp-idf\components\pthread\pthread.c -o CMakeFiles\__idf_pthread.dir\pthread.c.s
 
 esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread_cond_var.c.obj: esp-idf/pthread/CMakeFiles/__idf_pthread.dir/flags.make
 esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread_cond_var.c.obj: C:/Users/pawel/Desktop/esp-idf/components/pthread/pthread_cond_var.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread_cond_var.c.obj"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\pthread && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\__idf_pthread.dir\pthread_cond_var.c.obj   -c C:\Users\pawel\Desktop\esp-idf\components\pthread\pthread_cond_var.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread_cond_var.c.obj"
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\pthread && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\__idf_pthread.dir\pthread_cond_var.c.obj   -c C:\Users\pawel\Desktop\esp-idf\components\pthread\pthread_cond_var.c
 
 esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread_cond_var.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_pthread.dir/pthread_cond_var.c.i"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\pthread && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\pawel\Desktop\esp-idf\components\pthread\pthread_cond_var.c > CMakeFiles\__idf_pthread.dir\pthread_cond_var.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\pthread && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\pawel\Desktop\esp-idf\components\pthread\pthread_cond_var.c > CMakeFiles\__idf_pthread.dir\pthread_cond_var.c.i
 
 esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread_cond_var.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_pthread.dir/pthread_cond_var.c.s"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\pthread && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\pawel\Desktop\esp-idf\components\pthread\pthread_cond_var.c -o CMakeFiles\__idf_pthread.dir\pthread_cond_var.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\pthread && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\pawel\Desktop\esp-idf\components\pthread\pthread_cond_var.c -o CMakeFiles\__idf_pthread.dir\pthread_cond_var.c.s
 
 esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread_local_storage.c.obj: esp-idf/pthread/CMakeFiles/__idf_pthread.dir/flags.make
 esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread_local_storage.c.obj: C:/Users/pawel/Desktop/esp-idf/components/pthread/pthread_local_storage.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread_local_storage.c.obj"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\pthread && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\__idf_pthread.dir\pthread_local_storage.c.obj   -c C:\Users\pawel\Desktop\esp-idf\components\pthread\pthread_local_storage.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread_local_storage.c.obj"
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\pthread && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\__idf_pthread.dir\pthread_local_storage.c.obj   -c C:\Users\pawel\Desktop\esp-idf\components\pthread\pthread_local_storage.c
 
 esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread_local_storage.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_pthread.dir/pthread_local_storage.c.i"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\pthread && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\pawel\Desktop\esp-idf\components\pthread\pthread_local_storage.c > CMakeFiles\__idf_pthread.dir\pthread_local_storage.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\pthread && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\pawel\Desktop\esp-idf\components\pthread\pthread_local_storage.c > CMakeFiles\__idf_pthread.dir\pthread_local_storage.c.i
 
 esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread_local_storage.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_pthread.dir/pthread_local_storage.c.s"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\pthread && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\pawel\Desktop\esp-idf\components\pthread\pthread_local_storage.c -o CMakeFiles\__idf_pthread.dir\pthread_local_storage.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\pthread && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\pawel\Desktop\esp-idf\components\pthread\pthread_local_storage.c -o CMakeFiles\__idf_pthread.dir\pthread_local_storage.c.s
 
 # Object files for target __idf_pthread
 __idf_pthread_OBJECTS = \
@@ -109,9 +109,9 @@ esp-idf/pthread/libpthread.a: esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthre
 esp-idf/pthread/libpthread.a: esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread_local_storage.c.obj
 esp-idf/pthread/libpthread.a: esp-idf/pthread/CMakeFiles/__idf_pthread.dir/build.make
 esp-idf/pthread/libpthread.a: esp-idf/pthread/CMakeFiles/__idf_pthread.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libpthread.a"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\pthread && $(CMAKE_COMMAND) -P CMakeFiles\__idf_pthread.dir\cmake_clean_target.cmake
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\pthread && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\__idf_pthread.dir\link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libpthread.a"
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\pthread && $(CMAKE_COMMAND) -P CMakeFiles\__idf_pthread.dir\cmake_clean_target.cmake
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\pthread && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\__idf_pthread.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 esp-idf/pthread/CMakeFiles/__idf_pthread.dir/build: esp-idf/pthread/libpthread.a
@@ -119,10 +119,10 @@ esp-idf/pthread/CMakeFiles/__idf_pthread.dir/build: esp-idf/pthread/libpthread.a
 .PHONY : esp-idf/pthread/CMakeFiles/__idf_pthread.dir/build
 
 esp-idf/pthread/CMakeFiles/__idf_pthread.dir/clean:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\pthread && $(CMAKE_COMMAND) -P CMakeFiles\__idf_pthread.dir\cmake_clean.cmake
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\pthread && $(CMAKE_COMMAND) -P CMakeFiles\__idf_pthread.dir\cmake_clean.cmake
 .PHONY : esp-idf/pthread/CMakeFiles/__idf_pthread.dir/clean
 
 esp-idf/pthread/CMakeFiles/__idf_pthread.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\esp-idf\components\pthread C:\Users\pawel\Desktop\Grant\Project\firmware\CMake C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\pthread C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\pthread\CMakeFiles\__idf_pthread.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\esp-idf\components\pthread C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\pthread C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\pthread\CMakeFiles\__idf_pthread.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : esp-idf/pthread/CMakeFiles/__idf_pthread.dir/depend
 

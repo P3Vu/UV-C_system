@@ -50,7 +50,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CMake
+CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -125,14 +125,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\xtensa\CMakeFiles\progress.marks
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/xtensa/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles 0
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\xtensa\CMakeFiles\progress.marks
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/xtensa/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/xtensa/clean
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/xtensa/clean
 .PHONY : clean
 
 # The main clean target
@@ -142,22 +142,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/xtensa/preinstall
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/xtensa/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/xtensa/preinstall
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/xtensa/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/rule:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/rule
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/rule
 .PHONY : esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/rule
 
 # Convenience name for target.
@@ -167,7 +167,7 @@ __idf_xtensa: esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/rule
 
 # fast build rule for target.
 __idf_xtensa/fast:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\xtensa\CMakeFiles\__idf_xtensa.dir\build.make esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/build
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\xtensa\CMakeFiles\__idf_xtensa.dir\build.make esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/build
 .PHONY : __idf_xtensa/fast
 
 debug_helpers.obj: debug_helpers.c.obj
@@ -176,7 +176,7 @@ debug_helpers.obj: debug_helpers.c.obj
 
 # target to build an object file
 debug_helpers.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\xtensa\CMakeFiles\__idf_xtensa.dir\build.make esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/debug_helpers.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\xtensa\CMakeFiles\__idf_xtensa.dir\build.make esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/debug_helpers.c.obj
 .PHONY : debug_helpers.c.obj
 
 debug_helpers.i: debug_helpers.c.i
@@ -185,7 +185,7 @@ debug_helpers.i: debug_helpers.c.i
 
 # target to preprocess a source file
 debug_helpers.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\xtensa\CMakeFiles\__idf_xtensa.dir\build.make esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/debug_helpers.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\xtensa\CMakeFiles\__idf_xtensa.dir\build.make esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/debug_helpers.c.i
 .PHONY : debug_helpers.c.i
 
 debug_helpers.s: debug_helpers.c.s
@@ -194,7 +194,7 @@ debug_helpers.s: debug_helpers.c.s
 
 # target to generate assembly for a file
 debug_helpers.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\xtensa\CMakeFiles\__idf_xtensa.dir\build.make esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/debug_helpers.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\xtensa\CMakeFiles\__idf_xtensa.dir\build.make esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/debug_helpers.c.s
 .PHONY : debug_helpers.c.s
 
 debug_helpers_asm.obj: debug_helpers_asm.S.obj
@@ -203,7 +203,7 @@ debug_helpers_asm.obj: debug_helpers_asm.S.obj
 
 # target to build an object file
 debug_helpers_asm.S.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\xtensa\CMakeFiles\__idf_xtensa.dir\build.make esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/debug_helpers_asm.S.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\xtensa\CMakeFiles\__idf_xtensa.dir\build.make esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/debug_helpers_asm.S.obj
 .PHONY : debug_helpers_asm.S.obj
 
 eri.obj: eri.c.obj
@@ -212,7 +212,7 @@ eri.obj: eri.c.obj
 
 # target to build an object file
 eri.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\xtensa\CMakeFiles\__idf_xtensa.dir\build.make esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/eri.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\xtensa\CMakeFiles\__idf_xtensa.dir\build.make esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/eri.c.obj
 .PHONY : eri.c.obj
 
 eri.i: eri.c.i
@@ -221,7 +221,7 @@ eri.i: eri.c.i
 
 # target to preprocess a source file
 eri.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\xtensa\CMakeFiles\__idf_xtensa.dir\build.make esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/eri.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\xtensa\CMakeFiles\__idf_xtensa.dir\build.make esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/eri.c.i
 .PHONY : eri.c.i
 
 eri.s: eri.c.s
@@ -230,7 +230,7 @@ eri.s: eri.c.s
 
 # target to generate assembly for a file
 eri.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\xtensa\CMakeFiles\__idf_xtensa.dir\build.make esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/eri.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\xtensa\CMakeFiles\__idf_xtensa.dir\build.make esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/eri.c.s
 .PHONY : eri.c.s
 
 trax.obj: trax.c.obj
@@ -239,7 +239,7 @@ trax.obj: trax.c.obj
 
 # target to build an object file
 trax.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\xtensa\CMakeFiles\__idf_xtensa.dir\build.make esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/trax.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\xtensa\CMakeFiles\__idf_xtensa.dir\build.make esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/trax.c.obj
 .PHONY : trax.c.obj
 
 trax.i: trax.c.i
@@ -248,7 +248,7 @@ trax.i: trax.c.i
 
 # target to preprocess a source file
 trax.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\xtensa\CMakeFiles\__idf_xtensa.dir\build.make esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/trax.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\xtensa\CMakeFiles\__idf_xtensa.dir\build.make esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/trax.c.i
 .PHONY : trax.c.i
 
 trax.s: trax.c.s
@@ -257,7 +257,7 @@ trax.s: trax.c.s
 
 # target to generate assembly for a file
 trax.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\xtensa\CMakeFiles\__idf_xtensa.dir\build.make esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/trax.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\xtensa\CMakeFiles\__idf_xtensa.dir\build.make esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/trax.c.s
 .PHONY : trax.c.s
 
 # Help Target
@@ -294,6 +294,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

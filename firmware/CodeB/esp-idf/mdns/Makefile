@@ -50,7 +50,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CMake
+CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -125,14 +125,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\mdns\CMakeFiles\progress.marks
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/mdns/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles 0
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\mdns\CMakeFiles\progress.marks
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/mdns/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/mdns/clean
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/mdns/clean
 .PHONY : clean
 
 # The main clean target
@@ -142,22 +142,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/mdns/preinstall
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/mdns/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/mdns/preinstall
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/mdns/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 esp-idf/mdns/CMakeFiles/__idf_mdns.dir/rule:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/mdns/CMakeFiles/__idf_mdns.dir/rule
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/mdns/CMakeFiles/__idf_mdns.dir/rule
 .PHONY : esp-idf/mdns/CMakeFiles/__idf_mdns.dir/rule
 
 # Convenience name for target.
@@ -167,7 +167,7 @@ __idf_mdns: esp-idf/mdns/CMakeFiles/__idf_mdns.dir/rule
 
 # fast build rule for target.
 __idf_mdns/fast:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\mdns\CMakeFiles\__idf_mdns.dir\build.make esp-idf/mdns/CMakeFiles/__idf_mdns.dir/build
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\mdns\CMakeFiles\__idf_mdns.dir\build.make esp-idf/mdns/CMakeFiles/__idf_mdns.dir/build
 .PHONY : __idf_mdns/fast
 
 mdns.obj: mdns.c.obj
@@ -176,7 +176,7 @@ mdns.obj: mdns.c.obj
 
 # target to build an object file
 mdns.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\mdns\CMakeFiles\__idf_mdns.dir\build.make esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\mdns\CMakeFiles\__idf_mdns.dir\build.make esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns.c.obj
 .PHONY : mdns.c.obj
 
 mdns.i: mdns.c.i
@@ -185,7 +185,7 @@ mdns.i: mdns.c.i
 
 # target to preprocess a source file
 mdns.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\mdns\CMakeFiles\__idf_mdns.dir\build.make esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\mdns\CMakeFiles\__idf_mdns.dir\build.make esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns.c.i
 .PHONY : mdns.c.i
 
 mdns.s: mdns.c.s
@@ -194,7 +194,7 @@ mdns.s: mdns.c.s
 
 # target to generate assembly for a file
 mdns.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\mdns\CMakeFiles\__idf_mdns.dir\build.make esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\mdns\CMakeFiles\__idf_mdns.dir\build.make esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns.c.s
 .PHONY : mdns.c.s
 
 mdns_console.obj: mdns_console.c.obj
@@ -203,7 +203,7 @@ mdns_console.obj: mdns_console.c.obj
 
 # target to build an object file
 mdns_console.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\mdns\CMakeFiles\__idf_mdns.dir\build.make esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns_console.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\mdns\CMakeFiles\__idf_mdns.dir\build.make esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns_console.c.obj
 .PHONY : mdns_console.c.obj
 
 mdns_console.i: mdns_console.c.i
@@ -212,7 +212,7 @@ mdns_console.i: mdns_console.c.i
 
 # target to preprocess a source file
 mdns_console.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\mdns\CMakeFiles\__idf_mdns.dir\build.make esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns_console.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\mdns\CMakeFiles\__idf_mdns.dir\build.make esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns_console.c.i
 .PHONY : mdns_console.c.i
 
 mdns_console.s: mdns_console.c.s
@@ -221,7 +221,7 @@ mdns_console.s: mdns_console.c.s
 
 # target to generate assembly for a file
 mdns_console.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\mdns\CMakeFiles\__idf_mdns.dir\build.make esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns_console.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\mdns\CMakeFiles\__idf_mdns.dir\build.make esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns_console.c.s
 .PHONY : mdns_console.c.s
 
 mdns_networking.obj: mdns_networking.c.obj
@@ -230,7 +230,7 @@ mdns_networking.obj: mdns_networking.c.obj
 
 # target to build an object file
 mdns_networking.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\mdns\CMakeFiles\__idf_mdns.dir\build.make esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns_networking.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\mdns\CMakeFiles\__idf_mdns.dir\build.make esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns_networking.c.obj
 .PHONY : mdns_networking.c.obj
 
 mdns_networking.i: mdns_networking.c.i
@@ -239,7 +239,7 @@ mdns_networking.i: mdns_networking.c.i
 
 # target to preprocess a source file
 mdns_networking.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\mdns\CMakeFiles\__idf_mdns.dir\build.make esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns_networking.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\mdns\CMakeFiles\__idf_mdns.dir\build.make esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns_networking.c.i
 .PHONY : mdns_networking.c.i
 
 mdns_networking.s: mdns_networking.c.s
@@ -248,7 +248,7 @@ mdns_networking.s: mdns_networking.c.s
 
 # target to generate assembly for a file
 mdns_networking.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\mdns\CMakeFiles\__idf_mdns.dir\build.make esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns_networking.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\mdns\CMakeFiles\__idf_mdns.dir\build.make esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns_networking.c.s
 .PHONY : mdns_networking.c.s
 
 # Help Target
@@ -284,6 +284,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

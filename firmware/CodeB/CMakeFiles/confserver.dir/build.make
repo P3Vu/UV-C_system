@@ -45,7 +45,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CMake
+CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB
 
 # Utility rule file for confserver.
 
@@ -53,7 +53,7 @@ CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CMake
 include CMakeFiles/confserver.dir/progress.make
 
 CMakeFiles/confserver:
-	python C:/Users/pawel/Desktop/esp-idf/tools/kconfig_new/confserver.py --env-file C:/Users/pawel/Desktop/Grant/Project/firmware/CMake/config.env --kconfig C:/Users/pawel/Desktop/esp-idf/Kconfig --sdkconfig-rename C:/Users/pawel/Desktop/esp-idf/sdkconfig.rename --config C:/Users/pawel/Desktop/Grant/Project/firmware/sdkconfig
+	python C:/Users/pawel/Desktop/esp-idf/tools/kconfig_new/confserver.py --env-file C:/Users/pawel/Desktop/Grant/Project/firmware/CodeB/config.env --kconfig C:/Users/pawel/Desktop/esp-idf/Kconfig --sdkconfig-rename C:/Users/pawel/Desktop/esp-idf/sdkconfig.rename --config C:/Users/pawel/Desktop/Grant/Project/firmware/sdkconfig
 
 confserver: CMakeFiles/confserver
 confserver: CMakeFiles/confserver.dir/build.make
@@ -70,6 +70,6 @@ CMakeFiles/confserver.dir/clean:
 .PHONY : CMakeFiles/confserver.dir/clean
 
 CMakeFiles/confserver.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\Grant\Project\firmware\CMake C:\Users\pawel\Desktop\Grant\Project\firmware\CMake C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles\confserver.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles\confserver.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/confserver.dir/depend
 

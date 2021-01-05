@@ -45,7 +45,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CMake
+CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB
 
 # Include any dependencies generated for this target.
 include esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/depend.make
@@ -58,47 +58,47 @@ include esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/flags.make
 
 esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/debug_helpers.c.obj: esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/flags.make
 esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/debug_helpers.c.obj: C:/Users/pawel/Desktop/esp-idf/components/xtensa/debug_helpers.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/debug_helpers.c.obj"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\xtensa && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\__idf_xtensa.dir\debug_helpers.c.obj   -c C:\Users\pawel\Desktop\esp-idf\components\xtensa\debug_helpers.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/debug_helpers.c.obj"
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\xtensa && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\__idf_xtensa.dir\debug_helpers.c.obj   -c C:\Users\pawel\Desktop\esp-idf\components\xtensa\debug_helpers.c
 
 esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/debug_helpers.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_xtensa.dir/debug_helpers.c.i"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\xtensa && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\pawel\Desktop\esp-idf\components\xtensa\debug_helpers.c > CMakeFiles\__idf_xtensa.dir\debug_helpers.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\xtensa && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\pawel\Desktop\esp-idf\components\xtensa\debug_helpers.c > CMakeFiles\__idf_xtensa.dir\debug_helpers.c.i
 
 esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/debug_helpers.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_xtensa.dir/debug_helpers.c.s"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\xtensa && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\pawel\Desktop\esp-idf\components\xtensa\debug_helpers.c -o CMakeFiles\__idf_xtensa.dir\debug_helpers.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\xtensa && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\pawel\Desktop\esp-idf\components\xtensa\debug_helpers.c -o CMakeFiles\__idf_xtensa.dir\debug_helpers.c.s
 
 esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/debug_helpers_asm.S.obj: esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/flags.make
 esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/debug_helpers_asm.S.obj: C:/Users/pawel/Desktop/esp-idf/components/xtensa/debug_helpers_asm.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building ASM object esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/debug_helpers_asm.S.obj"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\xtensa && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles\__idf_xtensa.dir\debug_helpers_asm.S.obj -c C:\Users\pawel\Desktop\esp-idf\components\xtensa\debug_helpers_asm.S
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building ASM object esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/debug_helpers_asm.S.obj"
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\xtensa && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles\__idf_xtensa.dir\debug_helpers_asm.S.obj -c C:\Users\pawel\Desktop\esp-idf\components\xtensa\debug_helpers_asm.S
 
 esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/eri.c.obj: esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/flags.make
 esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/eri.c.obj: C:/Users/pawel/Desktop/esp-idf/components/xtensa/eri.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/eri.c.obj"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\xtensa && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\__idf_xtensa.dir\eri.c.obj   -c C:\Users\pawel\Desktop\esp-idf\components\xtensa\eri.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/eri.c.obj"
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\xtensa && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\__idf_xtensa.dir\eri.c.obj   -c C:\Users\pawel\Desktop\esp-idf\components\xtensa\eri.c
 
 esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/eri.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_xtensa.dir/eri.c.i"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\xtensa && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\pawel\Desktop\esp-idf\components\xtensa\eri.c > CMakeFiles\__idf_xtensa.dir\eri.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\xtensa && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\pawel\Desktop\esp-idf\components\xtensa\eri.c > CMakeFiles\__idf_xtensa.dir\eri.c.i
 
 esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/eri.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_xtensa.dir/eri.c.s"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\xtensa && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\pawel\Desktop\esp-idf\components\xtensa\eri.c -o CMakeFiles\__idf_xtensa.dir\eri.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\xtensa && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\pawel\Desktop\esp-idf\components\xtensa\eri.c -o CMakeFiles\__idf_xtensa.dir\eri.c.s
 
 esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/trax.c.obj: esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/flags.make
 esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/trax.c.obj: C:/Users/pawel/Desktop/esp-idf/components/xtensa/trax.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/trax.c.obj"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\xtensa && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\__idf_xtensa.dir\trax.c.obj   -c C:\Users\pawel\Desktop\esp-idf\components\xtensa\trax.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/trax.c.obj"
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\xtensa && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\__idf_xtensa.dir\trax.c.obj   -c C:\Users\pawel\Desktop\esp-idf\components\xtensa\trax.c
 
 esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/trax.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_xtensa.dir/trax.c.i"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\xtensa && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\pawel\Desktop\esp-idf\components\xtensa\trax.c > CMakeFiles\__idf_xtensa.dir\trax.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\xtensa && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\pawel\Desktop\esp-idf\components\xtensa\trax.c > CMakeFiles\__idf_xtensa.dir\trax.c.i
 
 esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/trax.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_xtensa.dir/trax.c.s"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\xtensa && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\pawel\Desktop\esp-idf\components\xtensa\trax.c -o CMakeFiles\__idf_xtensa.dir\trax.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\xtensa && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\pawel\Desktop\esp-idf\components\xtensa\trax.c -o CMakeFiles\__idf_xtensa.dir\trax.c.s
 
 # Object files for target __idf_xtensa
 __idf_xtensa_OBJECTS = \
@@ -116,9 +116,9 @@ esp-idf/xtensa/libxtensa.a: esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/eri.c.obj
 esp-idf/xtensa/libxtensa.a: esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/trax.c.obj
 esp-idf/xtensa/libxtensa.a: esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/build.make
 esp-idf/xtensa/libxtensa.a: esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libxtensa.a"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\xtensa && $(CMAKE_COMMAND) -P CMakeFiles\__idf_xtensa.dir\cmake_clean_target.cmake
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\xtensa && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\__idf_xtensa.dir\link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libxtensa.a"
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\xtensa && $(CMAKE_COMMAND) -P CMakeFiles\__idf_xtensa.dir\cmake_clean_target.cmake
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\xtensa && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\__idf_xtensa.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/build: esp-idf/xtensa/libxtensa.a
@@ -126,10 +126,10 @@ esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/build: esp-idf/xtensa/libxtensa.a
 .PHONY : esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/build
 
 esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/clean:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\xtensa && $(CMAKE_COMMAND) -P CMakeFiles\__idf_xtensa.dir\cmake_clean.cmake
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\xtensa && $(CMAKE_COMMAND) -P CMakeFiles\__idf_xtensa.dir\cmake_clean.cmake
 .PHONY : esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/clean
 
 esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\esp-idf\components\xtensa C:\Users\pawel\Desktop\Grant\Project\firmware\CMake C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\xtensa C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\xtensa\CMakeFiles\__idf_xtensa.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\esp-idf\components\xtensa C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\xtensa C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\xtensa\CMakeFiles\__idf_xtensa.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/depend
 

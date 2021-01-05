@@ -50,7 +50,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CMake
+CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -125,14 +125,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\esp_common\CMakeFiles\progress.marks
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/esp_common/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles 0
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\esp_common\CMakeFiles\progress.marks
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/esp_common/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/esp_common/clean
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/esp_common/clean
 .PHONY : clean
 
 # The main clean target
@@ -142,22 +142,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/esp_common/preinstall
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/esp_common/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/esp_common/preinstall
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/esp_common/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/rule:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/rule
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/rule
 .PHONY : esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/rule
 
 # Convenience name for target.
@@ -167,7 +167,7 @@ __idf_esp_common: esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/rule
 
 # fast build rule for target.
 __idf_esp_common/fast:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/build
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/build
 .PHONY : __idf_esp_common/fast
 
 src/dbg_stubs.obj: src/dbg_stubs.c.obj
@@ -176,7 +176,7 @@ src/dbg_stubs.obj: src/dbg_stubs.c.obj
 
 # target to build an object file
 src/dbg_stubs.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/dbg_stubs.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/dbg_stubs.c.obj
 .PHONY : src/dbg_stubs.c.obj
 
 src/dbg_stubs.i: src/dbg_stubs.c.i
@@ -185,7 +185,7 @@ src/dbg_stubs.i: src/dbg_stubs.c.i
 
 # target to preprocess a source file
 src/dbg_stubs.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/dbg_stubs.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/dbg_stubs.c.i
 .PHONY : src/dbg_stubs.c.i
 
 src/dbg_stubs.s: src/dbg_stubs.c.s
@@ -194,7 +194,7 @@ src/dbg_stubs.s: src/dbg_stubs.c.s
 
 # target to generate assembly for a file
 src/dbg_stubs.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/dbg_stubs.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/dbg_stubs.c.s
 .PHONY : src/dbg_stubs.c.s
 
 src/esp_err_to_name.obj: src/esp_err_to_name.c.obj
@@ -203,7 +203,7 @@ src/esp_err_to_name.obj: src/esp_err_to_name.c.obj
 
 # target to build an object file
 src/esp_err_to_name.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/esp_err_to_name.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/esp_err_to_name.c.obj
 .PHONY : src/esp_err_to_name.c.obj
 
 src/esp_err_to_name.i: src/esp_err_to_name.c.i
@@ -212,7 +212,7 @@ src/esp_err_to_name.i: src/esp_err_to_name.c.i
 
 # target to preprocess a source file
 src/esp_err_to_name.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/esp_err_to_name.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/esp_err_to_name.c.i
 .PHONY : src/esp_err_to_name.c.i
 
 src/esp_err_to_name.s: src/esp_err_to_name.c.s
@@ -221,7 +221,7 @@ src/esp_err_to_name.s: src/esp_err_to_name.c.s
 
 # target to generate assembly for a file
 src/esp_err_to_name.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/esp_err_to_name.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/esp_err_to_name.c.s
 .PHONY : src/esp_err_to_name.c.s
 
 src/esp_timer.obj: src/esp_timer.c.obj
@@ -230,7 +230,7 @@ src/esp_timer.obj: src/esp_timer.c.obj
 
 # target to build an object file
 src/esp_timer.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/esp_timer.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/esp_timer.c.obj
 .PHONY : src/esp_timer.c.obj
 
 src/esp_timer.i: src/esp_timer.c.i
@@ -239,7 +239,7 @@ src/esp_timer.i: src/esp_timer.c.i
 
 # target to preprocess a source file
 src/esp_timer.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/esp_timer.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/esp_timer.c.i
 .PHONY : src/esp_timer.c.i
 
 src/esp_timer.s: src/esp_timer.c.s
@@ -248,7 +248,7 @@ src/esp_timer.s: src/esp_timer.c.s
 
 # target to generate assembly for a file
 src/esp_timer.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/esp_timer.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/esp_timer.c.s
 .PHONY : src/esp_timer.c.s
 
 src/ets_timer_legacy.obj: src/ets_timer_legacy.c.obj
@@ -257,7 +257,7 @@ src/ets_timer_legacy.obj: src/ets_timer_legacy.c.obj
 
 # target to build an object file
 src/ets_timer_legacy.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/ets_timer_legacy.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/ets_timer_legacy.c.obj
 .PHONY : src/ets_timer_legacy.c.obj
 
 src/ets_timer_legacy.i: src/ets_timer_legacy.c.i
@@ -266,7 +266,7 @@ src/ets_timer_legacy.i: src/ets_timer_legacy.c.i
 
 # target to preprocess a source file
 src/ets_timer_legacy.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/ets_timer_legacy.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/ets_timer_legacy.c.i
 .PHONY : src/ets_timer_legacy.c.i
 
 src/ets_timer_legacy.s: src/ets_timer_legacy.c.s
@@ -275,7 +275,7 @@ src/ets_timer_legacy.s: src/ets_timer_legacy.c.s
 
 # target to generate assembly for a file
 src/ets_timer_legacy.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/ets_timer_legacy.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/ets_timer_legacy.c.s
 .PHONY : src/ets_timer_legacy.c.s
 
 src/freertos_hooks.obj: src/freertos_hooks.c.obj
@@ -284,7 +284,7 @@ src/freertos_hooks.obj: src/freertos_hooks.c.obj
 
 # target to build an object file
 src/freertos_hooks.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/freertos_hooks.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/freertos_hooks.c.obj
 .PHONY : src/freertos_hooks.c.obj
 
 src/freertos_hooks.i: src/freertos_hooks.c.i
@@ -293,7 +293,7 @@ src/freertos_hooks.i: src/freertos_hooks.c.i
 
 # target to preprocess a source file
 src/freertos_hooks.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/freertos_hooks.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/freertos_hooks.c.i
 .PHONY : src/freertos_hooks.c.i
 
 src/freertos_hooks.s: src/freertos_hooks.c.s
@@ -302,7 +302,7 @@ src/freertos_hooks.s: src/freertos_hooks.c.s
 
 # target to generate assembly for a file
 src/freertos_hooks.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/freertos_hooks.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/freertos_hooks.c.s
 .PHONY : src/freertos_hooks.c.s
 
 src/ipc.obj: src/ipc.c.obj
@@ -311,7 +311,7 @@ src/ipc.obj: src/ipc.c.obj
 
 # target to build an object file
 src/ipc.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/ipc.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/ipc.c.obj
 .PHONY : src/ipc.c.obj
 
 src/ipc.i: src/ipc.c.i
@@ -320,7 +320,7 @@ src/ipc.i: src/ipc.c.i
 
 # target to preprocess a source file
 src/ipc.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/ipc.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/ipc.c.i
 .PHONY : src/ipc.c.i
 
 src/ipc.s: src/ipc.c.s
@@ -329,7 +329,7 @@ src/ipc.s: src/ipc.c.s
 
 # target to generate assembly for a file
 src/ipc.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/ipc.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/ipc.c.s
 .PHONY : src/ipc.c.s
 
 src/pm_locks.obj: src/pm_locks.c.obj
@@ -338,7 +338,7 @@ src/pm_locks.obj: src/pm_locks.c.obj
 
 # target to build an object file
 src/pm_locks.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/pm_locks.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/pm_locks.c.obj
 .PHONY : src/pm_locks.c.obj
 
 src/pm_locks.i: src/pm_locks.c.i
@@ -347,7 +347,7 @@ src/pm_locks.i: src/pm_locks.c.i
 
 # target to preprocess a source file
 src/pm_locks.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/pm_locks.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/pm_locks.c.i
 .PHONY : src/pm_locks.c.i
 
 src/pm_locks.s: src/pm_locks.c.s
@@ -356,7 +356,7 @@ src/pm_locks.s: src/pm_locks.c.s
 
 # target to generate assembly for a file
 src/pm_locks.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/pm_locks.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/pm_locks.c.s
 .PHONY : src/pm_locks.c.s
 
 src/stack_check.obj: src/stack_check.c.obj
@@ -365,7 +365,7 @@ src/stack_check.obj: src/stack_check.c.obj
 
 # target to build an object file
 src/stack_check.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/stack_check.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/stack_check.c.obj
 .PHONY : src/stack_check.c.obj
 
 src/stack_check.i: src/stack_check.c.i
@@ -374,7 +374,7 @@ src/stack_check.i: src/stack_check.c.i
 
 # target to preprocess a source file
 src/stack_check.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/stack_check.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/stack_check.c.i
 .PHONY : src/stack_check.c.i
 
 src/stack_check.s: src/stack_check.c.s
@@ -383,7 +383,7 @@ src/stack_check.s: src/stack_check.c.s
 
 # target to generate assembly for a file
 src/stack_check.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/stack_check.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\esp_common\CMakeFiles\__idf_esp_common.dir\build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/stack_check.c.s
 .PHONY : src/stack_check.c.s
 
 # Help Target
@@ -434,6 +434,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

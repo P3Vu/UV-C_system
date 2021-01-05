@@ -50,7 +50,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CMake
+CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -125,14 +125,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\json\CMakeFiles\progress.marks
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/json/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles 0
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\json\CMakeFiles\progress.marks
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/json/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/json/clean
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/json/clean
 .PHONY : clean
 
 # The main clean target
@@ -142,22 +142,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/json/preinstall
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/json/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/json/preinstall
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/json/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 esp-idf/json/CMakeFiles/__idf_json.dir/rule:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/json/CMakeFiles/__idf_json.dir/rule
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/json/CMakeFiles/__idf_json.dir/rule
 .PHONY : esp-idf/json/CMakeFiles/__idf_json.dir/rule
 
 # Convenience name for target.
@@ -167,7 +167,7 @@ __idf_json: esp-idf/json/CMakeFiles/__idf_json.dir/rule
 
 # fast build rule for target.
 __idf_json/fast:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\json\CMakeFiles\__idf_json.dir\build.make esp-idf/json/CMakeFiles/__idf_json.dir/build
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\json\CMakeFiles\__idf_json.dir\build.make esp-idf/json/CMakeFiles/__idf_json.dir/build
 .PHONY : __idf_json/fast
 
 cJSON/cJSON.obj: cJSON/cJSON.c.obj
@@ -176,7 +176,7 @@ cJSON/cJSON.obj: cJSON/cJSON.c.obj
 
 # target to build an object file
 cJSON/cJSON.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\json\CMakeFiles\__idf_json.dir\build.make esp-idf/json/CMakeFiles/__idf_json.dir/cJSON/cJSON.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\json\CMakeFiles\__idf_json.dir\build.make esp-idf/json/CMakeFiles/__idf_json.dir/cJSON/cJSON.c.obj
 .PHONY : cJSON/cJSON.c.obj
 
 cJSON/cJSON.i: cJSON/cJSON.c.i
@@ -185,7 +185,7 @@ cJSON/cJSON.i: cJSON/cJSON.c.i
 
 # target to preprocess a source file
 cJSON/cJSON.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\json\CMakeFiles\__idf_json.dir\build.make esp-idf/json/CMakeFiles/__idf_json.dir/cJSON/cJSON.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\json\CMakeFiles\__idf_json.dir\build.make esp-idf/json/CMakeFiles/__idf_json.dir/cJSON/cJSON.c.i
 .PHONY : cJSON/cJSON.c.i
 
 cJSON/cJSON.s: cJSON/cJSON.c.s
@@ -194,7 +194,7 @@ cJSON/cJSON.s: cJSON/cJSON.c.s
 
 # target to generate assembly for a file
 cJSON/cJSON.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\json\CMakeFiles\__idf_json.dir\build.make esp-idf/json/CMakeFiles/__idf_json.dir/cJSON/cJSON.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\json\CMakeFiles\__idf_json.dir\build.make esp-idf/json/CMakeFiles/__idf_json.dir/cJSON/cJSON.c.s
 .PHONY : cJSON/cJSON.c.s
 
 cJSON/cJSON_Utils.obj: cJSON/cJSON_Utils.c.obj
@@ -203,7 +203,7 @@ cJSON/cJSON_Utils.obj: cJSON/cJSON_Utils.c.obj
 
 # target to build an object file
 cJSON/cJSON_Utils.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\json\CMakeFiles\__idf_json.dir\build.make esp-idf/json/CMakeFiles/__idf_json.dir/cJSON/cJSON_Utils.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\json\CMakeFiles\__idf_json.dir\build.make esp-idf/json/CMakeFiles/__idf_json.dir/cJSON/cJSON_Utils.c.obj
 .PHONY : cJSON/cJSON_Utils.c.obj
 
 cJSON/cJSON_Utils.i: cJSON/cJSON_Utils.c.i
@@ -212,7 +212,7 @@ cJSON/cJSON_Utils.i: cJSON/cJSON_Utils.c.i
 
 # target to preprocess a source file
 cJSON/cJSON_Utils.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\json\CMakeFiles\__idf_json.dir\build.make esp-idf/json/CMakeFiles/__idf_json.dir/cJSON/cJSON_Utils.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\json\CMakeFiles\__idf_json.dir\build.make esp-idf/json/CMakeFiles/__idf_json.dir/cJSON/cJSON_Utils.c.i
 .PHONY : cJSON/cJSON_Utils.c.i
 
 cJSON/cJSON_Utils.s: cJSON/cJSON_Utils.c.s
@@ -221,7 +221,7 @@ cJSON/cJSON_Utils.s: cJSON/cJSON_Utils.c.s
 
 # target to generate assembly for a file
 cJSON/cJSON_Utils.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\json\CMakeFiles\__idf_json.dir\build.make esp-idf/json/CMakeFiles/__idf_json.dir/cJSON/cJSON_Utils.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\json\CMakeFiles\__idf_json.dir\build.make esp-idf/json/CMakeFiles/__idf_json.dir/cJSON/cJSON_Utils.c.s
 .PHONY : cJSON/cJSON_Utils.c.s
 
 # Help Target
@@ -254,6 +254,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

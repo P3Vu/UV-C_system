@@ -45,7 +45,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CMake
+CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB
 
 # Utility rule file for show_efuse_table.
 
@@ -53,7 +53,7 @@ CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CMake
 include esp-idf/efuse/CMakeFiles/show_efuse_table.dir/progress.make
 
 esp-idf/efuse/CMakeFiles/show_efuse_table:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\efuse && python C:/Users/pawel/Desktop/esp-idf/components/efuse/efuse_table_gen.py C:/Users/pawel/Desktop/esp-idf/components/efuse/esp32/esp_efuse_table.csv --max_blk_len 192 --info
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\efuse && python C:/Users/pawel/Desktop/esp-idf/components/efuse/efuse_table_gen.py C:/Users/pawel/Desktop/esp-idf/components/efuse/esp32/esp_efuse_table.csv --max_blk_len 192 --info
 
 show_efuse_table: esp-idf/efuse/CMakeFiles/show_efuse_table
 show_efuse_table: esp-idf/efuse/CMakeFiles/show_efuse_table.dir/build.make
@@ -66,10 +66,10 @@ esp-idf/efuse/CMakeFiles/show_efuse_table.dir/build: show_efuse_table
 .PHONY : esp-idf/efuse/CMakeFiles/show_efuse_table.dir/build
 
 esp-idf/efuse/CMakeFiles/show_efuse_table.dir/clean:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\efuse && $(CMAKE_COMMAND) -P CMakeFiles\show_efuse_table.dir\cmake_clean.cmake
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\efuse && $(CMAKE_COMMAND) -P CMakeFiles\show_efuse_table.dir\cmake_clean.cmake
 .PHONY : esp-idf/efuse/CMakeFiles/show_efuse_table.dir/clean
 
 esp-idf/efuse/CMakeFiles/show_efuse_table.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\esp-idf\components\efuse C:\Users\pawel\Desktop\Grant\Project\firmware\CMake C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\efuse C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\efuse\CMakeFiles\show_efuse_table.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\esp-idf\components\efuse C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\efuse C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\efuse\CMakeFiles\show_efuse_table.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : esp-idf/efuse/CMakeFiles/show_efuse_table.dir/depend
 

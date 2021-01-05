@@ -45,7 +45,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CMake
+CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB
 
 # Utility rule file for apidoc.
 
@@ -66,10 +66,10 @@ esp-idf/mbedtls/mbedtls/CMakeFiles/apidoc.dir/build: apidoc
 .PHONY : esp-idf/mbedtls/mbedtls/CMakeFiles/apidoc.dir/build
 
 esp-idf/mbedtls/mbedtls/CMakeFiles/apidoc.dir/clean:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\mbedtls\mbedtls && $(CMAKE_COMMAND) -P CMakeFiles\apidoc.dir\cmake_clean.cmake
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\mbedtls\mbedtls && $(CMAKE_COMMAND) -P CMakeFiles\apidoc.dir\cmake_clean.cmake
 .PHONY : esp-idf/mbedtls/mbedtls/CMakeFiles/apidoc.dir/clean
 
 esp-idf/mbedtls/mbedtls/CMakeFiles/apidoc.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\esp-idf\components\mbedtls\mbedtls C:\Users\pawel\Desktop\Grant\Project\firmware\CMake C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\mbedtls\mbedtls C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\mbedtls\mbedtls\CMakeFiles\apidoc.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\esp-idf\components\mbedtls\mbedtls C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\mbedtls\mbedtls C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\mbedtls\mbedtls\CMakeFiles\apidoc.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : esp-idf/mbedtls/mbedtls/CMakeFiles/apidoc.dir/depend
 

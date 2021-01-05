@@ -1,7 +1,7 @@
 {
     "project_name":       "UV",
     "project_path":       "C:/Users/pawel/Desktop/Grant/Project/firmware",
-    "build_dir":          "C:/Users/pawel/Desktop/Grant/Project/firmware/CMake",
+    "build_dir":          "C:/Users/pawel/Desktop/Grant/Project/firmware/CodeB",
     "config_file":        "C:/Users/pawel/Desktop/Grant/Project/firmware/sdkconfig",
     "config_defaults":    "",
     "app_elf":            "UV.elf",

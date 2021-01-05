@@ -50,7 +50,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CMake
+CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -125,14 +125,14 @@ list_install_components/fast: list_install_components
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\newlib\CMakeFiles\progress.marks
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/newlib/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles 0
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\newlib\CMakeFiles\progress.marks
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/newlib/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/newlib/clean
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/newlib/clean
 .PHONY : clean
 
 # The main clean target
@@ -142,22 +142,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/newlib/preinstall
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/newlib/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/newlib/preinstall
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/newlib/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 esp-idf/newlib/CMakeFiles/__idf_newlib.dir/rule:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/newlib/CMakeFiles/__idf_newlib.dir/rule
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/newlib/CMakeFiles/__idf_newlib.dir/rule
 .PHONY : esp-idf/newlib/CMakeFiles/__idf_newlib.dir/rule
 
 # Convenience name for target.
@@ -167,7 +167,7 @@ __idf_newlib: esp-idf/newlib/CMakeFiles/__idf_newlib.dir/rule
 
 # fast build rule for target.
 __idf_newlib/fast:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/build
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/build
 .PHONY : __idf_newlib/fast
 
 heap.obj: heap.c.obj
@@ -176,7 +176,7 @@ heap.obj: heap.c.obj
 
 # target to build an object file
 heap.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/heap.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/heap.c.obj
 .PHONY : heap.c.obj
 
 heap.i: heap.c.i
@@ -185,7 +185,7 @@ heap.i: heap.c.i
 
 # target to preprocess a source file
 heap.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/heap.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/heap.c.i
 .PHONY : heap.c.i
 
 heap.s: heap.c.s
@@ -194,7 +194,7 @@ heap.s: heap.c.s
 
 # target to generate assembly for a file
 heap.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/heap.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/heap.c.s
 .PHONY : heap.c.s
 
 locks.obj: locks.c.obj
@@ -203,7 +203,7 @@ locks.obj: locks.c.obj
 
 # target to build an object file
 locks.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/locks.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/locks.c.obj
 .PHONY : locks.c.obj
 
 locks.i: locks.c.i
@@ -212,7 +212,7 @@ locks.i: locks.c.i
 
 # target to preprocess a source file
 locks.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/locks.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/locks.c.i
 .PHONY : locks.c.i
 
 locks.s: locks.c.s
@@ -221,7 +221,7 @@ locks.s: locks.c.s
 
 # target to generate assembly for a file
 locks.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/locks.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/locks.c.s
 .PHONY : locks.c.s
 
 poll.obj: poll.c.obj
@@ -230,7 +230,7 @@ poll.obj: poll.c.obj
 
 # target to build an object file
 poll.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/poll.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/poll.c.obj
 .PHONY : poll.c.obj
 
 poll.i: poll.c.i
@@ -239,7 +239,7 @@ poll.i: poll.c.i
 
 # target to preprocess a source file
 poll.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/poll.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/poll.c.i
 .PHONY : poll.c.i
 
 poll.s: poll.c.s
@@ -248,7 +248,7 @@ poll.s: poll.c.s
 
 # target to generate assembly for a file
 poll.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/poll.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/poll.c.s
 .PHONY : poll.c.s
 
 pread.obj: pread.c.obj
@@ -257,7 +257,7 @@ pread.obj: pread.c.obj
 
 # target to build an object file
 pread.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/pread.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/pread.c.obj
 .PHONY : pread.c.obj
 
 pread.i: pread.c.i
@@ -266,7 +266,7 @@ pread.i: pread.c.i
 
 # target to preprocess a source file
 pread.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/pread.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/pread.c.i
 .PHONY : pread.c.i
 
 pread.s: pread.c.s
@@ -275,7 +275,7 @@ pread.s: pread.c.s
 
 # target to generate assembly for a file
 pread.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/pread.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/pread.c.s
 .PHONY : pread.c.s
 
 pthread.obj: pthread.c.obj
@@ -284,7 +284,7 @@ pthread.obj: pthread.c.obj
 
 # target to build an object file
 pthread.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/pthread.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/pthread.c.obj
 .PHONY : pthread.c.obj
 
 pthread.i: pthread.c.i
@@ -293,7 +293,7 @@ pthread.i: pthread.c.i
 
 # target to preprocess a source file
 pthread.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/pthread.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/pthread.c.i
 .PHONY : pthread.c.i
 
 pthread.s: pthread.c.s
@@ -302,7 +302,7 @@ pthread.s: pthread.c.s
 
 # target to generate assembly for a file
 pthread.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/pthread.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/pthread.c.s
 .PHONY : pthread.c.s
 
 pwrite.obj: pwrite.c.obj
@@ -311,7 +311,7 @@ pwrite.obj: pwrite.c.obj
 
 # target to build an object file
 pwrite.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/pwrite.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/pwrite.c.obj
 .PHONY : pwrite.c.obj
 
 pwrite.i: pwrite.c.i
@@ -320,7 +320,7 @@ pwrite.i: pwrite.c.i
 
 # target to preprocess a source file
 pwrite.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/pwrite.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/pwrite.c.i
 .PHONY : pwrite.c.i
 
 pwrite.s: pwrite.c.s
@@ -329,7 +329,7 @@ pwrite.s: pwrite.c.s
 
 # target to generate assembly for a file
 pwrite.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/pwrite.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/pwrite.c.s
 .PHONY : pwrite.c.s
 
 random.obj: random.c.obj
@@ -338,7 +338,7 @@ random.obj: random.c.obj
 
 # target to build an object file
 random.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/random.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/random.c.obj
 .PHONY : random.c.obj
 
 random.i: random.c.i
@@ -347,7 +347,7 @@ random.i: random.c.i
 
 # target to preprocess a source file
 random.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/random.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/random.c.i
 .PHONY : random.c.i
 
 random.s: random.c.s
@@ -356,7 +356,7 @@ random.s: random.c.s
 
 # target to generate assembly for a file
 random.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/random.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/random.c.s
 .PHONY : random.c.s
 
 reent_init.obj: reent_init.c.obj
@@ -365,7 +365,7 @@ reent_init.obj: reent_init.c.obj
 
 # target to build an object file
 reent_init.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/reent_init.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/reent_init.c.obj
 .PHONY : reent_init.c.obj
 
 reent_init.i: reent_init.c.i
@@ -374,7 +374,7 @@ reent_init.i: reent_init.c.i
 
 # target to preprocess a source file
 reent_init.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/reent_init.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/reent_init.c.i
 .PHONY : reent_init.c.i
 
 reent_init.s: reent_init.c.s
@@ -383,7 +383,7 @@ reent_init.s: reent_init.c.s
 
 # target to generate assembly for a file
 reent_init.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/reent_init.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/reent_init.c.s
 .PHONY : reent_init.c.s
 
 select.obj: select.c.obj
@@ -392,7 +392,7 @@ select.obj: select.c.obj
 
 # target to build an object file
 select.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/select.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/select.c.obj
 .PHONY : select.c.obj
 
 select.i: select.c.i
@@ -401,7 +401,7 @@ select.i: select.c.i
 
 # target to preprocess a source file
 select.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/select.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/select.c.i
 .PHONY : select.c.i
 
 select.s: select.c.s
@@ -410,7 +410,7 @@ select.s: select.c.s
 
 # target to generate assembly for a file
 select.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/select.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/select.c.s
 .PHONY : select.c.s
 
 syscall_table.obj: syscall_table.c.obj
@@ -419,7 +419,7 @@ syscall_table.obj: syscall_table.c.obj
 
 # target to build an object file
 syscall_table.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/syscall_table.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/syscall_table.c.obj
 .PHONY : syscall_table.c.obj
 
 syscall_table.i: syscall_table.c.i
@@ -428,7 +428,7 @@ syscall_table.i: syscall_table.c.i
 
 # target to preprocess a source file
 syscall_table.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/syscall_table.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/syscall_table.c.i
 .PHONY : syscall_table.c.i
 
 syscall_table.s: syscall_table.c.s
@@ -437,7 +437,7 @@ syscall_table.s: syscall_table.c.s
 
 # target to generate assembly for a file
 syscall_table.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/syscall_table.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/syscall_table.c.s
 .PHONY : syscall_table.c.s
 
 syscalls.obj: syscalls.c.obj
@@ -446,7 +446,7 @@ syscalls.obj: syscalls.c.obj
 
 # target to build an object file
 syscalls.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/syscalls.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/syscalls.c.obj
 .PHONY : syscalls.c.obj
 
 syscalls.i: syscalls.c.i
@@ -455,7 +455,7 @@ syscalls.i: syscalls.c.i
 
 # target to preprocess a source file
 syscalls.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/syscalls.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/syscalls.c.i
 .PHONY : syscalls.c.i
 
 syscalls.s: syscalls.c.s
@@ -464,7 +464,7 @@ syscalls.s: syscalls.c.s
 
 # target to generate assembly for a file
 syscalls.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/syscalls.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/syscalls.c.s
 .PHONY : syscalls.c.s
 
 termios.obj: termios.c.obj
@@ -473,7 +473,7 @@ termios.obj: termios.c.obj
 
 # target to build an object file
 termios.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/termios.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/termios.c.obj
 .PHONY : termios.c.obj
 
 termios.i: termios.c.i
@@ -482,7 +482,7 @@ termios.i: termios.c.i
 
 # target to preprocess a source file
 termios.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/termios.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/termios.c.i
 .PHONY : termios.c.i
 
 termios.s: termios.c.s
@@ -491,7 +491,7 @@ termios.s: termios.c.s
 
 # target to generate assembly for a file
 termios.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/termios.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/termios.c.s
 .PHONY : termios.c.s
 
 time.obj: time.c.obj
@@ -500,7 +500,7 @@ time.obj: time.c.obj
 
 # target to build an object file
 time.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/time.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/time.c.obj
 .PHONY : time.c.obj
 
 time.i: time.c.i
@@ -509,7 +509,7 @@ time.i: time.c.i
 
 # target to preprocess a source file
 time.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/time.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/time.c.i
 .PHONY : time.c.i
 
 time.s: time.c.s
@@ -518,7 +518,7 @@ time.s: time.c.s
 
 # target to generate assembly for a file
 time.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/time.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/time.c.s
 .PHONY : time.c.s
 
 utime.obj: utime.c.obj
@@ -527,7 +527,7 @@ utime.obj: utime.c.obj
 
 # target to build an object file
 utime.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/utime.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/utime.c.obj
 .PHONY : utime.c.obj
 
 utime.i: utime.c.i
@@ -536,7 +536,7 @@ utime.i: utime.c.i
 
 # target to preprocess a source file
 utime.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/utime.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/utime.c.i
 .PHONY : utime.c.i
 
 utime.s: utime.c.s
@@ -545,7 +545,7 @@ utime.s: utime.c.s
 
 # target to generate assembly for a file
 utime.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/utime.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\newlib\CMakeFiles\__idf_newlib.dir\build.make esp-idf/newlib/CMakeFiles/__idf_newlib.dir/utime.c.s
 .PHONY : utime.c.s
 
 # Help Target
@@ -614,6 +614,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

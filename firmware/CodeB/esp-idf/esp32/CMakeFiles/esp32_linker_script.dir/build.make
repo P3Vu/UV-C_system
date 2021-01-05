@@ -45,7 +45,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CMake
+CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB
 
 # Utility rule file for esp32_linker_script.
 
@@ -56,8 +56,8 @@ esp-idf/esp32/CMakeFiles/esp32_linker_script: esp-idf/esp32/esp32_out.ld
 
 
 esp-idf/esp32/esp32_out.ld: config/sdkconfig.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating linker script..."
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\esp32 && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe -C -P -x c -E -o esp32_out.ld -I C:/Users/pawel/Desktop/Grant/Project/firmware/CMake/config C:/Users/pawel/Desktop/esp-idf/components/esp32/ld/esp32.ld
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating linker script..."
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\esp32 && C:\Users\pawel\.espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe -C -P -x c -E -o esp32_out.ld -I C:/Users/pawel/Desktop/Grant/Project/firmware/CodeB/config C:/Users/pawel/Desktop/esp-idf/components/esp32/ld/esp32.ld
 
 esp32_linker_script: esp-idf/esp32/CMakeFiles/esp32_linker_script
 esp32_linker_script: esp-idf/esp32/esp32_out.ld
@@ -71,10 +71,10 @@ esp-idf/esp32/CMakeFiles/esp32_linker_script.dir/build: esp32_linker_script
 .PHONY : esp-idf/esp32/CMakeFiles/esp32_linker_script.dir/build
 
 esp-idf/esp32/CMakeFiles/esp32_linker_script.dir/clean:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\esp32 && $(CMAKE_COMMAND) -P CMakeFiles\esp32_linker_script.dir\cmake_clean.cmake
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\esp32 && $(CMAKE_COMMAND) -P CMakeFiles\esp32_linker_script.dir\cmake_clean.cmake
 .PHONY : esp-idf/esp32/CMakeFiles/esp32_linker_script.dir/clean
 
 esp-idf/esp32/CMakeFiles/esp32_linker_script.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\esp-idf\components\esp32 C:\Users\pawel\Desktop\Grant\Project\firmware\CMake C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\esp32 C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\esp32\CMakeFiles\esp32_linker_script.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\esp-idf\components\esp32 C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\esp32 C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\esp32\CMakeFiles\esp32_linker_script.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : esp-idf/esp32/CMakeFiles/esp32_linker_script.dir/depend
 

@@ -50,7 +50,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CMake
+CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -125,14 +125,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\freertos\CMakeFiles\progress.marks
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/freertos/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles 0
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\freertos\CMakeFiles\progress.marks
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/freertos/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/freertos/clean
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/freertos/clean
 .PHONY : clean
 
 # The main clean target
@@ -142,22 +142,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/freertos/preinstall
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/freertos/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/freertos/preinstall
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/freertos/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 esp-idf/freertos/CMakeFiles/__idf_freertos.dir/rule:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/freertos/CMakeFiles/__idf_freertos.dir/rule
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/freertos/CMakeFiles/__idf_freertos.dir/rule
 .PHONY : esp-idf/freertos/CMakeFiles/__idf_freertos.dir/rule
 
 # Convenience name for target.
@@ -167,7 +167,7 @@ __idf_freertos: esp-idf/freertos/CMakeFiles/__idf_freertos.dir/rule
 
 # fast build rule for target.
 __idf_freertos/fast:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build
 .PHONY : __idf_freertos/fast
 
 FreeRTOS-openocd.obj: FreeRTOS-openocd.c.obj
@@ -176,7 +176,7 @@ FreeRTOS-openocd.obj: FreeRTOS-openocd.c.obj
 
 # target to build an object file
 FreeRTOS-openocd.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-openocd.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-openocd.c.obj
 .PHONY : FreeRTOS-openocd.c.obj
 
 FreeRTOS-openocd.i: FreeRTOS-openocd.c.i
@@ -185,7 +185,7 @@ FreeRTOS-openocd.i: FreeRTOS-openocd.c.i
 
 # target to preprocess a source file
 FreeRTOS-openocd.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-openocd.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-openocd.c.i
 .PHONY : FreeRTOS-openocd.c.i
 
 FreeRTOS-openocd.s: FreeRTOS-openocd.c.s
@@ -194,7 +194,7 @@ FreeRTOS-openocd.s: FreeRTOS-openocd.c.s
 
 # target to generate assembly for a file
 FreeRTOS-openocd.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-openocd.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-openocd.c.s
 .PHONY : FreeRTOS-openocd.c.s
 
 croutine.obj: croutine.c.obj
@@ -203,7 +203,7 @@ croutine.obj: croutine.c.obj
 
 # target to build an object file
 croutine.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/croutine.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/croutine.c.obj
 .PHONY : croutine.c.obj
 
 croutine.i: croutine.c.i
@@ -212,7 +212,7 @@ croutine.i: croutine.c.i
 
 # target to preprocess a source file
 croutine.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/croutine.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/croutine.c.i
 .PHONY : croutine.c.i
 
 croutine.s: croutine.c.s
@@ -221,7 +221,7 @@ croutine.s: croutine.c.s
 
 # target to generate assembly for a file
 croutine.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/croutine.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/croutine.c.s
 .PHONY : croutine.c.s
 
 event_groups.obj: event_groups.c.obj
@@ -230,7 +230,7 @@ event_groups.obj: event_groups.c.obj
 
 # target to build an object file
 event_groups.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/event_groups.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/event_groups.c.obj
 .PHONY : event_groups.c.obj
 
 event_groups.i: event_groups.c.i
@@ -239,7 +239,7 @@ event_groups.i: event_groups.c.i
 
 # target to preprocess a source file
 event_groups.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/event_groups.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/event_groups.c.i
 .PHONY : event_groups.c.i
 
 event_groups.s: event_groups.c.s
@@ -248,7 +248,7 @@ event_groups.s: event_groups.c.s
 
 # target to generate assembly for a file
 event_groups.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/event_groups.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/event_groups.c.s
 .PHONY : event_groups.c.s
 
 list.obj: list.c.obj
@@ -257,7 +257,7 @@ list.obj: list.c.obj
 
 # target to build an object file
 list.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/list.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/list.c.obj
 .PHONY : list.c.obj
 
 list.i: list.c.i
@@ -266,7 +266,7 @@ list.i: list.c.i
 
 # target to preprocess a source file
 list.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/list.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/list.c.i
 .PHONY : list.c.i
 
 list.s: list.c.s
@@ -275,7 +275,7 @@ list.s: list.c.s
 
 # target to generate assembly for a file
 list.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/list.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/list.c.s
 .PHONY : list.c.s
 
 port.obj: port.c.obj
@@ -284,7 +284,7 @@ port.obj: port.c.obj
 
 # target to build an object file
 port.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/port.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/port.c.obj
 .PHONY : port.c.obj
 
 port.i: port.c.i
@@ -293,7 +293,7 @@ port.i: port.c.i
 
 # target to preprocess a source file
 port.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/port.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/port.c.i
 .PHONY : port.c.i
 
 port.s: port.c.s
@@ -302,7 +302,7 @@ port.s: port.c.s
 
 # target to generate assembly for a file
 port.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/port.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/port.c.s
 .PHONY : port.c.s
 
 portasm.obj: portasm.S.obj
@@ -311,7 +311,7 @@ portasm.obj: portasm.S.obj
 
 # target to build an object file
 portasm.S.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/portasm.S.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/portasm.S.obj
 .PHONY : portasm.S.obj
 
 queue.obj: queue.c.obj
@@ -320,7 +320,7 @@ queue.obj: queue.c.obj
 
 # target to build an object file
 queue.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/queue.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/queue.c.obj
 .PHONY : queue.c.obj
 
 queue.i: queue.c.i
@@ -329,7 +329,7 @@ queue.i: queue.c.i
 
 # target to preprocess a source file
 queue.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/queue.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/queue.c.i
 .PHONY : queue.c.i
 
 queue.s: queue.c.s
@@ -338,7 +338,7 @@ queue.s: queue.c.s
 
 # target to generate assembly for a file
 queue.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/queue.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/queue.c.s
 .PHONY : queue.c.s
 
 tasks.obj: tasks.c.obj
@@ -347,7 +347,7 @@ tasks.obj: tasks.c.obj
 
 # target to build an object file
 tasks.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/tasks.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/tasks.c.obj
 .PHONY : tasks.c.obj
 
 tasks.i: tasks.c.i
@@ -356,7 +356,7 @@ tasks.i: tasks.c.i
 
 # target to preprocess a source file
 tasks.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/tasks.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/tasks.c.i
 .PHONY : tasks.c.i
 
 tasks.s: tasks.c.s
@@ -365,7 +365,7 @@ tasks.s: tasks.c.s
 
 # target to generate assembly for a file
 tasks.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/tasks.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/tasks.c.s
 .PHONY : tasks.c.s
 
 timers.obj: timers.c.obj
@@ -374,7 +374,7 @@ timers.obj: timers.c.obj
 
 # target to build an object file
 timers.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/timers.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/timers.c.obj
 .PHONY : timers.c.obj
 
 timers.i: timers.c.i
@@ -383,7 +383,7 @@ timers.i: timers.c.i
 
 # target to preprocess a source file
 timers.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/timers.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/timers.c.i
 .PHONY : timers.c.i
 
 timers.s: timers.c.s
@@ -392,7 +392,7 @@ timers.s: timers.c.s
 
 # target to generate assembly for a file
 timers.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/timers.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/timers.c.s
 .PHONY : timers.c.s
 
 xtensa_context.obj: xtensa_context.S.obj
@@ -401,7 +401,7 @@ xtensa_context.obj: xtensa_context.S.obj
 
 # target to build an object file
 xtensa_context.S.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/xtensa_context.S.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/xtensa_context.S.obj
 .PHONY : xtensa_context.S.obj
 
 xtensa_init.obj: xtensa_init.c.obj
@@ -410,7 +410,7 @@ xtensa_init.obj: xtensa_init.c.obj
 
 # target to build an object file
 xtensa_init.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/xtensa_init.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/xtensa_init.c.obj
 .PHONY : xtensa_init.c.obj
 
 xtensa_init.i: xtensa_init.c.i
@@ -419,7 +419,7 @@ xtensa_init.i: xtensa_init.c.i
 
 # target to preprocess a source file
 xtensa_init.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/xtensa_init.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/xtensa_init.c.i
 .PHONY : xtensa_init.c.i
 
 xtensa_init.s: xtensa_init.c.s
@@ -428,7 +428,7 @@ xtensa_init.s: xtensa_init.c.s
 
 # target to generate assembly for a file
 xtensa_init.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/xtensa_init.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/xtensa_init.c.s
 .PHONY : xtensa_init.c.s
 
 xtensa_intr.obj: xtensa_intr.c.obj
@@ -437,7 +437,7 @@ xtensa_intr.obj: xtensa_intr.c.obj
 
 # target to build an object file
 xtensa_intr.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/xtensa_intr.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/xtensa_intr.c.obj
 .PHONY : xtensa_intr.c.obj
 
 xtensa_intr.i: xtensa_intr.c.i
@@ -446,7 +446,7 @@ xtensa_intr.i: xtensa_intr.c.i
 
 # target to preprocess a source file
 xtensa_intr.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/xtensa_intr.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/xtensa_intr.c.i
 .PHONY : xtensa_intr.c.i
 
 xtensa_intr.s: xtensa_intr.c.s
@@ -455,7 +455,7 @@ xtensa_intr.s: xtensa_intr.c.s
 
 # target to generate assembly for a file
 xtensa_intr.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/xtensa_intr.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/xtensa_intr.c.s
 .PHONY : xtensa_intr.c.s
 
 xtensa_intr_asm.obj: xtensa_intr_asm.S.obj
@@ -464,7 +464,7 @@ xtensa_intr_asm.obj: xtensa_intr_asm.S.obj
 
 # target to build an object file
 xtensa_intr_asm.S.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/xtensa_intr_asm.S.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/xtensa_intr_asm.S.obj
 .PHONY : xtensa_intr_asm.S.obj
 
 xtensa_overlay_os_hook.obj: xtensa_overlay_os_hook.c.obj
@@ -473,7 +473,7 @@ xtensa_overlay_os_hook.obj: xtensa_overlay_os_hook.c.obj
 
 # target to build an object file
 xtensa_overlay_os_hook.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/xtensa_overlay_os_hook.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/xtensa_overlay_os_hook.c.obj
 .PHONY : xtensa_overlay_os_hook.c.obj
 
 xtensa_overlay_os_hook.i: xtensa_overlay_os_hook.c.i
@@ -482,7 +482,7 @@ xtensa_overlay_os_hook.i: xtensa_overlay_os_hook.c.i
 
 # target to preprocess a source file
 xtensa_overlay_os_hook.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/xtensa_overlay_os_hook.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/xtensa_overlay_os_hook.c.i
 .PHONY : xtensa_overlay_os_hook.c.i
 
 xtensa_overlay_os_hook.s: xtensa_overlay_os_hook.c.s
@@ -491,7 +491,7 @@ xtensa_overlay_os_hook.s: xtensa_overlay_os_hook.c.s
 
 # target to generate assembly for a file
 xtensa_overlay_os_hook.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/xtensa_overlay_os_hook.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/xtensa_overlay_os_hook.c.s
 .PHONY : xtensa_overlay_os_hook.c.s
 
 xtensa_vector_defaults.obj: xtensa_vector_defaults.S.obj
@@ -500,7 +500,7 @@ xtensa_vector_defaults.obj: xtensa_vector_defaults.S.obj
 
 # target to build an object file
 xtensa_vector_defaults.S.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/xtensa_vector_defaults.S.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/xtensa_vector_defaults.S.obj
 .PHONY : xtensa_vector_defaults.S.obj
 
 xtensa_vectors.obj: xtensa_vectors.S.obj
@@ -509,7 +509,7 @@ xtensa_vectors.obj: xtensa_vectors.S.obj
 
 # target to build an object file
 xtensa_vectors.S.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/xtensa_vectors.S.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\freertos\CMakeFiles\__idf_freertos.dir\build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/xtensa_vectors.S.obj
 .PHONY : xtensa_vectors.S.obj
 
 # Help Target
@@ -574,6 +574,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

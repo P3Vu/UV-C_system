@@ -45,7 +45,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CMake
+CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB
 
 # Utility rule file for monitor.
 
@@ -53,7 +53,7 @@ CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CMake
 include CMakeFiles/monitor.dir/progress.make
 
 CMakeFiles/monitor:
-	cd /d C:\Users\pawel\Desktop\esp-idf\components\esptool_py && C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -D IDF_PATH="C:/Users/pawel/Desktop/esp-idf" -D IDF_MONITOR="C:/Users/pawel/Desktop/esp-idf/tools/idf_monitor.py" -D ELF_FILE="UV.elf" -D WORKING_DIRECTORY="C:/Users/pawel/Desktop/Grant/Project/firmware/CMake" -P run_idf_monitor.cmake
+	cd /d C:\Users\pawel\Desktop\esp-idf\components\esptool_py && C:\Users\pawel\.espressif\tools\cmake\3.13.4\bin\cmake.exe -D IDF_PATH="C:/Users/pawel/Desktop/esp-idf" -D IDF_MONITOR="C:/Users/pawel/Desktop/esp-idf/tools/idf_monitor.py" -D ELF_FILE="UV.elf" -D WORKING_DIRECTORY="C:/Users/pawel/Desktop/Grant/Project/firmware/CodeB" -P run_idf_monitor.cmake
 
 monitor: CMakeFiles/monitor
 monitor: CMakeFiles/monitor.dir/build.make
@@ -70,6 +70,6 @@ CMakeFiles/monitor.dir/clean:
 .PHONY : CMakeFiles/monitor.dir/clean
 
 CMakeFiles/monitor.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\Grant\Project\firmware\CMake C:\Users\pawel\Desktop\Grant\Project\firmware\CMake C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles\monitor.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles\monitor.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/monitor.dir/depend
 

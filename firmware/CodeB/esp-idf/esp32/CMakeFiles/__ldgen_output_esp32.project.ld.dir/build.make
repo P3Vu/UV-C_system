@@ -45,7 +45,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CMake
+CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB
 
 # Utility rule file for __ldgen_output_esp32.project.ld.
 
@@ -130,8 +130,8 @@ esp-idf/esp32/ld/esp32.project.ld: esp-idf/unity/libunity.a
 esp-idf/esp32/ld/esp32.project.ld: esp-idf/wifi_provisioning/libwifi_provisioning.a
 esp-idf/esp32/ld/esp32.project.ld: esp-idf/main/libmain.a
 esp-idf/esp32/ld/esp32.project.ld: C:/Users/pawel/Desktop/Grant/Project/firmware/sdkconfig
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ld/esp32.project.ld"
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\esp32 && python C:/Users/pawel/Desktop/esp-idf/tools/ldgen/ldgen.py --config C:/Users/pawel/Desktop/Grant/Project/firmware/sdkconfig --fragments C:/Users/pawel/Desktop/esp-idf/components/esp_ringbuf/linker.lf	C:/Users/pawel/Desktop/esp-idf/components/spi_flash/linker.lf	C:/Users/pawel/Desktop/esp-idf/components/esp_wifi/linker.lf	C:/Users/pawel/Desktop/esp-idf/components/lwip/linker.lf	C:/Users/pawel/Desktop/esp-idf/components/esp_event/linker.lf	C:/Users/pawel/Desktop/esp-idf/components/espcoredump/linker.lf	C:/Users/pawel/Desktop/esp-idf/components/esp32/linker.lf	C:/Users/pawel/Desktop/esp-idf/components/esp32/ld/esp32_fragments.lf	C:/Users/pawel/Desktop/esp-idf/components/xtensa/linker.lf	C:/Users/pawel/Desktop/esp-idf/components/soc/linker.lf	C:/Users/pawel/Desktop/esp-idf/components/heap/linker.lf	C:/Users/pawel/Desktop/esp-idf/components/freertos/linker.lf	C:/Users/pawel/Desktop/esp-idf/components/newlib/newlib.lf	C:/Users/pawel/Desktop/esp-idf/components/app_trace/linker.lf	C:/Users/pawel/Desktop/esp-idf/components/esp_gdbstub/linker.lf --input C:/Users/pawel/Desktop/esp-idf/components/esp32/ld/esp32.project.ld.in --output C:/Users/pawel/Desktop/Grant/Project/firmware/CMake/esp-idf/esp32/ld/esp32.project.ld --kconfig C:/Users/pawel/Desktop/esp-idf/Kconfig --env-file C:/Users/pawel/Desktop/Grant/Project/firmware/CMake/config.env --libraries-file C:/Users/pawel/Desktop/Grant/Project/firmware/CMake/ldgen_libraries --objdump C:/Users/pawel/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-objdump.exe
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ld/esp32.project.ld"
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\esp32 && python C:/Users/pawel/Desktop/esp-idf/tools/ldgen/ldgen.py --config C:/Users/pawel/Desktop/Grant/Project/firmware/sdkconfig --fragments C:/Users/pawel/Desktop/esp-idf/components/esp_ringbuf/linker.lf	C:/Users/pawel/Desktop/esp-idf/components/spi_flash/linker.lf	C:/Users/pawel/Desktop/esp-idf/components/esp_wifi/linker.lf	C:/Users/pawel/Desktop/esp-idf/components/lwip/linker.lf	C:/Users/pawel/Desktop/esp-idf/components/esp_event/linker.lf	C:/Users/pawel/Desktop/esp-idf/components/espcoredump/linker.lf	C:/Users/pawel/Desktop/esp-idf/components/esp32/linker.lf	C:/Users/pawel/Desktop/esp-idf/components/esp32/ld/esp32_fragments.lf	C:/Users/pawel/Desktop/esp-idf/components/xtensa/linker.lf	C:/Users/pawel/Desktop/esp-idf/components/soc/linker.lf	C:/Users/pawel/Desktop/esp-idf/components/heap/linker.lf	C:/Users/pawel/Desktop/esp-idf/components/freertos/linker.lf	C:/Users/pawel/Desktop/esp-idf/components/newlib/newlib.lf	C:/Users/pawel/Desktop/esp-idf/components/app_trace/linker.lf	C:/Users/pawel/Desktop/esp-idf/components/esp_gdbstub/linker.lf --input C:/Users/pawel/Desktop/esp-idf/components/esp32/ld/esp32.project.ld.in --output C:/Users/pawel/Desktop/Grant/Project/firmware/CodeB/esp-idf/esp32/ld/esp32.project.ld --kconfig C:/Users/pawel/Desktop/esp-idf/Kconfig --env-file C:/Users/pawel/Desktop/Grant/Project/firmware/CodeB/config.env --libraries-file C:/Users/pawel/Desktop/Grant/Project/firmware/CodeB/ldgen_libraries --objdump C:/Users/pawel/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-objdump.exe
 
 __ldgen_output_esp32.project.ld: esp-idf/esp32/CMakeFiles/__ldgen_output_esp32.project.ld
 __ldgen_output_esp32.project.ld: esp-idf/esp32/ld/esp32.project.ld
@@ -145,10 +145,10 @@ esp-idf/esp32/CMakeFiles/__ldgen_output_esp32.project.ld.dir/build: __ldgen_outp
 .PHONY : esp-idf/esp32/CMakeFiles/__ldgen_output_esp32.project.ld.dir/build
 
 esp-idf/esp32/CMakeFiles/__ldgen_output_esp32.project.ld.dir/clean:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\esp32 && $(CMAKE_COMMAND) -P CMakeFiles\__ldgen_output_esp32.project.ld.dir\cmake_clean.cmake
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\esp32 && $(CMAKE_COMMAND) -P CMakeFiles\__ldgen_output_esp32.project.ld.dir\cmake_clean.cmake
 .PHONY : esp-idf/esp32/CMakeFiles/__ldgen_output_esp32.project.ld.dir/clean
 
 esp-idf/esp32/CMakeFiles/__ldgen_output_esp32.project.ld.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\esp-idf\components\esp32 C:\Users\pawel\Desktop\Grant\Project\firmware\CMake C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\esp32 C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\esp32\CMakeFiles\__ldgen_output_esp32.project.ld.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\pawel\Desktop\Grant\Project\firmware C:\Users\pawel\Desktop\esp-idf\components\esp32 C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\esp32 C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\esp32\CMakeFiles\__ldgen_output_esp32.project.ld.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : esp-idf/esp32/CMakeFiles/__ldgen_output_esp32.project.ld.dir/depend
 

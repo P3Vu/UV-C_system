@@ -50,7 +50,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CMake
+CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -125,14 +125,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\main\CMakeFiles\progress.marks
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/main/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles 0
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\main\CMakeFiles\progress.marks
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/main/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/main/clean
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/main/clean
 .PHONY : clean
 
 # The main clean target
@@ -142,22 +142,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/main/preinstall
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/main/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/main/preinstall
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/main/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 esp-idf/main/CMakeFiles/__idf_main.dir/rule:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/main/CMakeFiles/__idf_main.dir/rule
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/main/CMakeFiles/__idf_main.dir/rule
 .PHONY : esp-idf/main/CMakeFiles/__idf_main.dir/rule
 
 # Convenience name for target.
@@ -167,8 +167,197 @@ __idf_main: esp-idf/main/CMakeFiles/__idf_main.dir/rule
 
 # fast build rule for target.
 __idf_main/fast:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\main\CMakeFiles\__idf_main.dir\build.make esp-idf/main/CMakeFiles/__idf_main.dir/build
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\main\CMakeFiles\__idf_main.dir\build.make esp-idf/main/CMakeFiles/__idf_main.dir/build
 .PHONY : __idf_main/fast
+
+__/libs/MAX44009/MAX44009.obj: __/libs/MAX44009/MAX44009.c.obj
+
+.PHONY : __/libs/MAX44009/MAX44009.obj
+
+# target to build an object file
+__/libs/MAX44009/MAX44009.c.obj:
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\main\CMakeFiles\__idf_main.dir\build.make esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/MAX44009/MAX44009.c.obj
+.PHONY : __/libs/MAX44009/MAX44009.c.obj
+
+__/libs/MAX44009/MAX44009.i: __/libs/MAX44009/MAX44009.c.i
+
+.PHONY : __/libs/MAX44009/MAX44009.i
+
+# target to preprocess a source file
+__/libs/MAX44009/MAX44009.c.i:
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\main\CMakeFiles\__idf_main.dir\build.make esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/MAX44009/MAX44009.c.i
+.PHONY : __/libs/MAX44009/MAX44009.c.i
+
+__/libs/MAX44009/MAX44009.s: __/libs/MAX44009/MAX44009.c.s
+
+.PHONY : __/libs/MAX44009/MAX44009.s
+
+# target to generate assembly for a file
+__/libs/MAX44009/MAX44009.c.s:
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\main\CMakeFiles\__idf_main.dir\build.make esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/MAX44009/MAX44009.c.s
+.PHONY : __/libs/MAX44009/MAX44009.c.s
+
+__/libs/ML8511/ML8511.obj: __/libs/ML8511/ML8511.c.obj
+
+.PHONY : __/libs/ML8511/ML8511.obj
+
+# target to build an object file
+__/libs/ML8511/ML8511.c.obj:
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\main\CMakeFiles\__idf_main.dir\build.make esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/ML8511/ML8511.c.obj
+.PHONY : __/libs/ML8511/ML8511.c.obj
+
+__/libs/ML8511/ML8511.i: __/libs/ML8511/ML8511.c.i
+
+.PHONY : __/libs/ML8511/ML8511.i
+
+# target to preprocess a source file
+__/libs/ML8511/ML8511.c.i:
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\main\CMakeFiles\__idf_main.dir\build.make esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/ML8511/ML8511.c.i
+.PHONY : __/libs/ML8511/ML8511.c.i
+
+__/libs/ML8511/ML8511.s: __/libs/ML8511/ML8511.c.s
+
+.PHONY : __/libs/ML8511/ML8511.s
+
+# target to generate assembly for a file
+__/libs/ML8511/ML8511.c.s:
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\main\CMakeFiles\__idf_main.dir\build.make esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/ML8511/ML8511.c.s
+.PHONY : __/libs/ML8511/ML8511.c.s
+
+__/libs/cJSON/cJSON.obj: __/libs/cJSON/cJSON.c.obj
+
+.PHONY : __/libs/cJSON/cJSON.obj
+
+# target to build an object file
+__/libs/cJSON/cJSON.c.obj:
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\main\CMakeFiles\__idf_main.dir\build.make esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/cJSON/cJSON.c.obj
+.PHONY : __/libs/cJSON/cJSON.c.obj
+
+__/libs/cJSON/cJSON.i: __/libs/cJSON/cJSON.c.i
+
+.PHONY : __/libs/cJSON/cJSON.i
+
+# target to preprocess a source file
+__/libs/cJSON/cJSON.c.i:
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\main\CMakeFiles\__idf_main.dir\build.make esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/cJSON/cJSON.c.i
+.PHONY : __/libs/cJSON/cJSON.c.i
+
+__/libs/cJSON/cJSON.s: __/libs/cJSON/cJSON.c.s
+
+.PHONY : __/libs/cJSON/cJSON.s
+
+# target to generate assembly for a file
+__/libs/cJSON/cJSON.c.s:
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\main\CMakeFiles\__idf_main.dir\build.make esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/cJSON/cJSON.c.s
+.PHONY : __/libs/cJSON/cJSON.c.s
+
+__/libs/myHTTP/my_http.obj: __/libs/myHTTP/my_http.c.obj
+
+.PHONY : __/libs/myHTTP/my_http.obj
+
+# target to build an object file
+__/libs/myHTTP/my_http.c.obj:
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\main\CMakeFiles\__idf_main.dir\build.make esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/myHTTP/my_http.c.obj
+.PHONY : __/libs/myHTTP/my_http.c.obj
+
+__/libs/myHTTP/my_http.i: __/libs/myHTTP/my_http.c.i
+
+.PHONY : __/libs/myHTTP/my_http.i
+
+# target to preprocess a source file
+__/libs/myHTTP/my_http.c.i:
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\main\CMakeFiles\__idf_main.dir\build.make esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/myHTTP/my_http.c.i
+.PHONY : __/libs/myHTTP/my_http.c.i
+
+__/libs/myHTTP/my_http.s: __/libs/myHTTP/my_http.c.s
+
+.PHONY : __/libs/myHTTP/my_http.s
+
+# target to generate assembly for a file
+__/libs/myHTTP/my_http.c.s:
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\main\CMakeFiles\__idf_main.dir\build.make esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/myHTTP/my_http.c.s
+.PHONY : __/libs/myHTTP/my_http.c.s
+
+__/libs/myI2C/my_i2c.obj: __/libs/myI2C/my_i2c.c.obj
+
+.PHONY : __/libs/myI2C/my_i2c.obj
+
+# target to build an object file
+__/libs/myI2C/my_i2c.c.obj:
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\main\CMakeFiles\__idf_main.dir\build.make esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/myI2C/my_i2c.c.obj
+.PHONY : __/libs/myI2C/my_i2c.c.obj
+
+__/libs/myI2C/my_i2c.i: __/libs/myI2C/my_i2c.c.i
+
+.PHONY : __/libs/myI2C/my_i2c.i
+
+# target to preprocess a source file
+__/libs/myI2C/my_i2c.c.i:
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\main\CMakeFiles\__idf_main.dir\build.make esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/myI2C/my_i2c.c.i
+.PHONY : __/libs/myI2C/my_i2c.c.i
+
+__/libs/myI2C/my_i2c.s: __/libs/myI2C/my_i2c.c.s
+
+.PHONY : __/libs/myI2C/my_i2c.s
+
+# target to generate assembly for a file
+__/libs/myI2C/my_i2c.c.s:
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\main\CMakeFiles\__idf_main.dir\build.make esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/myI2C/my_i2c.c.s
+.PHONY : __/libs/myI2C/my_i2c.c.s
+
+__/libs/myJSON/my_JSON.obj: __/libs/myJSON/my_JSON.c.obj
+
+.PHONY : __/libs/myJSON/my_JSON.obj
+
+# target to build an object file
+__/libs/myJSON/my_JSON.c.obj:
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\main\CMakeFiles\__idf_main.dir\build.make esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/myJSON/my_JSON.c.obj
+.PHONY : __/libs/myJSON/my_JSON.c.obj
+
+__/libs/myJSON/my_JSON.i: __/libs/myJSON/my_JSON.c.i
+
+.PHONY : __/libs/myJSON/my_JSON.i
+
+# target to preprocess a source file
+__/libs/myJSON/my_JSON.c.i:
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\main\CMakeFiles\__idf_main.dir\build.make esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/myJSON/my_JSON.c.i
+.PHONY : __/libs/myJSON/my_JSON.c.i
+
+__/libs/myJSON/my_JSON.s: __/libs/myJSON/my_JSON.c.s
+
+.PHONY : __/libs/myJSON/my_JSON.s
+
+# target to generate assembly for a file
+__/libs/myJSON/my_JSON.c.s:
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\main\CMakeFiles\__idf_main.dir\build.make esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/myJSON/my_JSON.c.s
+.PHONY : __/libs/myJSON/my_JSON.c.s
+
+__/libs/mySNTP/my_SNTP.obj: __/libs/mySNTP/my_SNTP.c.obj
+
+.PHONY : __/libs/mySNTP/my_SNTP.obj
+
+# target to build an object file
+__/libs/mySNTP/my_SNTP.c.obj:
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\main\CMakeFiles\__idf_main.dir\build.make esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/mySNTP/my_SNTP.c.obj
+.PHONY : __/libs/mySNTP/my_SNTP.c.obj
+
+__/libs/mySNTP/my_SNTP.i: __/libs/mySNTP/my_SNTP.c.i
+
+.PHONY : __/libs/mySNTP/my_SNTP.i
+
+# target to preprocess a source file
+__/libs/mySNTP/my_SNTP.c.i:
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\main\CMakeFiles\__idf_main.dir\build.make esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/mySNTP/my_SNTP.c.i
+.PHONY : __/libs/mySNTP/my_SNTP.c.i
+
+__/libs/mySNTP/my_SNTP.s: __/libs/mySNTP/my_SNTP.c.s
+
+.PHONY : __/libs/mySNTP/my_SNTP.s
+
+# target to generate assembly for a file
+__/libs/mySNTP/my_SNTP.c.s:
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\main\CMakeFiles\__idf_main.dir\build.make esp-idf/main/CMakeFiles/__idf_main.dir/__/libs/mySNTP/my_SNTP.c.s
+.PHONY : __/libs/mySNTP/my_SNTP.c.s
 
 main.obj: main.c.obj
 
@@ -176,7 +365,7 @@ main.obj: main.c.obj
 
 # target to build an object file
 main.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\main\CMakeFiles\__idf_main.dir\build.make esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\main\CMakeFiles\__idf_main.dir\build.make esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
 .PHONY : main.c.obj
 
 main.i: main.c.i
@@ -185,7 +374,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\main\CMakeFiles\__idf_main.dir\build.make esp-idf/main/CMakeFiles/__idf_main.dir/main.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\main\CMakeFiles\__idf_main.dir\build.make esp-idf/main/CMakeFiles/__idf_main.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -194,7 +383,7 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\main\CMakeFiles\__idf_main.dir\build.make esp-idf/main/CMakeFiles/__idf_main.dir/main.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\main\CMakeFiles\__idf_main.dir\build.make esp-idf/main/CMakeFiles/__idf_main.dir/main.c.s
 .PHONY : main.c.s
 
 # Help Target
@@ -210,6 +399,27 @@ help:
 	@echo ... rebuild_cache
 	@echo ... list_install_components
 	@echo ... install/strip
+	@echo ... __/libs/MAX44009/MAX44009.obj
+	@echo ... __/libs/MAX44009/MAX44009.i
+	@echo ... __/libs/MAX44009/MAX44009.s
+	@echo ... __/libs/ML8511/ML8511.obj
+	@echo ... __/libs/ML8511/ML8511.i
+	@echo ... __/libs/ML8511/ML8511.s
+	@echo ... __/libs/cJSON/cJSON.obj
+	@echo ... __/libs/cJSON/cJSON.i
+	@echo ... __/libs/cJSON/cJSON.s
+	@echo ... __/libs/myHTTP/my_http.obj
+	@echo ... __/libs/myHTTP/my_http.i
+	@echo ... __/libs/myHTTP/my_http.s
+	@echo ... __/libs/myI2C/my_i2c.obj
+	@echo ... __/libs/myI2C/my_i2c.i
+	@echo ... __/libs/myI2C/my_i2c.s
+	@echo ... __/libs/myJSON/my_JSON.obj
+	@echo ... __/libs/myJSON/my_JSON.i
+	@echo ... __/libs/myJSON/my_JSON.s
+	@echo ... __/libs/mySNTP/my_SNTP.obj
+	@echo ... __/libs/mySNTP/my_SNTP.i
+	@echo ... __/libs/mySNTP/my_SNTP.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
@@ -224,6 +434,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

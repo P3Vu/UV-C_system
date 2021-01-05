@@ -50,7 +50,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CMake
+CMAKE_BINARY_DIR = C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -125,14 +125,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\esp-idf\tcp_transport\CMakeFiles\progress.marks
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/tcp_transport/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CMake\CMakeFiles 0
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\esp-idf\tcp_transport\CMakeFiles\progress.marks
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/tcp_transport/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/tcp_transport/clean
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/tcp_transport/clean
 .PHONY : clean
 
 # The main clean target
@@ -142,22 +142,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/tcp_transport/preinstall
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/tcp_transport/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/tcp_transport/preinstall
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/tcp_transport/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/rule:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/rule
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f CMakeFiles\Makefile2 esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/rule
 .PHONY : esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/rule
 
 # Convenience name for target.
@@ -167,7 +167,7 @@ __idf_tcp_transport: esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/ru
 
 # fast build rule for target.
 __idf_tcp_transport/fast:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\tcp_transport\CMakeFiles\__idf_tcp_transport.dir\build.make esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/build
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\tcp_transport\CMakeFiles\__idf_tcp_transport.dir\build.make esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/build
 .PHONY : __idf_tcp_transport/fast
 
 transport.obj: transport.c.obj
@@ -176,7 +176,7 @@ transport.obj: transport.c.obj
 
 # target to build an object file
 transport.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\tcp_transport\CMakeFiles\__idf_tcp_transport.dir\build.make esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\tcp_transport\CMakeFiles\__idf_tcp_transport.dir\build.make esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport.c.obj
 .PHONY : transport.c.obj
 
 transport.i: transport.c.i
@@ -185,7 +185,7 @@ transport.i: transport.c.i
 
 # target to preprocess a source file
 transport.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\tcp_transport\CMakeFiles\__idf_tcp_transport.dir\build.make esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\tcp_transport\CMakeFiles\__idf_tcp_transport.dir\build.make esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport.c.i
 .PHONY : transport.c.i
 
 transport.s: transport.c.s
@@ -194,7 +194,7 @@ transport.s: transport.c.s
 
 # target to generate assembly for a file
 transport.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\tcp_transport\CMakeFiles\__idf_tcp_transport.dir\build.make esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\tcp_transport\CMakeFiles\__idf_tcp_transport.dir\build.make esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport.c.s
 .PHONY : transport.c.s
 
 transport_ssl.obj: transport_ssl.c.obj
@@ -203,7 +203,7 @@ transport_ssl.obj: transport_ssl.c.obj
 
 # target to build an object file
 transport_ssl.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\tcp_transport\CMakeFiles\__idf_tcp_transport.dir\build.make esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport_ssl.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\tcp_transport\CMakeFiles\__idf_tcp_transport.dir\build.make esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport_ssl.c.obj
 .PHONY : transport_ssl.c.obj
 
 transport_ssl.i: transport_ssl.c.i
@@ -212,7 +212,7 @@ transport_ssl.i: transport_ssl.c.i
 
 # target to preprocess a source file
 transport_ssl.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\tcp_transport\CMakeFiles\__idf_tcp_transport.dir\build.make esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport_ssl.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\tcp_transport\CMakeFiles\__idf_tcp_transport.dir\build.make esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport_ssl.c.i
 .PHONY : transport_ssl.c.i
 
 transport_ssl.s: transport_ssl.c.s
@@ -221,7 +221,7 @@ transport_ssl.s: transport_ssl.c.s
 
 # target to generate assembly for a file
 transport_ssl.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\tcp_transport\CMakeFiles\__idf_tcp_transport.dir\build.make esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport_ssl.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\tcp_transport\CMakeFiles\__idf_tcp_transport.dir\build.make esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport_ssl.c.s
 .PHONY : transport_ssl.c.s
 
 transport_strcasestr.obj: transport_strcasestr.c.obj
@@ -230,7 +230,7 @@ transport_strcasestr.obj: transport_strcasestr.c.obj
 
 # target to build an object file
 transport_strcasestr.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\tcp_transport\CMakeFiles\__idf_tcp_transport.dir\build.make esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport_strcasestr.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\tcp_transport\CMakeFiles\__idf_tcp_transport.dir\build.make esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport_strcasestr.c.obj
 .PHONY : transport_strcasestr.c.obj
 
 transport_strcasestr.i: transport_strcasestr.c.i
@@ -239,7 +239,7 @@ transport_strcasestr.i: transport_strcasestr.c.i
 
 # target to preprocess a source file
 transport_strcasestr.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\tcp_transport\CMakeFiles\__idf_tcp_transport.dir\build.make esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport_strcasestr.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\tcp_transport\CMakeFiles\__idf_tcp_transport.dir\build.make esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport_strcasestr.c.i
 .PHONY : transport_strcasestr.c.i
 
 transport_strcasestr.s: transport_strcasestr.c.s
@@ -248,7 +248,7 @@ transport_strcasestr.s: transport_strcasestr.c.s
 
 # target to generate assembly for a file
 transport_strcasestr.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\tcp_transport\CMakeFiles\__idf_tcp_transport.dir\build.make esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport_strcasestr.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\tcp_transport\CMakeFiles\__idf_tcp_transport.dir\build.make esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport_strcasestr.c.s
 .PHONY : transport_strcasestr.c.s
 
 transport_tcp.obj: transport_tcp.c.obj
@@ -257,7 +257,7 @@ transport_tcp.obj: transport_tcp.c.obj
 
 # target to build an object file
 transport_tcp.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\tcp_transport\CMakeFiles\__idf_tcp_transport.dir\build.make esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport_tcp.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\tcp_transport\CMakeFiles\__idf_tcp_transport.dir\build.make esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport_tcp.c.obj
 .PHONY : transport_tcp.c.obj
 
 transport_tcp.i: transport_tcp.c.i
@@ -266,7 +266,7 @@ transport_tcp.i: transport_tcp.c.i
 
 # target to preprocess a source file
 transport_tcp.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\tcp_transport\CMakeFiles\__idf_tcp_transport.dir\build.make esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport_tcp.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\tcp_transport\CMakeFiles\__idf_tcp_transport.dir\build.make esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport_tcp.c.i
 .PHONY : transport_tcp.c.i
 
 transport_tcp.s: transport_tcp.c.s
@@ -275,7 +275,7 @@ transport_tcp.s: transport_tcp.c.s
 
 # target to generate assembly for a file
 transport_tcp.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\tcp_transport\CMakeFiles\__idf_tcp_transport.dir\build.make esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport_tcp.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\tcp_transport\CMakeFiles\__idf_tcp_transport.dir\build.make esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport_tcp.c.s
 .PHONY : transport_tcp.c.s
 
 transport_utils.obj: transport_utils.c.obj
@@ -284,7 +284,7 @@ transport_utils.obj: transport_utils.c.obj
 
 # target to build an object file
 transport_utils.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\tcp_transport\CMakeFiles\__idf_tcp_transport.dir\build.make esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport_utils.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\tcp_transport\CMakeFiles\__idf_tcp_transport.dir\build.make esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport_utils.c.obj
 .PHONY : transport_utils.c.obj
 
 transport_utils.i: transport_utils.c.i
@@ -293,7 +293,7 @@ transport_utils.i: transport_utils.c.i
 
 # target to preprocess a source file
 transport_utils.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\tcp_transport\CMakeFiles\__idf_tcp_transport.dir\build.make esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport_utils.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\tcp_transport\CMakeFiles\__idf_tcp_transport.dir\build.make esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport_utils.c.i
 .PHONY : transport_utils.c.i
 
 transport_utils.s: transport_utils.c.s
@@ -302,7 +302,7 @@ transport_utils.s: transport_utils.c.s
 
 # target to generate assembly for a file
 transport_utils.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\tcp_transport\CMakeFiles\__idf_tcp_transport.dir\build.make esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport_utils.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\tcp_transport\CMakeFiles\__idf_tcp_transport.dir\build.make esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport_utils.c.s
 .PHONY : transport_utils.c.s
 
 transport_ws.obj: transport_ws.c.obj
@@ -311,7 +311,7 @@ transport_ws.obj: transport_ws.c.obj
 
 # target to build an object file
 transport_ws.c.obj:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\tcp_transport\CMakeFiles\__idf_tcp_transport.dir\build.make esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport_ws.c.obj
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\tcp_transport\CMakeFiles\__idf_tcp_transport.dir\build.make esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport_ws.c.obj
 .PHONY : transport_ws.c.obj
 
 transport_ws.i: transport_ws.c.i
@@ -320,7 +320,7 @@ transport_ws.i: transport_ws.c.i
 
 # target to preprocess a source file
 transport_ws.c.i:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\tcp_transport\CMakeFiles\__idf_tcp_transport.dir\build.make esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport_ws.c.i
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\tcp_transport\CMakeFiles\__idf_tcp_transport.dir\build.make esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport_ws.c.i
 .PHONY : transport_ws.c.i
 
 transport_ws.s: transport_ws.c.s
@@ -329,7 +329,7 @@ transport_ws.s: transport_ws.c.s
 
 # target to generate assembly for a file
 transport_ws.c.s:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(MAKE) -f esp-idf\tcp_transport\CMakeFiles\__idf_tcp_transport.dir\build.make esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport_ws.c.s
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(MAKE) -f esp-idf\tcp_transport\CMakeFiles\__idf_tcp_transport.dir\build.make esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport_ws.c.s
 .PHONY : transport_ws.c.s
 
 # Help Target
@@ -374,6 +374,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CMake && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\pawel\Desktop\Grant\Project\firmware\CodeB && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
