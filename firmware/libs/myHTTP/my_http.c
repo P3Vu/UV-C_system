@@ -95,8 +95,6 @@ void read_database(char *buf, char *date, int room)
     sprintf(urlargs, "room=%d&date=%s", room, date);
     strcat(url, urlargs);
 
-    printf("url = %s\n", url);
-
     char local_response_buffer[MAX_HTTP_OUTPUT_BUFFER] = {0};
     esp_http_client_config_t config = {
         .url = url,
@@ -118,7 +116,8 @@ void read_database(char *buf, char *date, int room)
                 esp_http_client_get_transport_type(client));
     }
     else {
-        ESP_LOGE(TAG_HTTP, "HTTP GET request failed: %s", esp_err_to_name(err));
+        //ESP_LOGE(TAG_HTTP, "HTTP GET request failed: %s", esp_err_to_name(err));
+        ESP_LOGW(TAG_HTTP, "HTTP GET request failed: %s", esp_err_to_name(err));
     }
 
     //printf(local_response_buffer);

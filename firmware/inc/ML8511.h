@@ -9,4 +9,4 @@
 
 #define ADC_AVR_SAMPLES 64          /* Number of samples avereged for UV sensor */
 
-  float UVmeas(void);
+float UVmeas(void);

@@ -11,4 +11,4 @@
 #define LHB_addr                    0x03                        /* Lux High Byte address */
 #define LLB_addr                    0x04                        /* Lux Low Byte address */
 
-static int LUXMeas(void);
+int LUXMeas(void);

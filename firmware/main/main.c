@@ -37,11 +37,24 @@
 #include "my_SNTP.h"
 #include "tcpip_adapter.h"
 
-#define LAMP1                       GPIO_NUM_2                    /* RELAY IN1 on board */
-#define LAMP2                       GPIO_NUM_0                    /* RELAY IN2 on board */
-#define LAMP3                       GPIO_NUM_18                   /* RELAY IN3 on board */
-#define LAMP4                       GPIO_NUM_19                   /* RELAY IN4 on board */
+#define UV_LAMP                     GPIO_NUM_17                    /* RELAY IN1 on board */
+#define LIGHT_LAMP1                 GPIO_NUM_0                    /* RELAY IN2 on board */
+#define LIGHT_LAMP2                 GPIO_NUM_18                   /* RELAY IN3 on board */
+#define LIGHT_LAMP3                 GPIO_NUM_19                   /* RELAY IN4 on board */
 #define MOTION_SENSOR               GPIO_NUM_13                   /* Microwave Motion Sensor */
+#define ITR_CONFIRM_BUTTON          GPIO_NUM_15                   /* Button to confirm room interrupt */
+#define UV_INTERRUPTED_LED          GPIO_NUM_16                    /* Ligts when UV is stopped */
+#define SYSTEM_ARMED_LED            GPIO_NUM_4                   /* Ligts if system works accordigly to calendar */
+
+#define THRS1   250
+#define THRS2   500
+#define THRS3   750
+#define HYSTH   25
+
+#define UV_DETECTION_THRS 1.0
+
+#define LIGHT_CONTROL       1         /* by default we disable light control */
+#define NUMBER_OF_SAMPLES  30     /* number determines how many samples we average from light sensor to drive lights */
 
 #define GPIO_OUTPUT_PIN_SEL         ((1ULL<<GPIO_NUM_2) |   \
                                     (1ULL<<GPIO_NUM_0) |    \
@@ -66,14 +79,21 @@
 #define WIFI_FAIL_BIT      BIT1
 
 static xQueueHandle gpio_evt_queue      = NULL;
-static const char   *TAG_MODULE           = "Module";
+static const char   *TAG_MODULE           = "MODULE";
 static const char   *TAG_WIFI             = "WiFi";
+static const char   *TAG_LIGHTS           = "LIGHTS";
+static const char   *TAG_UV               = "UV";
+static const char   *TAG_UV_SENSOR        = "UV_SENSOR";
 
 
 char HTTP_BUFFER[1024] = {0};
 static int s_retry_num = 0;
 time_t now;
 struct tm timeinfo;
+
+bool MOTION_SENSOR_ITR_FLAG = false;
+
+float UVavg = 0.0;
 
 /* FreeRTOS event group to signal when we are connected*/
 static EventGroupHandle_t s_wifi_event_group;
@@ -111,6 +131,24 @@ struct Time {
 
 /** *************************************************************** */
 
+/** Turn On the Lamp */
+static void TurnOnLamp(int gpioNum){
+    int err = 0;
+    err = gpio_set_level(gpioNum, LAMP_ON);
+    if(err != ESP_OK) ESP_LOGW(TAG_MODULE, "Fail to set Lamp On at GPIO: %d", gpioNum);
+
+    return;
+}
+
+/** Turn Off the Lamp */
+static void TurnOffLamp(int gpioNum){
+    int err = 0;
+    err = gpio_set_level(gpioNum, LAMP_OFF);
+    if(err != ESP_OK) ESP_LOGW(TAG_MODULE, "Fail to set Lamp Off at GPIO: %d", gpioNum);
+
+    return;
+}
+
 static void IRAM_ATTR gpio_isr_handler(void* arg)
 {
     uint32_t gpio_num = (uint32_t) arg;
@@ -122,7 +160,15 @@ static void gpio_task_example(void* arg)
     uint32_t io_num;
     for(;;) {
         if(xQueueReceive(gpio_evt_queue, &io_num, portMAX_DELAY)) {
-            printf("GPIO[%d] intr, val: %d\n", io_num, gpio_get_level(io_num));
+            //printf("GPIO[%d] intr, val: %d\n", io_num, gpio_get_level(io_num));
+            /* Check if lamp is ON */
+            if(!gpio_get_level(UV_LAMP)){
+                ESP_LOGW(TAG_UV, "Motion detected while UV Lamp ON!!! Turning it OFF Immidietly.");
+                MOTION_SENSOR_ITR_FLAG = true;
+                gpio_set_level(UV_INTERRUPTED_LED, 1);
+                gpio_set_level(SYSTEM_ARMED_LED, 0);
+                TurnOffLamp(UV_LAMP);
+            }
         }
     }
 }
@@ -157,8 +203,9 @@ static void configGPIO(void){
 
     //create a queue to handle gpio event from isr
     gpio_evt_queue = xQueueCreate(10, sizeof(uint32_t));
+
     //start gpio task
-    xTaskCreate(gpio_task_example, "Motion_Task", 2048, NULL, 10, NULL);
+    xTaskCreate(gpio_task_example, "Motion_Task", 2048, NULL, 13, NULL);
 
     //install gpio isr service
     gpio_install_isr_service(ESP_INTR_FLAG_DEFAULT);
@@ -170,23 +217,6 @@ static void configGPIO(void){
     gpio_isr_handler_add(MOTION_SENSOR, gpio_isr_handler, (void*) MOTION_SENSOR);
 
     ESP_LOGI(TAG_MODULE, "GPIO Config finished.");
-}
-/** Turn On the Lamp */
-static void TurnOnLamp(int gpioNum){
-    int err = 0;
-    err = gpio_set_level(gpioNum, LAMP_ON);
-    if(err != ESP_OK) ESP_LOGW(TAG_MODULE, "Fail to set Lamp On at GPIO: %d", gpioNum);
-
-    return;
-}
-
-/** Turn Off the Lamp */
-static void TurnOffLamp(int gpioNum){
-    int err = 0;
-    err = gpio_set_level(gpioNum, LAMP_OFF);
-    if(err != ESP_OK) ESP_LOGW(TAG_MODULE, "Fail to set Lamp Off at GPIO: %d", gpioNum);
-
-    return;
 }
 
 /** Configures the ADC peripheral for UV sensor */
@@ -376,9 +406,9 @@ void parseTime(struct Time *ctime, char *strftime_buf){
     ctime->seconds      = atoi(elements[5]);
     ctime->date_year    = atoi(elements[6]);
 
-    printf("%d %d %d %d %d %d %d\n", ctime->week_day, ctime->date_month,
+    /*printf("%d %d %d %d %d %d %d\n", ctime->week_day, ctime->date_month,
            ctime->date_day, ctime->hours, ctime->minutes, ctime->seconds, ctime->date_year);
-
+    */
 
     return;
 }
@@ -420,6 +450,79 @@ void ChangeTimeFormat(char *destination, struct Time ctime){
     strcpy(destination, date);
     return;
 }
+/** Turn on or off lamps accordingly to calendar */
+void UpdateUVState(struct Time ctime){
+    if(ctime.week_day > -1 && ctime.hours > -1 && Calendar[ctime.week_day][ctime.hours] == 1){
+           //ESP_LOGI(TAG_UV, "LAMP ON");
+           TurnOnLamp(UV_LAMP);
+       }
+    else{
+        //ESP_LOGI(TAG_UV, "LAMP OFF");
+        TurnOffLamp(UV_LAMP);
+    }
+
+    return;
+}
+
+/**
+    @brief Updates Light Lamp State by given values from light sensor
+    - if control is OFF & lamps should be ON, each lamp is ON
+                          lamps should be OFF, each lamp is OFF
+    - if control is ON & lamps should be ON, lamps are ON depending on thresholds
+                          lamps should be OFF, each lamps is OFF
+
+    @note control is set by Threshold parameters (THRS1-3) with hystheresis (HSTH)
+
+    @param[in] lval is ADC value from light sensor
+    @param[in] control is a flag that tells if we want to drive light sensor depending on light sensor
+        - True (with light control)
+        - False(no light control)
+    @param[in] status is a flag that tells if light should be ON or OFF
+        - True (lamps ON)
+        - False(lamps OFF)
+*/
+void UpdateLightState(int lval, bool control, bool status){
+
+    // histereza i wartoœæ œrednia - moze w czujniku juz ona
+    ESP_LOGI(TAG_LIGHTS, "Updating light state.");
+
+    if(!status){
+        TurnOffLamp(LIGHT_LAMP1);
+        TurnOffLamp(LIGHT_LAMP2);
+        TurnOffLamp(LIGHT_LAMP3);
+    }
+    else{
+        if(!control){
+            TurnOnLamp(LIGHT_LAMP1);
+            TurnOnLamp(LIGHT_LAMP2);
+            TurnOnLamp(LIGHT_LAMP3);
+        }
+        else{
+            if(lval <= THRS1){
+                TurnOnLamp(LIGHT_LAMP1);
+                TurnOnLamp(LIGHT_LAMP2);
+                TurnOnLamp(LIGHT_LAMP3);
+            }
+            else if (lval > THRS1 && lval <= THRS2){
+                TurnOnLamp(LIGHT_LAMP1);
+                TurnOffLamp(LIGHT_LAMP2);
+                TurnOnLamp(LIGHT_LAMP3);
+            }
+            else if (lval > THRS2 && lval <= THRS3){
+                TurnOnLamp(LIGHT_LAMP1);
+                TurnOffLamp(LIGHT_LAMP2);
+                TurnOffLamp(LIGHT_LAMP3);
+            }
+            else{
+                TurnOffLamp(LIGHT_LAMP1);
+                TurnOffLamp(LIGHT_LAMP2);
+                TurnOffLamp(LIGHT_LAMP3);
+            }
+        }
+    }
+
+    return;
+}
 
 void http_task(void *pvParameters)
 {
@@ -427,30 +530,167 @@ void http_task(void *pvParameters)
     char dtbTimeFormat[12];
     struct Time ctime;
 
-    ESP_LOGI(TAG_HTTP, "Reading from database..");
+    ESP_LOGI(TAG_HTTP, "Starting http task");
 
-    /* Update database info - read to buffer in JSON format at first*/
+    while(1){
+
+        ESP_LOGI(TAG_HTTP, "Reading from database..");
+
+        /* Update database info - read to buffer in JSON format at first*/
+        time(&now);
+        localtime_r(&now, &timeinfo);
+        strftime(strftime_buf, sizeof(strftime_buf), "%c", &timeinfo);
+        parseTime(&ctime, strftime_buf);
+
+        ChangeTimeFormat(dtbTimeFormat, ctime);
+
+        read_database(HTTP_BUFFER, dtbTimeFormat, ID);
+        /* Parse JSON buffer and update Calendar */
+    // The semaphore is necessary here probably
+        CleanCalendar();
+        UpdateCalendar(HTTP_BUFFER, Calendar, ID);
+        //printCalendar();
+    //
+
+    // Give a signal that Calendar was updated //
+
+        vTaskDelay(60*1000 / portTICK_PERIOD_MS);  // 60secs = 1 minute1
+    }
+
+    /* Wait */
+
+    ESP_LOGI(TAG_HTTP, "Finish http example");
+    vTaskDelete(NULL);
+}
+
+/**
+    @brief Main goal of this task is to control 3 Lights that are connected to IN2,IN3 and IN4. These lights are ON depending on whether we want to
+    drive them by measurements from light sensor or not if we dont want this control.
+
+    @param[in] LIGHT_CONTROL
+        - 1 : enabled
+        - 0 : disabled
+    @param[in] NUMBER_OF_SAMPLES determines how many samples we take to calculate lux value, each sample is 1 second delay
+        (it is possible to add more frequent readings than 1 secs)
+
+*/
+void lights_task(void *pvParameters)
+{
+    int cntr = 0;
+    int luxSamples[30] = {};
+    float luxAvg = 0;
+
+    ESP_LOGI(TAG_LIGHTS, "Starting Lights Task");
+
+    while(1){
+
+        if(cntr > NUMBER_OF_SAMPLES-1){
+            int x;
+            float sum;
+            for(x = 0; x < NUMBER_OF_SAMPLES; x++){
+                sum += luxSamples[x];
+            }
+            luxAvg = sum / NUMBER_OF_SAMPLES;
+
+            //printf("lux avg = %d\n", (int)luxAvg);
+            UpdateLightState((int)luxAvg, LIGHT_CONTROL, 1);
+            cntr = 0;
+            sum = 0;
+        }
+        else{
+            luxSamples[cntr] = LUXMeas();
+            cntr++;
+        }
+
+        vTaskDelay(1000 / portTICK_PERIOD_MS);
+    }
+
+    vTaskDelete(NULL);
+}
+
+/**
+    @brief This task controls the UV lamp work. Lamp should be ON only in specified by calendar timeslots.
+*/
+void uv_task(void *pvParameters)
+{
+    ESP_LOGI(TAG_UV, "Starting UV Task");
+
+    char strftime_buf[64];
+    struct Time ctime = {
+        .week_day = -1,
+        .hours = -1
+    };
+
     time(&now);
     localtime_r(&now, &timeinfo);
     strftime(strftime_buf, sizeof(strftime_buf), "%c", &timeinfo);
     parseTime(&ctime, strftime_buf);
 
-    ChangeTimeFormat(dtbTimeFormat, ctime);
+    while(1){
+        if(MOTION_SENSOR_ITR_FLAG == false){
+            /* Update time */
+            time(&now);
+            localtime_r(&now, &timeinfo);
+            strftime(strftime_buf, sizeof(strftime_buf), "%c", &timeinfo);
+            parseTime(&ctime, strftime_buf);
 
-    read_database(HTTP_BUFFER, dtbTimeFormat, ID);
-    /* Parse JSON buffer and update Calendar */
-// The semaphore is necessary here probably
-    CleanCalendar();
-    UpdateCalendar(HTTP_BUFFER, Calendar, ID);
-    printCalendar();
-//
+            /* Check Calendar and drive UV accordingly */
+            UpdateUVState(ctime);
+        }
 
-// Give a signal that Calendar was updated //
+        else{
+            /* Better option to change it for interrupt */
+            while(MOTION_SENSOR_ITR_FLAG == true){
+                if(!gpio_get_level(ITR_CONFIRM_BUTTON)){
+                    printf("Button pushed.\n");
+                    MOTION_SENSOR_ITR_FLAG = false;
+                    gpio_set_level(UV_INTERRUPTED_LED, 0);
+                    gpio_set_level(SYSTEM_ARMED_LED, 1);
+                }
+                vTaskDelay(10 / portTICK_PERIOD_MS);
+            }
+        }
 
-    /* Wait */
-    //vTaskDelay(300*1000 / portTICK_PERIOD_MS);  // 300secs = 5 minutes
+        /* Check if UV works properly using UV sensor */
+        if(!gpio_get_level(UV_LAMP) && UVavg < UV_DETECTION_THRS){
+            gpio_set_level(UV_INTERRUPTED_LED, 1);
+            vTaskDelay(1000 / portTICK_PERIOD_MS);
+            gpio_set_level(UV_INTERRUPTED_LED, 0);
+            //vTaskDelay(1000 / portTICK_PERIOD_MS);
+        }
 
-    ESP_LOGI(TAG_HTTP, "Finish http example");
+        /* Wait */
+        vTaskDelay(1000 / portTICK_PERIOD_MS);
+    }
+
+    vTaskDelete(NULL);
+}
+
+void uv_sensor_task(void *pvParameters){
+
+    ESP_LOGI(TAG_UV_SENSOR, "Starting UV Sensor Task");
+
+    int cntr = 0;
+    int probes = 10;
+    float data[10] = {};
+    int x;
+    float sum = 0.0;
+
+    while(1){
+        data[cntr] = UVmeas();
+        for(x = 0; x < probes; x++){
+            sum += data[x];
+        }
+        UVavg = sum / probes;
+        //printf("UVavg = %f\n", UVavg);
+        cntr++;
+        sum = 0;
+
+        if(cntr > 9) cntr = 0;
+
+        vTaskDelay(1000 / portTICK_PERIOD_MS);
+    }
+
     vTaskDelete(NULL);
 }
 
@@ -458,10 +698,16 @@ void http_task(void *pvParameters)
 
 void app_main()
 {
-    esp_log_level_set("*", ESP_LOG_VERBOSE);
+    //esp_log_level_set("*", ESP_LOG_VERBOSE);
 
     /* Basic hardware init */
     configGPIO();
+    gpio_set_direction(ITR_CONFIRM_BUTTON, GPIO_MODE_INPUT);
+    gpio_set_direction(UV_LAMP, GPIO_MODE_INPUT_OUTPUT);
+    TurnOffLamp(UV_LAMP);
+    gpio_set_direction(UV_INTERRUPTED_LED, GPIO_MODE_OUTPUT);
+    gpio_set_direction(SYSTEM_ARMED_LED, GPIO_MODE_OUTPUT);
+
     configADC();
     i2c_init();
 
@@ -472,7 +718,7 @@ void app_main()
     }
     ESP_ERROR_CHECK(err);
 
-    /* WiFi initial */
+    /* WiFi init */
     ESP_LOGI(TAG_WIFI, "ESP_WIFI_MODE_STA");
     wifi_init();
 
@@ -480,70 +726,34 @@ void app_main()
     time(&now);
     localtime_r(&now, &timeinfo);
     // Is time set? If not, tm_year will be (2020 - 1900).
-    if (timeinfo.tm_year < (2020 - 1900)) {
+
+    if(timeinfo.tm_year <= (2020 - 1900)) {
         ESP_LOGI(SNTP_TAG, "Time is not set yet. Getting time over NTP.");
         obtain_time();
         // update 'now' variable with current time
         time(&now);
+        localtime_r(&now, &timeinfo);
     }
 
-    char strftime_buf[64];
-
     // Set time
+    char strftime_buf[64];
     setenv("TZ", "CET-1CEST,M3.5.0,M10.5.0/3", 1);
     tzset();
     localtime_r(&now, &timeinfo);
     strftime(strftime_buf, sizeof(strftime_buf), "%c", &timeinfo);
     ESP_LOGI(SNTP_TAG, "The current date/time is: %s", strftime_buf);
 
-    printf("Region time is %s \n", strftime_buf);
-
-    struct Time ctime = {
-        .week_day = -1,
-        .hours = -1
-    };
-
-    parseTime(&ctime, strftime_buf);
-
-    //printCalendar();
-    if(ctime.week_day > -1 && ctime.hours > -1
-       && Calendar[ctime.week_day][ctime.hours] == 1){
-           printf("Zapalam Lampy\n");
-           //TurnOnLamp();
-       }
-    else{
-        printf("Zgaszam Lampy\n");
-        //TurnOffLamp();
-    }
-
-    // Napisac task ktory bedzie odpowiadal za zmiane stanu lamp - obslugiwal flage z http
-    // ktora bedzie informowac o updejcie kalendarza.
-    // Luiza nie jest w stanie wyslac do mnie informacji kiedy nastapi zmiana wiec nie ma mechanizmu przerwan
-
+    /* Task to communicate with database */
     xTaskCreate(&http_task, "http_test_task", 8192, NULL, 5, NULL);
-    vTaskDelay(3*1000 / portTICK_PERIOD_MS);
 
-    //printf("HTTP_BUFFER = %s\n", HTTP_BUFFER);
-    UpdateCalendar(HTTP_BUFFER, Calendar, ID);
-    //printCalendar();
+    /* Task to control light lamp state */
+    xTaskCreate(&lights_task, "lights_task", 2048, NULL, 4, NULL);
 
+    /* Task to control uv lamp state */
+    xTaskCreate(&uv_task, "uv_task", 2048, NULL, 6, NULL);
 
-    if(ctime.week_day > -1 && ctime.hours > -1 && Calendar[ctime.week_day][ctime.hours] == 1){
-           printf("Zapalam Lampy\n");
-           //TurnOnLamp();
-       }
-    else{
-        printf("Zgaszam Lampy\n");
-        //TurnOffLamp();
-    }
-
-    while(1){
-        time(&now);
-        localtime_r(&now, &timeinfo);
-        strftime(strftime_buf, sizeof(strftime_buf), "%c", &timeinfo);
-        ESP_LOGI(SNTP_TAG, "The current date/time is: %s", strftime_buf);
-        vTaskDelay(3*1000 / portTICK_PERIOD_MS);
-    }
+    /* Task to control uv sensor */
+    xTaskCreate(&uv_sensor_task, "uv_sensor_task", 2048, NULL, 10, NULL);
 }
 
 
