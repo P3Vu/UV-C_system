@@ -18,6 +18,7 @@
 
 esp_err_t _http_event_handler(esp_http_client_event_t *evt)
 {
+    esp_log_level_set("*", ESP_LOG_VERBOSE);
     static char *output_buffer;  // Buffer to store response of http request from event handler
     static int output_len;       // Stores number of bytes read
     switch(evt->event_id) {
@@ -35,11 +36,12 @@ esp_err_t _http_event_handler(esp_http_client_event_t *evt)
             break;
         case HTTP_EVENT_ON_DATA:
             ESP_LOGD(TAG_HTTP, "HTTP_EVENT_ON_DATA, len=%d", evt->data_len);
+            //printf("%s HTTP_EVENT_ON_DATA, len = %d, chunked = %d\n", TAG_HTTP, evt->data_len, esp_http_client_is_chunked_response(evt->client));
             /*
              *  Check for chunked encoding is added as the URL for chunked encoding used in this example returns binary data.
              *  However, event handler can also be used in case chunked encoding is used.
              */
-            if (!esp_http_client_is_chunked_response(evt->client)) {
+            //if (!esp_http_client_is_chunked_response(evt->client)) {
                 // If user_data buffer is configured, copy the response into the buffer
                 if (evt->user_data) {
                     memcpy(evt->user_data + output_len, evt->data, evt->data_len);
@@ -55,21 +57,23 @@ esp_err_t _http_event_handler(esp_http_client_event_t *evt)
                     }
                     memcpy(output_buffer + output_len, evt->data, evt->data_len);
                 }
+
                 output_len += evt->data_len;
-            }
+            //}
 
             break;
         case HTTP_EVENT_ON_FINISH:
             ESP_LOGD(TAG_HTTP, "HTTP_EVENT_ON_FINISH");
             if (output_buffer != NULL) {
                 // Response is accumulated in output_buffer. Uncomment the below line to print the accumulated response
-                // ESP_LOG_BUFFER_HEX(TAG_HTTP, output_buffer, output_len);
+                //ESP_LOG_BUFFER_HEX(TAG_HTTP, output_buffer, output_len);
                 free(output_buffer);
                 output_buffer = NULL;
             }
             output_len = 0;
             break;
         case HTTP_EVENT_DISCONNECTED:
+            if(output_buffer != NULL) printf("output_buffer = %s\n", output_buffer);
             ESP_LOGI(TAG_HTTP, "HTTP_EVENT_DISCONNECTED");
             int mbedtls_err = 0;
             esp_err_t err = esp_tls_get_and_clear_last_error(evt->data, &mbedtls_err, NULL);
@@ -89,7 +93,8 @@ esp_err_t _http_event_handler(esp_http_client_event_t *evt)
 
 void read_database(char *buf, char *date, int room)
 {
-    char url[200] = "http://192.168.0.129/json.php?";
+    //char url[200] = "http://192.168.0.129/json.php?";                 /* Example for local RPi */
+    char url[200] = "http://sterowanieuv.000webhostapp.com/json.php?";
     char urlargs[50] = {};
 
     sprintf(urlargs, "room=%d&date=%s", room, date);
@@ -98,9 +103,6 @@ void read_database(char *buf, char *date, int room)
     char local_response_buffer[MAX_HTTP_OUTPUT_BUFFER] = {0};
     esp_http_client_config_t config = {
         .url = url,
-        //.host = "http://192.168.0.129",
-        //.path = "/json.php",
-        //.query = "room=1",
         .event_handler = _http_event_handler,
         .user_data = local_response_buffer,         // Pass address of local buffer to get response
     };
@@ -120,12 +122,18 @@ void read_database(char *buf, char *date, int room)
         ESP_LOGW(TAG_HTTP, "HTTP GET request failed: %s", esp_err_to_name(err));
     }
 
-    //printf(local_response_buffer);
+    //printf("\nbuffer = %s\n", local_response_buffer);
     /* Parse the string, copy everything between <body> .. </body> without whitespaces*/
-    char *strPtr = strstr(local_response_buffer, "<body>") + 6;
-    while(isspace(*strPtr)) strPtr++;
-    char *endPtr = strstr(local_response_buffer, "</body>");
-    strncpy(buf, strPtr, (endPtr - strPtr)/sizeof(char));
+    if(local_response_buffer != NULL){
+        char *strPtr = strstr(local_response_buffer, "<body>") + 6;
+        while(isspace(*strPtr)) strPtr++;
+        char *endPtr = strstr(local_response_buffer, "</body>");
+        endPtr -= 4;
+        strncpy(buf, strPtr, (endPtr - strPtr)/sizeof(char));
+    }
 
+    //printf("buf = %s\n", buf);
     esp_http_client_cleanup(client);
+
+    return;
 }

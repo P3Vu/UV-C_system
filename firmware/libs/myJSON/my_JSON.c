@@ -155,8 +155,6 @@ void UpdateCalendar(char *http_buf, bool Calendar[][number_of_time_sections], in
     char Date[20] = {};
     char Timeslot[20] = {};
 
-    //printf("pre ID_param = %d\n", ID_param);
-
     calendar = cJSON_GetObjectItemCaseSensitive(string, "calendar");
     cJSON_ArrayForEach(single_data, calendar)
     {

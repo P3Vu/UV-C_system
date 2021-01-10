@@ -37,40 +37,45 @@
 #include "my_SNTP.h"
 #include "tcpip_adapter.h"
 
-#define UV_LAMP                     GPIO_NUM_17                    /* RELAY IN1 on board */
+/** -------------- CONFIG ----------------- */
+
+/*          WiFi Config             */
+#define ID                          1
+
+#define ESP_WIFI_SSID               "UPC8716827"
+#define ESP_WIFI_PASS               "bvyhjy3jbdbC"
+#define ESP_MAXIMUM_RETRY           1
+
+#define UV_LAMP                     GPIO_NUM_17                   /* RELAY IN1 on board */
 #define LIGHT_LAMP1                 GPIO_NUM_0                    /* RELAY IN2 on board */
 #define LIGHT_LAMP2                 GPIO_NUM_18                   /* RELAY IN3 on board */
 #define LIGHT_LAMP3                 GPIO_NUM_19                   /* RELAY IN4 on board */
 #define MOTION_SENSOR               GPIO_NUM_13                   /* Microwave Motion Sensor */
 #define ITR_CONFIRM_BUTTON          GPIO_NUM_15                   /* Button to confirm room interrupt */
-#define UV_INTERRUPTED_LED          GPIO_NUM_16                    /* Ligts when UV is stopped */
-#define SYSTEM_ARMED_LED            GPIO_NUM_4                   /* Ligts if system works accordigly to calendar */
-
-#define THRS1   250
-#define THRS2   500
-#define THRS3   750
-#define HYSTH   25
-
-#define UV_DETECTION_THRS 1.0
-
-#define LIGHT_CONTROL       1         /* by default we disable light control */
-#define NUMBER_OF_SAMPLES  30     /* number determines how many samples we average from light sensor to drive lights */
-
+#define UV_INTERRUPTED_LED          GPIO_NUM_16                   /* Ligts when UV is stopped */
+#define SYSTEM_ARMED_LED            GPIO_NUM_4                    /* Ligts if system works accordigly to calendar */
 #define GPIO_OUTPUT_PIN_SEL         ((1ULL<<GPIO_NUM_2) |   \
                                     (1ULL<<GPIO_NUM_0) |    \
                                     (1ULL<<GPIO_NUM_18)|    \
                                     (1ULL<<GPIO_NUM_19))
-
 #define GPIO_INPUT_PIN_SEL          1ULL<<MOTION_SENSOR
+
+#define THRS1   250                                             /* 1st threshold for light sensor */
+#define THRS2   500                                             /* 2nd */
+#define THRS3   750                                             /* 3rd */
+
+#define UV_DETECTION_THRS 1.0                                   /* Threshold for UV */
+
+#define LIGHT_CONTROL       1     /* by default we enable light control */
+#define NUMBER_OF_SAMPLES  30     /* number determines how many samples we average from light sensor to drive lights */
+
+
+/** ------------------------------------------- */
+
 #define ESP_INTR_FLAG_DEFAULT       0
 
 #define LAMP_ON      0
 #define LAMP_OFF     1
-
-/* WiFi Config */
-#define EXAMPLE_ESP_WIFI_SSID               "UPC8716827"
-#define EXAMPLE_ESP_WIFI_PASS               "bvyhjy3jbdbC"
-#define EXAMPLE_ESP_MAXIMUM_RETRY           1
 
 /* The event group allows multiple bits for each event, but we only care about two events:
  * - we are connected to the AP with an IP
@@ -78,7 +83,10 @@
 #define WIFI_CONNECTED_BIT BIT0
 #define WIFI_FAIL_BIT      BIT1
 
+#define HTTP_BUFFER_LENGTH 16384
+
 static xQueueHandle gpio_evt_queue      = NULL;
+
 static const char   *TAG_MODULE           = "MODULE";
 static const char   *TAG_WIFI             = "WiFi";
 static const char   *TAG_LIGHTS           = "LIGHTS";
@@ -86,7 +94,7 @@ static const char   *TAG_UV               = "UV";
 static const char   *TAG_UV_SENSOR        = "UV_SENSOR";
 
 
-char HTTP_BUFFER[1024] = {0};
+char HTTP_BUFFER[HTTP_BUFFER_LENGTH] = {0};
 static int s_retry_num = 0;
 time_t now;
 struct tm timeinfo;
@@ -100,13 +108,11 @@ static EventGroupHandle_t s_wifi_event_group;
 
 #define number_of_days  7
 #define number_of_time_sections  24
-#define ID 2
-
 enum week {Mon, Tue, Wed, Thur, Fri, Sat, Sun};
 bool Calendar[number_of_days][number_of_time_sections] = {};
 
 /*
-Example with 24 time sections
+Example with 24*7 time sections
                                     Days
                  0       1       2       3      4       5       6
                 Mon     Tue     Wed     Thu    Fri     Sat     Sun
@@ -116,7 +122,6 @@ Hours
  ...
 22:00 - 22:59    1    ...
 23:00 - 23:59    0    ...
-
 */
 
 struct Time {
@@ -245,7 +250,7 @@ static void event_handler(void* arg, esp_event_base_t event_base,
     if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_START) {
         esp_wifi_connect();
     } else if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_DISCONNECTED) {
-        if (s_retry_num < EXAMPLE_ESP_MAXIMUM_RETRY) {
+        if (s_retry_num < ESP_MAXIMUM_RETRY) {
             esp_wifi_connect();
             s_retry_num++;
             ESP_LOGI(TAG_WIFI, "retry to connect to the AP");
@@ -278,8 +283,8 @@ void wifi_init()
 
     wifi_config_t wifi_config = {
         .sta = {
-            .ssid = EXAMPLE_ESP_WIFI_SSID,
-            .password = EXAMPLE_ESP_WIFI_PASS,
+            .ssid = ESP_WIFI_SSID,
+            .password = ESP_WIFI_PASS,
             /* Setting a password implies module will connect to all security modes including WEP/WPA.
              * However these modes are deprecated and not advisable to be used. Incase your Access point
              * doesn't support WPA2, these mode can be enabled by commenting below line */
@@ -309,10 +314,10 @@ void wifi_init()
      * happened. */
     if (bits & WIFI_CONNECTED_BIT) {
         ESP_LOGI(TAG_WIFI, "connected to ap SSID:%s password:%s",
-                 EXAMPLE_ESP_WIFI_SSID, EXAMPLE_ESP_WIFI_PASS);
+                 ESP_WIFI_SSID, ESP_WIFI_PASS);
     } else if (bits & WIFI_FAIL_BIT) {
         ESP_LOGI(TAG_WIFI, "Failed to connect to SSID:%s, password:%s",
-                 EXAMPLE_ESP_WIFI_SSID, EXAMPLE_ESP_WIFI_PASS);
+                 ESP_WIFI_SSID, ESP_WIFI_PASS);
     } else {
         ESP_LOGE(TAG_WIFI, "UNEXPECTED EVENT");
     }
@@ -326,8 +331,9 @@ void wifi_init()
 
 /** *************************************************************** */
 
-/** Print the database */
-void printCalendar()
+/**
+    @brief Prints the database to console */
+static void printCalendar()
 {
     int day = Mon, section = 0;
 
@@ -354,7 +360,8 @@ void printCalendar()
 }
 
 
-/** Parses time */
+/** @brief
+    Parses time */
 void parseTime(struct Time *ctime, char *strftime_buf){
 
     // strftime_buf is like Fri Jan 1 19:53:49 2021
@@ -549,7 +556,7 @@ void http_task(void *pvParameters)
     // The semaphore is necessary here probably
         CleanCalendar();
         UpdateCalendar(HTTP_BUFFER, Calendar, ID);
-        //printCalendar();
+        printCalendar();
     //
 
     // Give a signal that Calendar was updated //
@@ -698,7 +705,7 @@ void uv_sensor_task(void *pvParameters){
 
 void app_main()
 {
-    //esp_log_level_set("*", ESP_LOG_VERBOSE);
+    esp_log_level_set("*", ESP_LOG_VERBOSE);
 
     /* Basic hardware init */
     configGPIO();
@@ -744,7 +751,7 @@ void app_main()
     ESP_LOGI(SNTP_TAG, "The current date/time is: %s", strftime_buf);
 
     /* Task to communicate with database */
-    xTaskCreate(&http_task, "http_test_task", 8192, NULL, 5, NULL);
+    xTaskCreate(&http_task, "http_test_task", 4*8192, NULL, 5, NULL);
 
     /* Task to control light lamp state */
     xTaskCreate(&lights_task, "lights_task", 2048, NULL, 4, NULL);
