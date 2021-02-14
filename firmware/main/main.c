@@ -102,11 +102,12 @@ time_t now;
 struct tm timeinfo;
 
 bool MOTION_SENSOR_ITR_FLAG = false;
-
 float UVavg = 0.0;
 
 /* FreeRTOS event group to signal when we are connected*/
 static EventGroupHandle_t s_wifi_event_group;
+
+SemaphoreHandle_t CalendarMutex;
 
 enum week {Mon, Tue, Wed, Thur, Fri, Sat, Sun};
 bool Calendar[DAYS][HOURS][MINUTES]= {};
@@ -554,27 +555,27 @@ void http_task(void *pvParameters)
 
         ChangeTimeFormat(dtbTimeFormat, ctime);
 
-        //Mutex
+        xSemaphoreTake(CalendarMutex, 0);
         CleanCalendar();
-        //Mutex
+        xSemaphoreGive(CalendarMutex);
 
         while(read_database(HTTP_BUFFER, dtbTimeFormat, BUILDING_ID, ID) != 0){
             vTaskDelay(5000 / portTICK_PERIOD_MS);
         }
         /* Parse JSON buffer and update Calendar */
-    // The mutex is necessary here probably
+        xSemaphoreTake(CalendarMutex, 0);
         UpdateCalendar(HTTP_BUFFER, Calendar);
+        xSemaphoreGive(CalendarMutex);
         //printCalendar(Sun);
-    //
 
-    // Give a signal that Calendar was updated //
+        // Give a signal that Calendar was updated //
 
         vTaskDelay(60*1000 / portTICK_PERIOD_MS);  // 60secs = 1 minute
     }
 
     /* Wait */
 
-    ESP_LOGI(TAG_HTTP, "Finish http example");
+    ESP_LOGI(TAG_HTTP, "Finish http task");
     vTaskDelete(NULL);
 }
 
@@ -650,7 +651,9 @@ void uv_task(void *pvParameters)
             parseTime(&ctime, strftime_buf);
 
             /* Check Calendar and drive UV accordingly */
+            xSemaphoreTake(CalendarMutex, 0);
             UpdateUVState(ctime);
+            xSemaphoreGive(CalendarMutex);
         }
 
         else{
@@ -698,6 +701,8 @@ void app_main()
 
     configADC();
     i2c_init();
+
+    CalendarMutex = xSemaphoreCreateMutex();
 
     esp_err_t err = nvs_flash_init();
     if(err == ESP_ERR_NVS_NO_FREE_PAGES || err == ESP_ERR_NVS_NEW_VERSION_FOUND){

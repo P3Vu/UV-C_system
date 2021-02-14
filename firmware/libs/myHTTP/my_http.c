@@ -125,6 +125,7 @@ int read_database(char *buf, char *date, int building, int room)
         return err;
     }
 
+    vTaskDelay(10 / portTICK_PERIOD_MS);
     //printf("\nbuffer = %s\n", local_response_buffer);
     /* Parse the string, copy everything between <body> .. </body> without whitespaces*/
     if(err == ESP_OK && local_response_buffer != NULL){
@@ -136,8 +137,10 @@ int read_database(char *buf, char *date, int building, int room)
         //printf("buf = %s\n", buf);
     }
 
+    vTaskDelay(10 / portTICK_PERIOD_MS);
     //printf("buf = %s\n", buf);
     esp_http_client_cleanup(client);
+    vTaskDelay(10 / portTICK_PERIOD_MS);
 
     return err;
 }
