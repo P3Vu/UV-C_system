@@ -15,4 +15,6 @@ extern const char howsmyssl_com_root_cert_pem_end[]   asm("_binary_howsmyssl_com
 
 const char *TAG_HTTP;
 
-void read_database(char *buf, char *date, int room);
+int read_database(char *buf, char *date, int building, int room);
+esp_err_t ScheduleInterrupted(int room, int building);
+esp_err_t CheckBlockStatus(char *buf);

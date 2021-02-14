@@ -144,32 +144,26 @@ int CalculateDay(char *date){
 }
 
 /** Parsing input calendar */
-void UpdateCalendar(char *http_buf, bool Calendar[][number_of_time_sections], int device_ID)
+void UpdateCalendar(char *http_buf, bool Calendar[][HOURS][MINUTES])
 {
     const cJSON *calendar       = NULL;
     const cJSON *single_data    = NULL;
 
     cJSON *string = cJSON_Parse(http_buf);
 
-    int ID_param = 0;
     char Date[20] = {};
     char Timeslot[20] = {};
 
     calendar = cJSON_GetObjectItemCaseSensitive(string, "calendar");
+
     cJSON_ArrayForEach(single_data, calendar)
     {
-        cJSON *id       = cJSON_GetObjectItemCaseSensitive(single_data, "room_id");
         cJSON *date     = cJSON_GetObjectItemCaseSensitive(single_data, "date");
         cJSON *timeslot = cJSON_GetObjectItemCaseSensitive(single_data, "timeslot");
 
-        if(!cJSON_IsNumber(id) || !cJSON_IsString(date) || !cJSON_IsString(timeslot)){
+        if(!cJSON_IsString(date) || !cJSON_IsString(timeslot)){
             //status = 0;
             goto end;
-        }
-
-        if (cJSON_IsNumber(id)){
-            ID_param = id->valueint;
-            //printf("post ID_param = %d\n", ID_param);
         }
 
         if(cJSON_IsString(date) && date->valuestring != NULL){
@@ -184,20 +178,90 @@ void UpdateCalendar(char *http_buf, bool Calendar[][number_of_time_sections], in
             //printf("\n");
         }
 
-        if(device_ID == ID_param){
-            int hour = -1, day = -1;
-            char buf[2] = {};
-            buf[0] = Timeslot[0];
-            buf[1] = Timeslot[1];
-            hour = atoi(buf);
+        int day = -1;
+        int hour_start = -1, hour_stop = -1;
+        int minute_start = -1, minute_stop = -1;
 
-            day = CalculateDay(Date);
+        char buf_hour_start[3] = {};
+        char buf_hour_stop[3] = {};
 
-            if(day > -1) Calendar[day][hour] = 1;
+        char buf_minute_start[3] = {};
+        char buf_minute_stop[3] = {};
+
+        strncpy(buf_hour_start, Timeslot, 2);
+        hour_start = atoi(buf_hour_start);
+
+        strncpy(buf_hour_stop, Timeslot+6, 2);
+        hour_stop = atoi(buf_hour_stop);
+
+        strncpy(buf_minute_start, Timeslot+3, 2);
+        minute_start = atoi(buf_minute_start);
+
+        strncpy(buf_minute_stop, Timeslot+9, 2);
+        minute_stop = atoi(buf_minute_stop);
+
+        day = CalculateDay(Date);
+
+        //printf("h_start = %d m_start = %d - h_stop = %d m_stop = %d\n", hour_start, minute_start, hour_stop, minute_stop);
+
+        if(day >= 0 && hour_start >= 0 && hour_start <= 59 && minute_start >= 0 && minute_start <= 59
+           && hour_stop >= 0 && hour_stop <= 59 && minute_stop >= 0 && minute_stop <= 59)
+           {
+            int hour = -1, min = -1;
+
+            hour = hour_start;
+            min = minute_start;
+
+            while(1)
+            {
+                Calendar[day][hour][min] = 1;
+                //printf("update\n");
+                min++;
+
+                if(min >= 60){
+                    min = 0;
+                    hour++;
+                }
+
+                if(hour >= 24){
+                    hour = 0;
+                    day++;
+                }
+
+                if(day > Sun){
+                    day = Mon;
+                }
+
+                if(hour == hour_stop && min == minute_stop){
+                    //printf("end\n");
+                    break;
+                }
+            }
         }
     }
 
     end:
         cJSON_Delete(string);
         return;
+}
+
+/** Parsing info about clicked switch */
+bool SwitchInfo(char *http_buf)
+{
+    const cJSON *SwitchStatus       = NULL;
+
+    cJSON *string = cJSON_Parse(http_buf);
+
+    bool switchStatus = false;
+
+    SwitchStatus = cJSON_GetObjectItemCaseSensitive(string, "SwitchStatus");
+    if(!cJSON_IsBool(SwitchStatus)) goto end;
+    else{
+        switchStatus = SwitchStatus->valueint;
+    }
+
+    end:
+        cJSON_Delete(string);
+
+    return switchStatus;
 }

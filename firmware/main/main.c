@@ -39,12 +39,16 @@
 
 /** -------------- CONFIG ----------------- */
 
+#define ID                          2
+#define BUILDING_ID                 2
+
 /*          WiFi Config             */
-#define ID                          1
 
 #define ESP_WIFI_SSID               "UPC8716827"
+//#define ESP_WIFI_SSID               "Xperia L1_7ded"
 #define ESP_WIFI_PASS               "bvyhjy3jbdbC"
-#define ESP_MAXIMUM_RETRY           1
+//#define ESP_WIFI_PASS               "bd4cffd9ea4c"
+#define ESP_MAXIMUM_RETRY           100000000
 
 #define UV_LAMP                     GPIO_NUM_17                   /* RELAY IN1 on board */
 #define LIGHT_LAMP1                 GPIO_NUM_0                    /* RELAY IN2 on board */
@@ -63,8 +67,6 @@
 #define THRS1   250                                             /* 1st threshold for light sensor */
 #define THRS2   500                                             /* 2nd */
 #define THRS3   750                                             /* 3rd */
-
-#define UV_DETECTION_THRS 1.0                                   /* Threshold for UV */
 
 #define LIGHT_CONTROL       1     /* by default we enable light control */
 #define NUMBER_OF_SAMPLES  30     /* number determines how many samples we average from light sensor to drive lights */
@@ -91,10 +93,10 @@ static const char   *TAG_MODULE           = "MODULE";
 static const char   *TAG_WIFI             = "WiFi";
 static const char   *TAG_LIGHTS           = "LIGHTS";
 static const char   *TAG_UV               = "UV";
-static const char   *TAG_UV_SENSOR        = "UV_SENSOR";
 
 
 char HTTP_BUFFER[HTTP_BUFFER_LENGTH] = {0};
+char HTTP_BUFFER2[HTTP_BUFFER_LENGTH] = {0};
 static int s_retry_num = 0;
 time_t now;
 struct tm timeinfo;
@@ -106,23 +108,8 @@ float UVavg = 0.0;
 /* FreeRTOS event group to signal when we are connected*/
 static EventGroupHandle_t s_wifi_event_group;
 
-#define number_of_days  7
-#define number_of_time_sections  24
 enum week {Mon, Tue, Wed, Thur, Fri, Sat, Sun};
-bool Calendar[number_of_days][number_of_time_sections] = {};
-
-/*
-Example with 24*7 time sections
-                                    Days
-                 0       1       2       3      4       5       6
-                Mon     Tue     Wed     Thu    Fri     Sat     Sun
-Hours
-00:00 - 00:59    0    ...
-01:00 - 01:59    1    ...
- ...
-22:00 - 22:59    1    ...
-23:00 - 23:59    0    ...
-*/
+bool Calendar[DAYS][HOURS][MINUTES]= {};
 
 struct Time {
     int     week_day;
@@ -163,10 +150,11 @@ static void IRAM_ATTR gpio_isr_handler(void* arg)
 static void gpio_task_example(void* arg)
 {
     uint32_t io_num;
-    for(;;) {
+    while(1) {
+
         if(xQueueReceive(gpio_evt_queue, &io_num, portMAX_DELAY)) {
             //printf("GPIO[%d] intr, val: %d\n", io_num, gpio_get_level(io_num));
-            /* Check if lamp is ON */
+            //Check if lamp is ON
             if(!gpio_get_level(UV_LAMP)){
                 ESP_LOGW(TAG_UV, "Motion detected while UV Lamp ON!!! Turning it OFF Immidietly.");
                 MOTION_SENSOR_ITR_FLAG = true;
@@ -175,6 +163,9 @@ static void gpio_task_example(void* arg)
                 TurnOffLamp(UV_LAMP);
             }
         }
+
+        //printf("gpio_state = %d\n", gpio_get_level(MOTION_SENSOR));
+        //vTaskDelay(200 / portTICK_PERIOD_MS);
     }
 }
 
@@ -210,7 +201,7 @@ static void configGPIO(void){
     gpio_evt_queue = xQueueCreate(10, sizeof(uint32_t));
 
     //start gpio task
-    xTaskCreate(gpio_task_example, "Motion_Task", 2048, NULL, 13, NULL);
+    xTaskCreate(gpio_task_example, "Motion_Task", 16*2048, NULL, 3, NULL);
 
     //install gpio isr service
     gpio_install_isr_service(ESP_INTR_FLAG_DEFAULT);
@@ -267,7 +258,7 @@ static void event_handler(void* arg, esp_event_base_t event_base,
     }
 }
 
-void wifi_init()
+int wifi_init()
 {
     s_wifi_event_group = xEventGroupCreate();
 
@@ -318,13 +309,16 @@ void wifi_init()
     } else if (bits & WIFI_FAIL_BIT) {
         ESP_LOGI(TAG_WIFI, "Failed to connect to SSID:%s, password:%s",
                  ESP_WIFI_SSID, ESP_WIFI_PASS);
+        return -1;
     } else {
         ESP_LOGE(TAG_WIFI, "UNEXPECTED EVENT");
     }
 
-    ESP_ERROR_CHECK(esp_event_handler_unregister(IP_EVENT, IP_EVENT_STA_GOT_IP, &event_handler));
-    ESP_ERROR_CHECK(esp_event_handler_unregister(WIFI_EVENT, ESP_EVENT_ANY_ID, &event_handler));
-    vEventGroupDelete(s_wifi_event_group);
+    //ESP_ERROR_CHECK(esp_event_handler_unregister(IP_EVENT, IP_EVENT_STA_GOT_IP, &event_handler));
+    //ESP_ERROR_CHECK(esp_event_handler_unregister(WIFI_EVENT, ESP_EVENT_ANY_ID, &event_handler));
+    //vEventGroupDelete(s_wifi_event_group);
+
+    return 0;
 }
 
 
@@ -332,28 +326,32 @@ void wifi_init()
 /** *************************************************************** */
 
 /**
-    @brief Prints the database to console */
-static void printCalendar()
+    @brief Prints the database to console
+
+    @param[in] hour - which hour to print
+    */
+static void printCalendar(uint8_t day)
 {
-    int day = Mon, section = 0;
+    int Hour = 0, Min = 0;
 
-    printf(" Hours | Mon | Tue | Wed | Thu | Fri | Sat | Sun |\n");
-    for(section = 0; section < number_of_time_sections; section++){
-        bool buf[7] = {};
-        for(day = Mon; day <= Sun; day++){
-            if(Calendar[day][section] == 1) buf[day] = 1;
+    printf(" M|H |0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|\n");
+    for(Min = 0; Min < MINUTES; Min++){
+        bool buf[24] = {};
+        for(Hour = 0; Hour < HOURS; Hour++){
+            if(Calendar[day][Hour][Min] == 1) buf[Hour] = 1;
         }
-        if(section < 9)
-            printf("  %d:%d  |  %d  |  %d  |  %d  |  %d  |  %d  |  %d  |  %d  |\n", section, section+1,
-                   buf[0], buf[1], buf[2], buf[3], buf[4], buf[5], buf[6]);
 
-        else if(section == 9)
-            printf("  %d:%d |  %d  |  %d  |  %d  |  %d  |  %d  |  %d  |  %d  |\n", section, section+1,
-                buf[0], buf[1], buf[2], buf[3], buf[4], buf[5], buf[6]);
+        if(Min <= 9)
+            printf(" %d   |%d|%d|%d|%d|%d|%d|%d|%d|%d|%d| %d| %d| %d| %d| %d| %d| %d| %d| %d| %d| %d| %d| %d| %d|\n", Min,
+                   buf[0], buf[1], buf[2], buf[3], buf[4], buf[5], buf[6], buf[7],\
+                   buf[8], buf[9], buf[10], buf[11], buf[12], buf[13], buf[14], buf[15],\
+                   buf[16], buf[17], buf[18], buf[19], buf[20], buf[21], buf[22], buf[23]);
 
-        else if(section > 9)
-            printf(" %d:%d |  %d  |  %d  |  %d  |  %d  |  %d  |  %d  |  %d  |\n", section, section+1,
-                buf[0], buf[1], buf[2], buf[3], buf[4], buf[5], buf[6]);
+        else if(Min > 9)
+            printf(" %d  |%d|%d|%d|%d|%d|%d|%d|%d|%d|%d| %d| %d| %d| %d| %d| %d| %d| %d| %d| %d| %d| %d| %d| %d|\n", Min,
+                   buf[0], buf[1], buf[2], buf[3], buf[4], buf[5], buf[6], buf[7],\
+                   buf[8], buf[9], buf[10], buf[11], buf[12], buf[13], buf[14], buf[15],\
+                   buf[16], buf[17], buf[18], buf[19], buf[20], buf[21], buf[22], buf[23]);
     }
 
     printf("\n");
@@ -422,11 +420,13 @@ void parseTime(struct Time *ctime, char *strftime_buf){
 
 /** Set whole calendar to OFF state */
 void CleanCalendar(void){
-    int day, ts;
+    int day, hr, mn;
 
     for(day = Mon; day <= Sun; day++){
-        for(ts = 0; ts <= 23; ts++ ){
-            Calendar[day][ts] = 0;
+        for(hr = 0; hr < HOURS; hr++ ){
+            for(mn = 0; mn < MINUTES; mn++){
+                Calendar[day][hr][mn] = 0;
+            }
         }
     }
 }
@@ -459,13 +459,15 @@ void ChangeTimeFormat(char *destination, struct Time ctime){
 }
 /** Turn on or off lamps accordingly to calendar */
 void UpdateUVState(struct Time ctime){
-    if(ctime.week_day > -1 && ctime.hours > -1 && Calendar[ctime.week_day][ctime.hours] == 1){
+    if(ctime.week_day > -1 && ctime.hours > -1 && ctime.minutes > -1 && Calendar[ctime.week_day][ctime.hours][ctime.minutes] == 1){
            //ESP_LOGI(TAG_UV, "LAMP ON");
            TurnOnLamp(UV_LAMP);
+           gpio_set_level(SYSTEM_ARMED_LED, 1);
        }
     else{
         //ESP_LOGI(TAG_UV, "LAMP OFF");
         TurnOffLamp(UV_LAMP);
+        gpio_set_level(SYSTEM_ARMED_LED, 0);
     }
 
     return;
@@ -492,6 +494,7 @@ void UpdateLightState(int lval, bool control, bool status){
 
     // histereza i wartoœæ œrednia - moze w czujniku juz ona
     ESP_LOGI(TAG_LIGHTS, "Updating light state.");
+    //printf("lval = %d\n", lval);
 
     if(!status){
         TurnOffLamp(LIGHT_LAMP1);
@@ -551,17 +554,22 @@ void http_task(void *pvParameters)
 
         ChangeTimeFormat(dtbTimeFormat, ctime);
 
-        read_database(HTTP_BUFFER, dtbTimeFormat, ID);
-        /* Parse JSON buffer and update Calendar */
-    // The semaphore is necessary here probably
+        //Mutex
         CleanCalendar();
-        UpdateCalendar(HTTP_BUFFER, Calendar, ID);
-        printCalendar();
+        //Mutex
+
+        while(read_database(HTTP_BUFFER, dtbTimeFormat, BUILDING_ID, ID) != 0){
+            vTaskDelay(5000 / portTICK_PERIOD_MS);
+        }
+        /* Parse JSON buffer and update Calendar */
+    // The mutex is necessary here probably
+        UpdateCalendar(HTTP_BUFFER, Calendar);
+        //printCalendar(Sun);
     //
 
     // Give a signal that Calendar was updated //
 
-        vTaskDelay(60*1000 / portTICK_PERIOD_MS);  // 60secs = 1 minute1
+        vTaskDelay(60*1000 / portTICK_PERIOD_MS);  // 60secs = 1 minute
     }
 
     /* Wait */
@@ -646,55 +654,27 @@ void uv_task(void *pvParameters)
         }
 
         else{
+            //ScheduleInterrupted(); - Make POST
+            while(ScheduleInterrupted(ID, BUILDING_ID) != ESP_OK) vTaskDelay(1000 / portTICK_PERIOD_MS);
+
             /* Better option to change it for interrupt */
+            // Sensor Interrupt
             while(MOTION_SENSOR_ITR_FLAG == true){
-                if(!gpio_get_level(ITR_CONFIRM_BUTTON)){
-                    printf("Button pushed.\n");
-                    MOTION_SENSOR_ITR_FLAG = false;
+                CheckBlockStatus(HTTP_BUFFER2);
+
+                if(SwitchInfo(HTTP_BUFFER2) == true){
+                    printf("Swich ON From website\n");
                     gpio_set_level(UV_INTERRUPTED_LED, 0);
                     gpio_set_level(SYSTEM_ARMED_LED, 1);
+                    MOTION_SENSOR_ITR_FLAG = false;
+                    break;
                 }
-                vTaskDelay(10 / portTICK_PERIOD_MS);
+
+                vTaskDelay(10000 / portTICK_PERIOD_MS);
             }
         }
 
-        /* Check if UV works properly using UV sensor */
-        if(!gpio_get_level(UV_LAMP) && UVavg < UV_DETECTION_THRS){
-            gpio_set_level(UV_INTERRUPTED_LED, 1);
-            vTaskDelay(1000 / portTICK_PERIOD_MS);
-            gpio_set_level(UV_INTERRUPTED_LED, 0);
-            //vTaskDelay(1000 / portTICK_PERIOD_MS);
-        }
-
         /* Wait */
-        vTaskDelay(1000 / portTICK_PERIOD_MS);
-    }
-
-    vTaskDelete(NULL);
-}
-
-void uv_sensor_task(void *pvParameters){
-
-    ESP_LOGI(TAG_UV_SENSOR, "Starting UV Sensor Task");
-
-    int cntr = 0;
-    int probes = 10;
-    float data[10] = {};
-    int x;
-    float sum = 0.0;
-
-    while(1){
-        data[cntr] = UVmeas();
-        for(x = 0; x < probes; x++){
-            sum += data[x];
-        }
-        UVavg = sum / probes;
-        //printf("UVavg = %f\n", UVavg);
-        cntr++;
-        sum = 0;
-
-        if(cntr > 9) cntr = 0;
-
         vTaskDelay(1000 / portTICK_PERIOD_MS);
     }
 
@@ -705,8 +685,6 @@ void uv_sensor_task(void *pvParameters){
 
 void app_main()
 {
-    esp_log_level_set("*", ESP_LOG_VERBOSE);
-
     /* Basic hardware init */
     configGPIO();
     gpio_set_direction(ITR_CONFIRM_BUTTON, GPIO_MODE_INPUT);
@@ -714,6 +692,9 @@ void app_main()
     TurnOffLamp(UV_LAMP);
     gpio_set_direction(UV_INTERRUPTED_LED, GPIO_MODE_OUTPUT);
     gpio_set_direction(SYSTEM_ARMED_LED, GPIO_MODE_OUTPUT);
+
+    gpio_set_level(UV_INTERRUPTED_LED, 0);
+    gpio_set_level(SYSTEM_ARMED_LED, 0);
 
     configADC();
     i2c_init();
@@ -725,7 +706,7 @@ void app_main()
     }
     ESP_ERROR_CHECK(err);
 
-    /* WiFi init */
+     /* WiFi init */
     ESP_LOGI(TAG_WIFI, "ESP_WIFI_MODE_STA");
     wifi_init();
 
@@ -734,7 +715,7 @@ void app_main()
     localtime_r(&now, &timeinfo);
     // Is time set? If not, tm_year will be (2020 - 1900).
 
-    if(timeinfo.tm_year <= (2020 - 1900)) {
+    while(timeinfo.tm_year <= (2020 - 1900)) {
         ESP_LOGI(SNTP_TAG, "Time is not set yet. Getting time over NTP.");
         obtain_time();
         // update 'now' variable with current time
@@ -757,10 +738,8 @@ void app_main()
     xTaskCreate(&lights_task, "lights_task", 2048, NULL, 4, NULL);
 
     /* Task to control uv lamp state */
-    xTaskCreate(&uv_task, "uv_task", 2048, NULL, 6, NULL);
+    xTaskCreate(&uv_task, "uv_task", 16*2048, NULL, 6, NULL);
 
-    /* Task to control uv sensor */
-    xTaskCreate(&uv_sensor_task, "uv_sensor_task", 2048, NULL, 10, NULL);
 }
 
 

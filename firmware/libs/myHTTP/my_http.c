@@ -91,13 +91,15 @@ esp_err_t _http_event_handler(esp_http_client_event_t *evt)
     return ESP_OK;
 }
 
-void read_database(char *buf, char *date, int room)
+/** GET - read schedule from database */
+int read_database(char *buf, char *date, int building, int room)
 {
     //char url[200] = "http://192.168.0.129/json.php?";                 /* Example for local RPi */
     char url[200] = "http://sterowanieuv.000webhostapp.com/json.php?";
-    char urlargs[50] = {};
+    char urlargs[100] = {};
 
-    sprintf(urlargs, "room=%d&date=%s", room, date);
+    sprintf(urlargs, "room=%d&date=%s&building=%d", room, date, building);
+    //sprintf(urlargs, "room=%d&date=%s", room, date);
     strcat(url, urlargs);
 
     char local_response_buffer[MAX_HTTP_OUTPUT_BUFFER] = {0};
@@ -120,20 +122,108 @@ void read_database(char *buf, char *date, int room)
     else {
         //ESP_LOGE(TAG_HTTP, "HTTP GET request failed: %s", esp_err_to_name(err));
         ESP_LOGW(TAG_HTTP, "HTTP GET request failed: %s", esp_err_to_name(err));
+        return err;
     }
 
     //printf("\nbuffer = %s\n", local_response_buffer);
     /* Parse the string, copy everything between <body> .. </body> without whitespaces*/
-    if(local_response_buffer != NULL){
+    if(err == ESP_OK && local_response_buffer != NULL){
         char *strPtr = strstr(local_response_buffer, "<body>") + 6;
         while(isspace(*strPtr)) strPtr++;
         char *endPtr = strstr(local_response_buffer, "</body>");
         endPtr -= 4;
         strncpy(buf, strPtr, (endPtr - strPtr)/sizeof(char));
+        //printf("buf = %s\n", buf);
     }
 
     //printf("buf = %s\n", buf);
     esp_http_client_cleanup(client);
 
-    return;
+    return err;
 }
+
+/** GET - Checks if user took down the block (which was cause by sensor) by clicking switch on web */
+esp_err_t CheckBlockStatus(char *buf){
+
+    char url[200] = "http://sterowanieuv.000webhostapp.com/info.php";
+
+    char local_response_buffer[MAX_HTTP_OUTPUT_BUFFER] = {0};
+
+    esp_http_client_config_t config = {
+    .url = url,
+    .event_handler = _http_event_handler,
+    .user_data = local_response_buffer,         // Pass address of local buffer to get response
+    };
+    esp_http_client_handle_t client = esp_http_client_init(&config);
+
+    // GET
+    esp_err_t err = esp_http_client_perform(client);
+    if (err == ESP_OK) {
+        ESP_LOGI(TAG_HTTP, "HTTP GET Status = %d, content_length = %d, chunked = %d, transport_type = %d",
+                esp_http_client_get_status_code(client),
+                esp_http_client_get_content_length(client),
+                esp_http_client_is_chunked_response(client),
+                esp_http_client_get_transport_type(client));
+    }
+    else {
+        //ESP_LOGE(TAG_HTTP, "HTTP GET request failed: %s", esp_err_to_name(err));
+        ESP_LOGW(TAG_HTTP, "HTTP GET request failed: %s", esp_err_to_name(err));
+        return err;
+    }
+
+    /* Parse the string, copy everything between <body> .. </body> without whitespaces*/
+    if(err == ESP_OK && local_response_buffer != NULL){
+        char *strPtr = strstr(local_response_buffer, "<body>") + 6;
+        while(isspace(*strPtr)) strPtr++;
+        char *endPtr = strstr(local_response_buffer, "</body>");
+        endPtr -= 4;
+        strncpy(buf, strPtr, (endPtr - strPtr)/sizeof(char));
+        //printf("buf = %s\n", buf);
+    }
+
+    //printf("buf = %s\n", buf);
+    esp_http_client_cleanup(client);
+
+    return err;
+}
+
+/** Makes POST to database to inform that UV schedule was interruted */
+esp_err_t ScheduleInterrupted(int room, int building){
+
+    char url[200] = "http://sterowanieuv.000webhostapp.com/stop.php?";
+    char urlargs[100] = {};
+
+    sprintf(urlargs, "room_id=%d&building_id=%d", room, building);
+    strcat(url, urlargs);
+
+    char local_response_buffer[MAX_HTTP_OUTPUT_BUFFER] = {0};
+
+    esp_http_client_config_t config = {
+        .url = url,
+        .event_handler = _http_event_handler,
+        .user_data = local_response_buffer,         // Pass address of local buffer to get response
+    };
+    esp_http_client_handle_t client = esp_http_client_init(&config);
+
+    //const char *post_data = "{\"UV\": 0}";
+
+    esp_http_client_set_url(client, url);
+    esp_http_client_set_method(client, HTTP_METHOD_POST);
+    esp_http_client_set_header(client, "Content-Type", "application/json");
+    //esp_http_client_set_post_field(client, post_data, strlen(post_data));
+
+    esp_err_t err = esp_http_client_perform(client);
+
+    if (err == ESP_OK) {
+        ESP_LOGI(TAG_HTTP, "HTTP POST Status = %d, content_length = %d",
+                esp_http_client_get_status_code(client),
+                esp_http_client_get_content_length(client));
+    } else {
+        ESP_LOGE(TAG_HTTP, "HTTP POST request failed: %s", esp_err_to_name(err));
+    }
+
+    return err;
+}
+
+
+

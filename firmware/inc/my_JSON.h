@@ -10,8 +10,10 @@
 
 #include <stdbool.h>
 
-#define number_of_days  7
-#define number_of_time_sections  24
+#define DAYS  7
+#define HOURS  24
+#define MINUTES 60
 
 void testData(void);
-void UpdateCalendar(char *http_buf, bool Calendar[number_of_days][number_of_time_sections], int ID);
+void UpdateCalendar(char *http_buf, bool Calendar[DAYS][HOURS][MINUTES]);
+bool SwitchInfo(char *http_buf);
