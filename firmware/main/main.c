@@ -16,6 +16,7 @@
 #include "freertos/task.h"
 #include "freertos/queue.h"
 #include "freertos/event_groups.h"
+#include "freertos/semphr.h"
 #include "esp_system.h"
 #include "esp_spi_flash.h"
 #include "esp_log.h"
@@ -39,8 +40,8 @@
 
 /** -------------- CONFIG ----------------- */
 
-#define ID                          2
-#define BUILDING_ID                 2
+#define ID                          1
+#define BUILDING_ID                 1
 
 /*          WiFi Config             */
 
@@ -50,11 +51,11 @@
 //#define ESP_WIFI_PASS               "bd4cffd9ea4c"
 #define ESP_MAXIMUM_RETRY           100000000
 
-#define UV_LAMP                     GPIO_NUM_17                   /* RELAY IN1 on board */
+#define UV_LAMP                     GPIO_NUM_2                   /* RELAY IN1 on board */
 #define LIGHT_LAMP1                 GPIO_NUM_0                    /* RELAY IN2 on board */
 #define LIGHT_LAMP2                 GPIO_NUM_18                   /* RELAY IN3 on board */
 #define LIGHT_LAMP3                 GPIO_NUM_19                   /* RELAY IN4 on board */
-#define MOTION_SENSOR               GPIO_NUM_13                   /* Microwave Motion Sensor */
+#define MOTION_SENSOR               GPIO_NUM_14                   /* Microwave Motion Sensor */
 #define ITR_CONFIRM_BUTTON          GPIO_NUM_15                   /* Button to confirm room interrupt */
 #define UV_INTERRUPTED_LED          GPIO_NUM_16                   /* Ligts when UV is stopped */
 #define SYSTEM_ARMED_LED            GPIO_NUM_4                    /* Ligts if system works accordigly to calendar */
@@ -107,7 +108,8 @@ float UVavg = 0.0;
 /* FreeRTOS event group to signal when we are connected*/
 static EventGroupHandle_t s_wifi_event_group;
 
-SemaphoreHandle_t CalendarMutex;
+//SemaphoreHandle_t CalendarMutex;
+SemaphoreHandle_t HTTP_Mutex;
 
 enum week {Mon, Tue, Wed, Thur, Fri, Sat, Sun};
 bool Calendar[DAYS][HOURS][MINUTES]= {};
@@ -121,6 +123,8 @@ struct Time {
     int     minutes;
     int     seconds;
 };
+
+void uv_task(void *pvParameters);
 
 /** *************************************************************** */
 
@@ -166,7 +170,7 @@ static void gpio_task_example(void* arg)
         }
 
         //printf("gpio_state = %d\n", gpio_get_level(MOTION_SENSOR));
-        //vTaskDelay(200 / portTICK_PERIOD_MS);
+        vTaskDelay(200 / portTICK_PERIOD_MS);
     }
 }
 
@@ -543,6 +547,9 @@ void http_task(void *pvParameters)
 
     ESP_LOGI(TAG_HTTP, "Starting http task");
 
+    /* Task to control uv lamp state */
+    xTaskCreate(&uv_task, "uv_task", 16*2048, NULL, 6, NULL);
+
     while(1){
 
         ESP_LOGI(TAG_HTTP, "Reading from database..");
@@ -553,21 +560,42 @@ void http_task(void *pvParameters)
         strftime(strftime_buf, sizeof(strftime_buf), "%c", &timeinfo);
         parseTime(&ctime, strftime_buf);
 
+        //printf("Rdb 1.\n");
         ChangeTimeFormat(dtbTimeFormat, ctime);
-
-        xSemaphoreTake(CalendarMutex, 0);
+        //printf("Rdb 2.\n");
+        //xSemaphoreTake(CalendarMutex, 0);
         CleanCalendar();
-        xSemaphoreGive(CalendarMutex);
+        //xSemaphoreGive(CalendarMutex);
 
-        while(read_database(HTTP_BUFFER, dtbTimeFormat, BUILDING_ID, ID) != 0){
+        //printf("Rdb 3.\n");
+
+
+        int dtb_read_correct = 1;
+        while(dtb_read_correct != 0){
+            if(xSemaphoreTake(HTTP_Mutex, (TickType_t)10 ) == pdTRUE)
+            {
+                // access to shared resource
+                dtb_read_correct = read_database(HTTP_BUFFER, dtbTimeFormat, BUILDING_ID, ID);
+                xSemaphoreGive(HTTP_Mutex);
+                if(dtb_read_correct == 0) break;
+            }
+
+            else{
+                //no access to shared resource
+            }
             vTaskDelay(5000 / portTICK_PERIOD_MS);
         }
-        /* Parse JSON buffer and update Calendar */
-        xSemaphoreTake(CalendarMutex, 0);
-        UpdateCalendar(HTTP_BUFFER, Calendar);
-        xSemaphoreGive(CalendarMutex);
-        //printCalendar(Sun);
 
+        //while(read_database(HTTP_BUFFER, dtbTimeFormat, BUILDING_ID, ID) != 0){
+            //vTaskDelay(5000 / portTICK_PERIOD_MS);
+        //}
+        //printf("Rdb 5.\n");
+        /* Parse JSON buffer and update Calendar */
+        //xSemaphoreTake(CalendarMutex, 0);
+        UpdateCalendar(HTTP_BUFFER, Calendar);
+        //xSemaphoreGive(CalendarMutex);
+        //printf("Rdb 6.\n");
+        //printCalendar(Sun);
         // Give a signal that Calendar was updated //
 
         vTaskDelay(60*1000 / portTICK_PERIOD_MS);  // 60secs = 1 minute
@@ -651,26 +679,34 @@ void uv_task(void *pvParameters)
             parseTime(&ctime, strftime_buf);
 
             /* Check Calendar and drive UV accordingly */
-            xSemaphoreTake(CalendarMutex, 0);
+            //xSemaphoreTake(CalendarMutex, 0);
             UpdateUVState(ctime);
-            xSemaphoreGive(CalendarMutex);
+            //xSemaphoreGive(CalendarMutex);
         }
 
         else{
-            //ScheduleInterrupted(); - Make POST
             while(ScheduleInterrupted(ID, BUILDING_ID) != ESP_OK) vTaskDelay(1000 / portTICK_PERIOD_MS);
 
             /* Better option to change it for interrupt */
             // Sensor Interrupt
             while(MOTION_SENSOR_ITR_FLAG == true){
-                CheckBlockStatus(HTTP_BUFFER2);
+                //xSemaphoreTake(CalendarMutex, 0);
+                if(xSemaphoreTake(HTTP_Mutex, (TickType_t)10) == pdTRUE){
+                    // access to shared resource
+                    CheckBlockStatus(HTTP_BUFFER2);
+                    xSemaphoreGive(HTTP_Mutex);
 
-                if(SwitchInfo(HTTP_BUFFER2) == true){
-                    printf("Swich ON From website\n");
-                    gpio_set_level(UV_INTERRUPTED_LED, 0);
-                    gpio_set_level(SYSTEM_ARMED_LED, 1);
-                    MOTION_SENSOR_ITR_FLAG = false;
-                    break;
+                    if(SwitchInfo(HTTP_BUFFER2) == true){
+                        printf("Swich ON From website\n");
+                        gpio_set_level(UV_INTERRUPTED_LED, 0);
+                        gpio_set_level(SYSTEM_ARMED_LED, 1);
+                        MOTION_SENSOR_ITR_FLAG = false;
+                        break;
+                    }
+                }
+
+                else{
+                    // not accessed
                 }
 
                 vTaskDelay(10000 / portTICK_PERIOD_MS);
@@ -702,7 +738,8 @@ void app_main()
     configADC();
     i2c_init();
 
-    CalendarMutex = xSemaphoreCreateMutex();
+    //CalendarMutex = xSemaphoreCreateMutex();
+    HTTP_Mutex = xSemaphoreCreateMutex();
 
     esp_err_t err = nvs_flash_init();
     if(err == ESP_ERR_NVS_NO_FREE_PAGES || err == ESP_ERR_NVS_NEW_VERSION_FOUND){
@@ -741,9 +778,6 @@ void app_main()
 
     /* Task to control light lamp state */
     xTaskCreate(&lights_task, "lights_task", 2048, NULL, 4, NULL);
-
-    /* Task to control uv lamp state */
-    xTaskCreate(&uv_task, "uv_task", 16*2048, NULL, 6, NULL);
 
 }
 

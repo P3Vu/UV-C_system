@@ -98,10 +98,12 @@ int read_database(char *buf, char *date, int building, int room)
     char url[200] = "http://sterowanieuv.000webhostapp.com/json.php?";
     char urlargs[100] = {};
 
+    //printf("Rdb 1.1\n");
     sprintf(urlargs, "room=%d&date=%s&building=%d", room, date, building);
     //sprintf(urlargs, "room=%d&date=%s", room, date);
     strcat(url, urlargs);
 
+    //printf("Rdb 1.2\n");
     char local_response_buffer[MAX_HTTP_OUTPUT_BUFFER] = {0};
     esp_http_client_config_t config = {
         .url = url,
@@ -110,8 +112,10 @@ int read_database(char *buf, char *date, int building, int room)
     };
     esp_http_client_handle_t client = esp_http_client_init(&config);
 
+    //printf("Rdb 1.3\n");
     // GET
     esp_err_t err = esp_http_client_perform(client);
+    /*
     if (err == ESP_OK) {
         ESP_LOGI(TAG_HTTP, "HTTP GET Status = %d, content_length = %d, chunked = %d, transport_type = %d",
                 esp_http_client_get_status_code(client),
@@ -124,24 +128,28 @@ int read_database(char *buf, char *date, int building, int room)
         ESP_LOGW(TAG_HTTP, "HTTP GET request failed: %s", esp_err_to_name(err));
         return err;
     }
-
-    vTaskDelay(10 / portTICK_PERIOD_MS);
+    */
+    //vTaskDelay(10 / portTICK_PERIOD_MS);
     //printf("\nbuffer = %s\n", local_response_buffer);
     /* Parse the string, copy everything between <body> .. </body> without whitespaces*/
+    //printf("Rdb 1.4\n");
+
     if(err == ESP_OK && local_response_buffer != NULL){
         char *strPtr = strstr(local_response_buffer, "<body>") + 6;
-        while(isspace(*strPtr)) strPtr++;
-        char *endPtr = strstr(local_response_buffer, "</body>");
-        endPtr -= 4;
-        strncpy(buf, strPtr, (endPtr - strPtr)/sizeof(char));
+        //while(isspace(*strPtr)) strPtr++;
+        char *endPtr = strstr(local_response_buffer, "<div style");
+        //endPtr -= 4;
+        //printf("Rdb 1.1.8\n");
+        strncpy(buf, strPtr, (endPtr - strPtr)/sizeof(char));           //problem
         //printf("buf = %s\n", buf);
     }
 
-    vTaskDelay(10 / portTICK_PERIOD_MS);
+    //printf("Rdb 1.5\n");
+    //vTaskDelay(10 / portTICK_PERIOD_MS);
     //printf("buf = %s\n", buf);
     esp_http_client_cleanup(client);
-    vTaskDelay(10 / portTICK_PERIOD_MS);
-
+    //vTaskDelay(10 / portTICK_PERIOD_MS);
+    //printf("Rdb 1.6\n");
     return err;
 }
 
@@ -158,9 +166,10 @@ esp_err_t CheckBlockStatus(char *buf){
     .user_data = local_response_buffer,         // Pass address of local buffer to get response
     };
     esp_http_client_handle_t client = esp_http_client_init(&config);
-
+    //printf("0.\n");
     // GET
     esp_err_t err = esp_http_client_perform(client);
+    /*
     if (err == ESP_OK) {
         ESP_LOGI(TAG_HTTP, "HTTP GET Status = %d, content_length = %d, chunked = %d, transport_type = %d",
                 esp_http_client_get_status_code(client),
@@ -173,7 +182,8 @@ esp_err_t CheckBlockStatus(char *buf){
         ESP_LOGW(TAG_HTTP, "HTTP GET request failed: %s", esp_err_to_name(err));
         return err;
     }
-
+    */
+    //printf("1.\n");
     /* Parse the string, copy everything between <body> .. </body> without whitespaces*/
     if(err == ESP_OK && local_response_buffer != NULL){
         char *strPtr = strstr(local_response_buffer, "<body>") + 6;
@@ -184,8 +194,10 @@ esp_err_t CheckBlockStatus(char *buf){
         //printf("buf = %s\n", buf);
     }
 
+    //printf("2.\n");
     //printf("buf = %s\n", buf);
     esp_http_client_cleanup(client);
+    //printf("3.\n");
 
     return err;
 }
@@ -208,12 +220,12 @@ esp_err_t ScheduleInterrupted(int room, int building){
     };
     esp_http_client_handle_t client = esp_http_client_init(&config);
 
-    //const char *post_data = "{\"UV\": 0}";
+    const char *post_data = "{\"UV\": 0}";
 
     esp_http_client_set_url(client, url);
     esp_http_client_set_method(client, HTTP_METHOD_POST);
     esp_http_client_set_header(client, "Content-Type", "application/json");
-    //esp_http_client_set_post_field(client, post_data, strlen(post_data));
+    esp_http_client_set_post_field(client, post_data, strlen(post_data));
 
     esp_err_t err = esp_http_client_perform(client);
 
