@@ -49,14 +49,14 @@
 //#define ESP_WIFI_SSID               "Xperia L1_7ded"
 #define ESP_WIFI_PASS               "bvyhjy3jbdbC"
 //#define ESP_WIFI_PASS               "bd4cffd9ea4c"
+
 #define ESP_MAXIMUM_RETRY           100000000
 
+#define LIGHT_LAMP1                 GPIO_NUM_0                   /* RELAY IN2 on board */
 #define UV_LAMP                     GPIO_NUM_2                   /* RELAY IN1 on board */
-#define LIGHT_LAMP1                 GPIO_NUM_0                    /* RELAY IN2 on board */
 #define LIGHT_LAMP2                 GPIO_NUM_18                   /* RELAY IN3 on board */
 #define LIGHT_LAMP3                 GPIO_NUM_19                   /* RELAY IN4 on board */
-#define MOTION_SENSOR               GPIO_NUM_14                   /* Microwave Motion Sensor */
-#define ITR_CONFIRM_BUTTON          GPIO_NUM_15                   /* Button to confirm room interrupt */
+#define MOTION_SENSOR               GPIO_NUM_13                   /* Microwave Motion Sensor */
 #define UV_INTERRUPTED_LED          GPIO_NUM_16                   /* Ligts when UV is stopped */
 #define SYSTEM_ARMED_LED            GPIO_NUM_4                    /* Ligts if system works accordigly to calendar */
 #define GPIO_OUTPUT_PIN_SEL         ((1ULL<<GPIO_NUM_2) |   \
@@ -158,14 +158,20 @@ static void gpio_task_example(void* arg)
     while(1) {
 
         if(xQueueReceive(gpio_evt_queue, &io_num, portMAX_DELAY)) {
-            //printf("GPIO[%d] intr, val: %d\n", io_num, gpio_get_level(io_num));
-            //Check if lamp is ON
-            if(!gpio_get_level(UV_LAMP)){
-                ESP_LOGW(TAG_UV, "Motion detected while UV Lamp ON!!! Turning it OFF Immidietly.");
-                MOTION_SENSOR_ITR_FLAG = true;
-                gpio_set_level(UV_INTERRUPTED_LED, 1);
-                gpio_set_level(SYSTEM_ARMED_LED, 0);
-                TurnOffLamp(UV_LAMP);
+            //vTaskDelay(50 / portTICK_PERIOD_MS);
+
+            if(gpio_get_level(io_num) == true){
+                //printf("GPIO[%d] intr, val: %d\n", io_num, gpio_get_level(io_num));
+                //printf("GPIO level = %d\n", gpio_get_level(MOTION_SENSOR));
+                //Check if lamp is ON
+
+                if(!gpio_get_level(UV_LAMP)){
+                    ESP_LOGW(TAG_UV, "Motion detected while UV Lamp ON!!! Turning it OFF Immidietly.");
+                    MOTION_SENSOR_ITR_FLAG = true;
+                    gpio_set_level(UV_INTERRUPTED_LED, 1);
+                    gpio_set_level(SYSTEM_ARMED_LED, 0);
+                    TurnOffLamp(UV_LAMP);
+                }
             }
         }
 
@@ -497,7 +503,6 @@ void UpdateUVState(struct Time ctime){
 */
 void UpdateLightState(int lval, bool control, bool status){
 
-    // histereza i wartoœæ œrednia - moze w czujniku juz ona
     ESP_LOGI(TAG_LIGHTS, "Updating light state.");
     //printf("lval = %d\n", lval);
 
@@ -560,15 +565,8 @@ void http_task(void *pvParameters)
         strftime(strftime_buf, sizeof(strftime_buf), "%c", &timeinfo);
         parseTime(&ctime, strftime_buf);
 
-        //printf("Rdb 1.\n");
         ChangeTimeFormat(dtbTimeFormat, ctime);
-        //printf("Rdb 2.\n");
-        //xSemaphoreTake(CalendarMutex, 0);
         CleanCalendar();
-        //xSemaphoreGive(CalendarMutex);
-
-        //printf("Rdb 3.\n");
-
 
         int dtb_read_correct = 1;
         while(dtb_read_correct != 0){
@@ -586,17 +584,8 @@ void http_task(void *pvParameters)
             vTaskDelay(5000 / portTICK_PERIOD_MS);
         }
 
-        //while(read_database(HTTP_BUFFER, dtbTimeFormat, BUILDING_ID, ID) != 0){
-            //vTaskDelay(5000 / portTICK_PERIOD_MS);
-        //}
-        //printf("Rdb 5.\n");
         /* Parse JSON buffer and update Calendar */
-        //xSemaphoreTake(CalendarMutex, 0);
         UpdateCalendar(HTTP_BUFFER, Calendar);
-        //xSemaphoreGive(CalendarMutex);
-        //printf("Rdb 6.\n");
-        //printCalendar(Sun);
-        // Give a signal that Calendar was updated //
 
         vTaskDelay(60*1000 / portTICK_PERIOD_MS);  // 60secs = 1 minute
     }
@@ -628,25 +617,39 @@ void lights_task(void *pvParameters)
 
     while(1){
 
-        if(cntr > NUMBER_OF_SAMPLES-1){
-            int x;
-            float sum;
-            for(x = 0; x < NUMBER_OF_SAMPLES; x++){
-                sum += luxSamples[x];
+        if(xSemaphoreTake(HTTP_Mutex, (TickType_t)10) == pdTRUE){
+            CheckLightSwitch(HTTP_BUFFER2, BUILDING_ID, ID);
+            xSemaphoreGive(HTTP_Mutex);
+
+            if(SwitchInfo(HTTP_BUFFER2) == false){
+                //printf("Lights switched off\n");
+                TurnOffLamp(LIGHT_LAMP1);
+                TurnOffLamp(LIGHT_LAMP2);
+                TurnOffLamp(LIGHT_LAMP3);
+
+                vTaskDelay(30000 / portTICK_PERIOD_MS);
             }
-            luxAvg = sum / NUMBER_OF_SAMPLES;
+            else{
+                while(cntr < NUMBER_OF_SAMPLES-1){
+                    luxSamples[cntr] = LUXMeas();
+                    cntr++;
 
-            //printf("lux avg = %d\n", (int)luxAvg);
-            UpdateLightState((int)luxAvg, LIGHT_CONTROL, 1);
-            cntr = 0;
-            sum = 0;
-        }
-        else{
-            luxSamples[cntr] = LUXMeas();
-            cntr++;
-        }
+                    vTaskDelay(1000 / portTICK_PERIOD_MS);
+                }
 
-        vTaskDelay(1000 / portTICK_PERIOD_MS);
+                int x;
+                float sum;
+                for(x = 0; x < NUMBER_OF_SAMPLES; x++){
+                    sum += luxSamples[x];
+                }
+                luxAvg = sum / NUMBER_OF_SAMPLES;
+
+                //printf("lux avg = %d\n", (int)luxAvg);
+                UpdateLightState((int)luxAvg, LIGHT_CONTROL, 1);
+                cntr = 0;
+                sum = 0;
+            }
+        }
     }
 
     vTaskDelete(NULL);
@@ -679,9 +682,7 @@ void uv_task(void *pvParameters)
             parseTime(&ctime, strftime_buf);
 
             /* Check Calendar and drive UV accordingly */
-            //xSemaphoreTake(CalendarMutex, 0);
             UpdateUVState(ctime);
-            //xSemaphoreGive(CalendarMutex);
         }
 
         else{
@@ -690,10 +691,9 @@ void uv_task(void *pvParameters)
             /* Better option to change it for interrupt */
             // Sensor Interrupt
             while(MOTION_SENSOR_ITR_FLAG == true){
-                //xSemaphoreTake(CalendarMutex, 0);
                 if(xSemaphoreTake(HTTP_Mutex, (TickType_t)10) == pdTRUE){
                     // access to shared resource
-                    CheckBlockStatus(HTTP_BUFFER2);
+                    CheckBlockStatus(HTTP_BUFFER2, BUILDING_ID, ID);
                     xSemaphoreGive(HTTP_Mutex);
 
                     if(SwitchInfo(HTTP_BUFFER2) == true){
@@ -724,9 +724,11 @@ void uv_task(void *pvParameters)
 
 void app_main()
 {
+    HTTP_Mutex = xSemaphoreCreateMutex();
+
     /* Basic hardware init */
     configGPIO();
-    gpio_set_direction(ITR_CONFIRM_BUTTON, GPIO_MODE_INPUT);
+    //gpio_set_direction(ITR_CONFIRM_BUTTON, GPIO_MODE_INPUT);
     gpio_set_direction(UV_LAMP, GPIO_MODE_INPUT_OUTPUT);
     TurnOffLamp(UV_LAMP);
     gpio_set_direction(UV_INTERRUPTED_LED, GPIO_MODE_OUTPUT);
@@ -737,9 +739,6 @@ void app_main()
 
     configADC();
     i2c_init();
-
-    //CalendarMutex = xSemaphoreCreateMutex();
-    HTTP_Mutex = xSemaphoreCreateMutex();
 
     esp_err_t err = nvs_flash_init();
     if(err == ESP_ERR_NVS_NO_FREE_PAGES || err == ESP_ERR_NVS_NEW_VERSION_FOUND){
@@ -777,7 +776,7 @@ void app_main()
     xTaskCreate(&http_task, "http_test_task", 4*8192, NULL, 5, NULL);
 
     /* Task to control light lamp state */
-    xTaskCreate(&lights_task, "lights_task", 2048, NULL, 4, NULL);
+    xTaskCreate(&lights_task, "lights_task", 4*8192, NULL, 4, NULL);
 
 }
 

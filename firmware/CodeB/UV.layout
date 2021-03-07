@@ -2,14 +2,30 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="all" />
-	<File name="..\..\..\..\esp-idf\components\lwip\apps\sntp\sntp.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="..\..\..\..\esp-idf\components\bt\CMakeLists.txt" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="2090" topLine="48" />
+			<Cursor1 position="491" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="..\sdkconfig" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="..\..\..\..\esp-idf\components\json\cJSON\cJSON.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="8194" topLine="173" />
+			<Cursor1 position="30518" topLine="940" />
+		</Cursor>
+	</File>
+	<File name="..\main\main.c" open="1" top="1" tabpos="1" split="2" active="1" splitpos="862" zoom_1="-1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="21431" topLine="604" />
+			<Cursor2 position="5102" topLine="146" />
+		</Cursor>
+	</File>
+	<File name="..\..\..\..\esp-idf\components\lwip\lwip\src\apps\sntp\sntp.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="8997" topLine="239" />
+		</Cursor>
+	</File>
+	<File name="..\inc\MAX44009.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="336" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="..\..\..\..\esp-idf\components\json\cJSON\cJSON.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -17,31 +33,30 @@
 			<Cursor1 position="5870" topLine="126" />
 		</Cursor>
 	</File>
-	<File name="..\main\main.c" open="1" top="1" tabpos="1" split="2" active="1" splitpos="1322" zoom_1="-1" zoom_2="0">
+	<File name="..\..\..\..\esp-idf\components\esp_common\src\esp_err_to_name.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="25519" topLine="743" />
-			<Cursor2 position="6019" topLine="149" />
+			<Cursor1 position="16242" topLine="261" />
 		</Cursor>
 	</File>
-	<File name="..\..\..\..\esp-idf\components\wifi_provisioning\src\manager.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="..\inc\my_SNTP.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="49666" topLine="1393" />
+			<Cursor1 position="336" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="..\libs\MAX44009\MAX44009.c" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="543" topLine="1" />
 		</Cursor>
 	</File>
 	<File name="..\libs\myHTTP\my_http.c" open="1" top="0" tabpos="2" split="2" active="1" splitpos="1322" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="4369" topLine="65" />
-			<Cursor2 position="6859" topLine="160" />
+			<Cursor1 position="6843" topLine="140" />
+			<Cursor2 position="0" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="..\libs\MAX44009\MAX44009.c" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="..\libs\ML8511\ML8511.c" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="543" topLine="2" />
-		</Cursor>
-	</File>
-	<File name="..\libs\cJSON\cJSON.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="33634" topLine="1159" />
+			<Cursor1 position="604" topLine="8" />
 		</Cursor>
 	</File>
 	<File name="..\..\..\..\esp-idf\components\esp32\esp_adapter.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -49,19 +64,19 @@
 			<Cursor1 position="8886" topLine="305" />
 		</Cursor>
 	</File>
+	<File name="..\inc\ML8511.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="392" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="..\..\..\..\esp-idf\components\wifi_provisioning\src\manager.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="49666" topLine="1393" />
+		</Cursor>
+	</File>
 	<File name="..\..\..\..\esp-idf\components\esp_http_client\esp_http_client.c" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="32384" topLine="435" />
-		</Cursor>
-	</File>
-	<File name="..\inc\MAX44009.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="526" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="..\..\..\..\esp-idf\components\esp_common\src\esp_err_to_name.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="16242" topLine="261" />
 		</Cursor>
 	</File>
 	<File name="..\libs\myJSON\my_JSON.c" open="1" top="0" tabpos="4" split="2" active="1" splitpos="933" zoom_1="0" zoom_2="0">
@@ -70,14 +85,14 @@
 			<Cursor2 position="0" topLine="136" />
 		</Cursor>
 	</File>
-	<File name="..\inc\ML8511.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="..\..\..\..\esp-idf\components\driver\gpio.c" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="392" topLine="0" />
+			<Cursor1 position="6305" topLine="172" />
 		</Cursor>
 	</File>
-	<File name="..\..\..\..\esp-idf\components\bt\CMakeLists.txt" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="..\sdkconfig" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="491" topLine="0" />
+			<Cursor1 position="8194" topLine="173" />
 		</Cursor>
 	</File>
 	<File name="..\..\..\..\esp-idf\components\tcp_transport\transport.c" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -85,19 +100,9 @@
 			<Cursor1 position="6575" topLine="194" />
 		</Cursor>
 	</File>
-	<File name="..\..\..\..\esp-idf\components\json\cJSON\cJSON.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="..\..\..\..\esp-idf\components\freertos\queue.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="30518" topLine="940" />
-		</Cursor>
-	</File>
-	<File name="..\libs\mySNTP\my_SNTP.c" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1079" topLine="20" />
-		</Cursor>
-	</File>
-	<File name="..\libs\myI2C\my_i2c.c" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="424" topLine="15" />
+			<Cursor1 position="27805" topLine="704" />
 		</Cursor>
 	</File>
 	<File name="..\..\..\..\esp-idf\components\coap\libcoap\src\mem.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -105,29 +110,24 @@
 			<Cursor1 position="1257" topLine="48" />
 		</Cursor>
 	</File>
-	<File name="..\..\..\..\esp-idf\components\freertos\queue.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="..\..\..\..\esp-idf\components\lwip\apps\sntp\sntp.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="27805" topLine="704" />
+			<Cursor1 position="2090" topLine="48" />
 		</Cursor>
 	</File>
-	<File name="..\..\..\..\esp-idf\components\driver\gpio.c" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="..\libs\cJSON\cJSON.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="6305" topLine="172" />
+			<Cursor1 position="33634" topLine="1159" />
 		</Cursor>
 	</File>
-	<File name="..\inc\my_SNTP.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="..\libs\mySNTP\my_SNTP.c" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="336" topLine="0" />
+			<Cursor1 position="1079" topLine="20" />
 		</Cursor>
 	</File>
-	<File name="..\libs\ML8511\ML8511.c" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="..\libs\myI2C\my_i2c.c" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="604" topLine="8" />
-		</Cursor>
-	</File>
-	<File name="..\..\..\..\esp-idf\components\lwip\lwip\src\apps\sntp\sntp.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="8997" topLine="239" />
+			<Cursor1 position="424" topLine="30" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>
